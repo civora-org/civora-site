@@ -166,6 +166,31 @@ section{padding-block:clamp(56px,8vw,104px)}
 .screens figcaption{margin-top:14px;font-size:1rem;color:var(--muted);max-width:46ch}
 .screens figcaption strong{color:var(--ink);font-weight:600}
 
+/* gallery */
+.gal{padding-block:clamp(48px,5vw,64px)}
+.gal__intro{margin-top:12px;color:var(--muted)}
+.gal__list{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:40px}
+.gal__item{min-width:0}
+.gal__title{font-size:1.1875rem}
+.gal__line{margin:4px 0 14px;font-size:1rem;color:var(--muted);max-width:60ch}
+.gal__note{margin-top:20px;font-size:.9375rem;color:var(--muted)}
+@media (min-width:960px){
+  .gal__list{margin-top:28px}
+  .gal.is-on .gal__body{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);gap:clamp(24px,3.5vw,48px);align-items:start}
+  .gal.is-on .gal__list{margin-top:0;gap:4px}
+  .gal.is-on .gal__item{padding:12px 16px;border:1px solid transparent;border-radius:8px;cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
+  .gal.is-on .gal__item .shot{display:none}
+  .gal.is-on .gal__line{margin:2px 0 0;font-size:.9375rem}
+  .gal.is-on .gal__title{color:var(--muted)}
+  .gal.is-on .gal__item:hover{background:rgba(255,255,255,.6)}
+  .gal.is-on .gal__item[aria-selected="true"]{background:var(--white);border-color:var(--rule)}
+  .gal.is-on .gal__item[aria-selected="true"] .gal__title{color:var(--ink)}
+  .gal__stage{position:sticky;top:24px}
+  .gal__stage img{transition:opacity .18s ease-out}
+  .gal__stage img.is-fading{opacity:0}
+}
+@media (prefers-reduced-motion:reduce){.gal__stage img,.gal.is-on .gal__item{transition:none}}
+
 /* pricing */
 .plans{margin:48px 0 0;border-top:2px solid var(--ink)}
 .plan{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,3fr);gap:16px 32px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--rule)}
@@ -288,20 +313,45 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
   </div>
 </section>
 
-<section class="tint">
+<section class="tint gal" id="galeria">
   <div class="wrap">
-    <h2>Takto to vyzerá</h2>
-    <div class="screens">
-      <figure>
-        <div class="shot"><img src="img/detail-crz-sk-1440.webp" srcset="img/detail-crz-sk-480.webp 480w, img/detail-crz-sk-800.webp 800w, img/detail-crz-sk-1200.webp 1200w, img/detail-crz-sk-1440.webp 1440w" sizes="(max-width:900px) calc(100vw - 32px), 560px" width="1440" height="900" alt="Detail zmluvy s odkazom na pôvodný záznam v CRZ (ukážkové dáta)" loading="lazy" decoding="async"></div>
-        <figcaption><strong>Detail zmluvy</strong> s odkazom na pôvodný záznam v CRZ.</figcaption>
-      </figure>
-      <figure>
-        <div class="shot"><img src="img/audit-trail-1440.webp" srcset="img/audit-trail-480.webp 480w, img/audit-trail-800.webp 800w, img/audit-trail-1200.webp 1200w, img/audit-trail-1440.webp 1440w" sizes="(max-width:900px) calc(100vw - 32px), 560px" width="1440" height="900" alt="Auditná stopa zmluvy so záznamom zmien (ukážkové dáta)" loading="lazy" decoding="async"></div>
-        <figcaption><strong>Auditná stopa</strong>: kto, čo a kedy zmenil.</figcaption>
-      </figure>
+    <h2>Ako to vyzerá v praxi</h2>
+    <p class="gal__intro">Verejný katalóg aj administrácia, zobrazené na vymyslených ukážkových dátach.</p>
+    <div class="gal__body">
+      <ol class="gal__list">
+        <li class="gal__item" data-id="catalogue-sk">
+          <h3 class="gal__title">Verejný katalóg</h3>
+          <p class="gal__line">Zoznam zverejnených zmlúv s vyhľadávaním, filtrami a sumami pre občanov a novinárov.</p>
+          <div class="shot"><img src="img/catalogue-sk-1440.webp" srcset="img/catalogue-sk-480.webp 480w, img/catalogue-sk-800.webp 800w, img/catalogue-sk-1200.webp 1200w, img/catalogue-sk-1440.webp 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Verejný katalóg zmlúv s vyhľadávaním, filtrami a zoznamom zmlúv so sumami (ukážkové dáta)" loading="lazy" decoding="async"></div>
+        </li>
+        <li class="gal__item" data-id="detail-crz-sk">
+          <h3 class="gal__title">Detail s pôvodom z CRZ</h3>
+          <p class="gal__line">Odkaz na pôvodný záznam v CRZ a upozornenie, že ide o externe potvrdené údaje.</p>
+          <div class="shot"><img src="img/detail-crz-sk-1440.webp" srcset="img/detail-crz-sk-480.webp 480w, img/detail-crz-sk-800.webp 800w, img/detail-crz-sk-1200.webp 1200w, img/detail-crz-sk-1440.webp 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Detail zmluvy zrkadlenej z CRZ s údajmi o zmluve, zmluvnými stranami a odkazom na pôvodný záznam (ukážkové dáta)" loading="lazy" decoding="async"></div>
+        </li>
+        <li class="gal__item" data-id="notes-sk">
+          <h3 class="gal__title">Interné poznámky</h3>
+          <p class="gal__line">Tím sa dohodne priamo pri zmluve. Vidia ich iba nositelia rolí, verejnosť nikdy.</p>
+          <div class="shot"><img src="img/notes-sk-1440.webp" srcset="img/notes-sk-480.webp 480w, img/notes-sk-800.webp 800w, img/notes-sk-1200.webp 1200w, img/notes-sk-1440.webp 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Interné poznámky k zmluve v administrácii: dve poznámky a pole na pridanie ďalšej (ukážkové dáta)" loading="lazy" decoding="async"></div>
+        </li>
+        <li class="gal__item" data-id="import-preview-sk">
+          <h3 class="gal__title">Import z tabuľky</h3>
+          <p class="gal__line">Náhľad ukáže chybné riadky ešte pred uložením. Nič sa neuloží, kým to nepotvrdíte.</p>
+          <div class="shot"><img src="img/import-preview-sk-1440.webp" srcset="img/import-preview-sk-480.webp 480w, img/import-preview-sk-800.webp 800w, img/import-preview-sk-1200.webp 1200w, img/import-preview-sk-1440.webp 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Náhľad importu zmlúv z tabuľky CSV: tri platné riadky a dva riadky s chybou v sume a v dátume (ukážkové dáta)" loading="lazy" decoding="async"></div>
+        </li>
+        <li class="gal__item" data-id="roles-sk">
+          <h3 class="gal__title">Správa rolí</h3>
+          <p class="gal__line">Prehľad nositeľov rolí a udelenie alebo odobratie roly.</p>
+          <div class="shot"><img src="img/roles-sk-1440.webp" srcset="img/roles-sk-480.webp 480w, img/roles-sk-800.webp 800w, img/roles-sk-1200.webp 1200w, img/roles-sk-1440.webp 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Správa rolí v administrácii s používateľom v roli recenzenta (ukážkové dáta)" loading="lazy" decoding="async"></div>
+        </li>
+        <li class="gal__item" data-id="audit-trail">
+          <h3 class="gal__title">Auditná stopa</h3>
+          <p class="gal__line">Pri zmluve vidno, kto, čo a kedy zmenil.</p>
+          <div class="shot"><img src="img/audit-trail-1440.webp" srcset="img/audit-trail-480.webp 480w, img/audit-trail-800.webp 800w, img/audit-trail-1200.webp 1200w, img/audit-trail-1440.webp 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Auditná stopa jednej zmluvy so zoznamom operácií, používateľov a dátumov (ukážkové dáta)" loading="lazy" decoding="async"></div>
+        </li>
+      </ol>
     </div>
-    <p class="note">Všetky obrazovky zobrazujú ukážkové dáta.</p>
+    <p class="gal__note">Všetky obrazovky zobrazujú ukážkové dáta.</p>
   </div>
 </section>
 
@@ -325,6 +375,80 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
     <a class="btn btn--light act" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
   </div>
 </section>
+<script>
+(function(){
+  var gal=document.getElementById('galeria');
+  var mq=window.matchMedia('(min-width:960px)');
+  if(!gal)return;
+  var body=gal.querySelector('.gal__body'),list=gal.querySelector('.gal__list');
+  var items=[].slice.call(list.children),stage,img,cur=0,timer;
+  function select(n,focus){
+    items.forEach(function(it,i){
+      it.setAttribute('aria-selected',i===n?'true':'false');
+      it.tabIndex=i===n?0:-1;
+    });
+    if(focus)items[n].focus();
+    if(n===cur&&img.src)return;
+    cur=n;
+    var src=items[n].querySelector('img'),panel=stage;
+    panel.setAttribute('aria-labelledby',items[n].id);
+    var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    clearTimeout(timer);
+    function swap(){
+      img.removeAttribute('loading');
+      img.srcset=src.srcset;img.sizes=src.sizes;img.src=src.src;img.alt=src.alt;
+      img.classList.remove('is-fading');
+    }
+    if(reduce){swap();return}
+    img.classList.add('is-fading');
+    timer=setTimeout(swap,180);
+  }
+  function on(){
+    if(stage)return;
+    stage=document.createElement('div');
+    stage.className='gal__stage shot';
+    stage.id='galeria-panel';
+    stage.setAttribute('role','tabpanel');
+    img=document.createElement('img');
+    img.width=1440;img.height=900;img.decoding='async';
+    stage.appendChild(img);
+    body.appendChild(stage);
+    list.setAttribute('role','tablist');
+    list.setAttribute('aria-label','Ukážky obrazoviek');
+    items.forEach(function(it,i){
+      it.id='galeria-tab-'+i;
+      it.setAttribute('role','tab');
+      it.setAttribute('aria-controls','galeria-panel');
+    });
+    gal.classList.add('is-on');
+    cur=-1;select(0);
+  }
+  function off(){
+    if(!stage)return;
+    stage.remove();stage=null;img=null;
+    gal.classList.remove('is-on');
+    list.removeAttribute('role');list.removeAttribute('aria-label');
+    items.forEach(function(it){
+      ['role','aria-controls','aria-selected','tabindex','id'].forEach(function(a){it.removeAttribute(a)});
+    });
+  }
+  items.forEach(function(it,i){it.addEventListener('click',function(){if(stage)select(i)})});
+  list.addEventListener('keydown',function(e){
+    if(!stage)return;
+    var i=items.indexOf(document.activeElement),n=-1;
+    if(i<0)return;
+    if(e.key==='ArrowDown'||e.key==='ArrowRight')n=(i+1)%items.length;
+    else if(e.key==='ArrowUp'||e.key==='ArrowLeft')n=(i-1+items.length)%items.length;
+    else if(e.key==='Home')n=0;
+    else if(e.key==='End')n=items.length-1;
+    if(n<0)return;
+    e.preventDefault();select(n,true);
+  });
+  function sync(){mq.matches?on():off()}
+  sync();
+  if(mq.addEventListener)mq.addEventListener('change',sync);
+})();
+</script>
 </main>
 
 <footer>
