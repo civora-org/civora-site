@@ -206,7 +206,8 @@ section{padding-block:clamp(56px,8vw,104px)}
 /* the letter */
 .letter-sec .grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(28px,5vw,72px);align-items:start}
 .foto{margin:0}
-.foto__arch{aspect-ratio:3/4;max-width:260px;border:2px dashed var(--civora-indigo);border-radius:999px 999px 14px 14px;display:flex;align-items:center;justify-content:center;font:700 1.5rem var(--civora-font-display);color:var(--civora-indigo);background:var(--civora-paper)}
+.foto__arch{aspect-ratio:3/4;max-width:260px;border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--civora-indigo-deep,#232c63);box-shadow:0 0 0 6px var(--civora-paper),0 0 0 8px var(--civora-terracotta,#b5523a)}
+.foto__arch img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .foto figcaption{margin-top:10px;font-size:.9375rem;color:var(--civora-muted);max-width:260px}
 .letter{background:var(--civora-paper);border:1px solid var(--civora-rule);border-radius:6px;overflow:hidden;box-shadow:0 1px 2px rgba(43,42,64,.06),0 20px 36px -26px rgba(43,42,64,.35)}
 .letter::before{content:"";display:block;height:14px;background:var(--civora-indigo) var(--mr);background-size:22px 22px}
@@ -493,18 +494,20 @@ footer .brand img{height:32px}
   <div class="wrap">
     <div class="grid">
       <figure class="foto reveal">
-        <div class="foto__arch">[FOTO]</div>
+        <div class="foto__arch"><img src="img/denys.jpg" width="519" height="693" alt="Denys Kozlov" loading="lazy" decoding="async"></div>
         <figcaption>Denys Kozlov, zakladateľ Civory</figcaption>
       </figure>
       <article class="letter reveal" style="--d:.1s">
         <div class="letter__body">
           <h2>List od zakladateľa</h2>
           <p class="hello">Dobrý deň,</p>
-          <p>volám sa Denys Kozlov a staviam Civoru.</p>
-          <p>Verím, že dôvera medzi ľuďmi a ich obcou sa nedá nariadiť. Dá sa len zaslúžiť: tým, že každý vidí, kto čo pripravil, kto skontroloval a kedy to vyšlo. Preto začínam zmluvami. Sú nudné, ale práve na nich sa ukáže, či si obec a jej ľudia môžu veriť.</p>
-          <p>Chcem, aby mala úradníčka pokojnejší utorok a občan nemusel nikoho prosiť o papier. Nič viac a nič menej.</p>
-          <p>Civora je zatiaľ malá a rastie pomaly. Raz by som rád, aby ľudia a ich vlády kdekoľvek na svete mohli na seba takto vidieť. Začíname v slovenskej obci, jednou zmluvou po druhej.</p>
-          <p>Ak vás to zaujíma, napíšte mi. Odpíšem sám.</p>
+          <p>volám sa Denys Kozlov. Som programátor z Bratislavy a Civoru staviam popri práci.</p>
+          <p>Tento mesiac som ju ukazoval prednostovi jedného mestského úradu. Opísal mi, ako u nich putuje zmluva: vecný odborník ju napíše, kolega ju skontroluje, tretí človek ju vloží do registra a celý ten čas sa lehota stráži v tabuľke a v hlave. Funguje to. Kým niekto neochorie.</p>
+          <p>To isté mesto má v Centrálnom registri zmlúv vyše tisíc zmlúv za jeden rok a k nim ani jeden prehľad, v ktorom by sa občan vyznal. Všetko je verejné. Kto chce vedieť, kto opravuje cestu pred jeho domom a za koľko, otvára PDF po jednom.</p>
+          <p>Preto Civora začína zmluvami. Sú nudné, ja viem. Lenže práve na nudných veciach sa ukáže, či sa obci dá veriť, pretože tam nikto nečaká, že sa niekto pozrie.</p>
+          <p>Kód Civory je verejný na GitHube. Úradník aj zvedavý sused si môžu prečítať, čo program robí s ich údajmi.</p>
+          <p>Raz by som chcel, aby takto otvorene spolu fungovali ľudia a ich samosprávy aj inde v Európe a možno vo svete. Dnes mi stačí jedna obec, ktorej utorok bude pokojnejší.</p>
+          <p>Ak sa vás to týka, napíšte mi. Odpíšem sám.</p>
           <p class="sign">Denys Kozlov</p>
           <p class="role">zakladateľ</p>
         </div>
