@@ -115,10 +115,11 @@ def render(s, slug, demo_href):
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
-<meta name="theme-color" content="#0b5cad">
+<meta name="theme-color" content="#fbf6ee">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/alegreya-sans-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/source-sans-3-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/source-sans-3-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 {CSS}
 </style>
@@ -126,50 +127,50 @@ def render(s, slug, demo_href):
 <body>
 <a class="skip" href="#obsah">Preskočiť na obsah</a>
 <header class="top wrap">
-  <a class="brand" href="https://civora.sk/" rel="noreferrer"><svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect width="28" height="28" rx="6" fill="#0b5cad"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Civora</a>
+  <a class="brand" href="https://civora.sk/" rel="noreferrer" aria-label="Civora"><img src="/brand/wordmark.svg" width="118" height="36" alt="Civora"></a>
   <p class="meta">Pripravené pre mesto · údaje k {data_sk}</p>
 </header>
-<main id="obsah" class="wrap">
-  <section class="intro">
+<main id="obsah">
+  <section class="band band--intro"><div class="wrap">
     <h1>{e(town)} v&nbsp;číslach</h1>
     <p class="lead">Za {s['window']['months']} mesiacov ({e(per)}) bolo v&nbsp;Centrálnom registri zmlúv zverejnených {num(total)} {plural(total, 'zmluva alebo dodatok', 'zmluvy alebo dodatky', 'zmlúv a dodatkov')}, pri ktorých je {e(town)} zmluvnou stranou.
     Pripravili sme prehľad z&nbsp;verejných údajov, aby bolo vidieť, čo sa z&nbsp;nich dá jednoducho prečítať.</p>
-  </section>
+  </div></section>
 
-  <section aria-labelledby="h-cisla">
+  <section class="band band--cream" aria-labelledby="h-cisla"><div class="wrap">
     <h2 id="h-cisla">Štyri čísla</h2>
     <dl class="facts">{facts_html}</dl>
-  </section>
+  </div></section>
 
-  <section aria-labelledby="h-mesiace">
+  <section class="band" aria-labelledby="h-mesiace"><div class="wrap">
     <h2 id="h-mesiace">Zmluvy po mesiacoch</h2>
     <p class="sub">Podľa dátumu podpisu. Dĺžka pruhu zodpovedá počtu zmlúv a dodatkov, vedľa je podpísaná hodnota zmlúv so sumou.</p>
     <table class="trend"><caption class="sr">Počet zmlúv a dodatkov podľa mesiaca podpisu</caption>
     <thead class="sr"><tr><th scope="col">Mesiac</th><th scope="col">Počet zmlúv a hodnota</th></tr></thead><tbody>{trend_html}</tbody></table>
-  </section>
+  </div></section>
 
-  <section aria-labelledby="h-top">
+  <section class="band band--cream" aria-labelledby="h-top"><div class="wrap">
     <h2 id="h-top">Desať najväčších zmlúv podľa sumy</h2>
     <p class="sub">Bez dodatkov. Zmluvnú stranu uvádzame len pri právnických osobách. Každá zmluva odkazuje na originál v CRZ.</p>
     <table class="data"><caption class="sr">Desať zmlúv s najvyššou sumou</caption>
     <thead class="sr"><tr><th scope="col">Poradie</th><th scope="col">Predmet a zmluvná strana</th><th scope="col">Suma</th><th scope="col">Odkaz</th></tr></thead><tbody>{''.join(top_rows)}</tbody></table>
-  </section>
+  </div></section>
 
-  <section aria-labelledby="h-dod">
+  <section class="band" aria-labelledby="h-dod"><div class="wrap">
     <h2 id="h-dod">Najväčšie zmluvné strany</h2>
     <p class="sub">Dodávatelia, ale aj poskytovatelia dotácií a úverov. Zoradené podľa podpísanej hodnoty zmlúv, bez dodatkov. Uvádzame iba právnické osoby s IČO.
     {num(sup['aggregated_contracts'])} z&nbsp;{num(sup['main_contracts'])} zmlúv (fyzické osoby, živnostníci a strany bez IČO) zobrazujeme len súhrnne.</p>
     {sup_block}
-  </section>
+  </div></section>
 
-  <section class="next no-print" aria-labelledby="h-dalej">
+  <section class="band next no-print" aria-labelledby="h-dalej"><div class="wrap">
     <h2 id="h-dalej">Čo s tým ďalej</h2>
     <p>Tieto čísla nehodnotia prácu úradu. Suma 0&nbsp;€ je pri rámcových, nájomných či bezodplatných zmluvách bežná a zverejnenie do niekoľkých dní je v&nbsp;poriadku. Zaujímavé sú otázky, na ktoré sa dá odpovedať rýchlo: ktoré zmluvy nemajú sumu a prečo, ako dlho trvá cesta od podpisu po zverejnenie, čo sa zverejnilo minulý mesiac.</p>
     <p>Civora Zmluvy drží celý postup (návrh, kontrolu, zverejnenie a prepojenie na CRZ) na jednom mieste, takže tieto odpovede sú po ruke.</p>
     <p><a class="btn" href="{e(demo_href)}">Takto by to vyzeralo u&nbsp;vás</a></p>
-  </section>
+  </div></section>
 
-  <section class="method" aria-labelledby="h-metoda">
+  <section class="band method" aria-labelledby="h-metoda"><div class="wrap">
     <h2 id="h-metoda">Ako sme to počítali</h2>
     <ul>
       <li><strong>Zdroj.</strong> Centrálny register zmlúv (crz.gov.sk) v&nbsp;podobe otvorených údajov na ekosystem.slovensko.digital. Údaje sú k&nbsp;{data_sk}.</li>
@@ -180,7 +181,7 @@ def render(s, slug, demo_href):
       <li><strong>Zverejnenie.</strong> Rozdiel medzi dátumom podpisu a dátumom zverejnenia v&nbsp;CRZ, medián zo všetkých {num(dl['n'])} {plural(dl['n'], 'zmluvy', 'zmlúv', 'zmlúv')} so známym dátumom. Čerstvo podpísané zmluvy nemusia byť ešte zverejnené.</li>
       <li><strong>Mená.</strong> Zmluvné strany pomenúvame len vtedy, keď ide o právnickú osobu s IČO. Živnostníci sú fyzické osoby, preto sa spolu s ostatnými fyzickými osobami ukazujú len v&nbsp;súčtoch.</li>
     </ul>
-  </section>
+  </div></section>
 </main>
 <footer class="wrap">
   <p class="attr">Zdroj údajov: Centrálny register zmlúv Slovenskej republiky, sprístupnený cez <a href="https://ekosystem.slovensko.digital/" rel="noreferrer noopener">ekosystem.slovensko.digital</a> pod licenciou <a href="https://creativecommons.org/licenses/by/4.0/deed.sk" rel="noreferrer noopener">CC BY 4.0</a>. Výpočty a spracovanie: Civora.</p>
