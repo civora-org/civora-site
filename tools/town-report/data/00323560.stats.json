@@ -1,0 +1,244 @@
+{
+  "ico": "00323560",
+  "town": "Mesto Snina",
+  "window": {
+    "from": "2025-10-01",
+    "to": "2026-09-30",
+    "months": 12
+  },
+  "data_date": "2026-10-14",
+  "contracts": {
+    "total": 563,
+    "amendments": 151,
+    "main": 412,
+    "duplicates_removed": 26
+  },
+  "amount": {
+    "with_amount": 292,
+    "value_eur": 7435592,
+    "no_amount": 120,
+    "no_amount_pct": 29,
+    "median_eur": 109
+  },
+  "delay": {
+    "n": 563,
+    "median_days": 5,
+    "within_7_pct": 61,
+    "over_30_pct": 2
+  },
+  "trend": [
+    {
+      "month": "2025-10",
+      "label": "október",
+      "year": 2025,
+      "contracts": 30,
+      "value_eur": 184687
+    },
+    {
+      "month": "2025-11",
+      "label": "november",
+      "year": 2025,
+      "contracts": 77,
+      "value_eur": 10635
+    },
+    {
+      "month": "2025-12",
+      "label": "december",
+      "year": 2025,
+      "contracts": 27,
+      "value_eur": 791515
+    },
+    {
+      "month": "2026-01",
+      "label": "január",
+      "year": 2026,
+      "contracts": 20,
+      "value_eur": 370658
+    },
+    {
+      "month": "2026-02",
+      "label": "február",
+      "year": 2026,
+      "contracts": 47,
+      "value_eur": 1002457
+    },
+    {
+      "month": "2026-03",
+      "label": "marec",
+      "year": 2026,
+      "contracts": 72,
+      "value_eur": 469568
+    },
+    {
+      "month": "2026-04",
+      "label": "apríl",
+      "year": 2026,
+      "contracts": 70,
+      "value_eur": 734818
+    },
+    {
+      "month": "2026-05",
+      "label": "máj",
+      "year": 2026,
+      "contracts": 74,
+      "value_eur": 2588047
+    },
+    {
+      "month": "2026-06",
+      "label": "jún",
+      "year": 2026,
+      "contracts": 46,
+      "value_eur": 173026
+    },
+    {
+      "month": "2026-07",
+      "label": "júl",
+      "year": 2026,
+      "contracts": 33,
+      "value_eur": 403336
+    },
+    {
+      "month": "2026-08",
+      "label": "august",
+      "year": 2026,
+      "contracts": 26,
+      "value_eur": 110626
+    },
+    {
+      "month": "2026-09",
+      "label": "september",
+      "year": 2026,
+      "contracts": 41,
+      "value_eur": 596220
+    }
+  ],
+  "top_contracts": [
+    {
+      "id": 12333642,
+      "signed_on": "2026-05-12",
+      "amount_eur": 1381080,
+      "counterparty": "Štátny fond rozvoja bývania",
+      "counterparty_ico": "31749542",
+      "subject": "Zmluva o úvere č. 700/167/2026",
+      "category": "úver alebo financovanie"
+    },
+    {
+      "id": 12345030,
+      "signed_on": "2026-05-13",
+      "amount_eur": 920720,
+      "counterparty": "Ministerstvo dopravy SR",
+      "counterparty_ico": "30416094",
+      "subject": "Zmluva č. 0005-PRB/2026 o poskytnutí dotácie na obstaranie nájomných bytov",
+      "category": "nájom"
+    },
+    {
+      "id": 11997935,
+      "signed_on": "2026-02-12",
+      "amount_eur": 792876,
+      "counterparty": "Ministerstvo práce, sociálnych vecí a rodiny SR",
+      "counterparty_ico": "00681156",
+      "subject": "Zmluva o poskytnutí finančného príspevku na poskytovanie sociálnej služby v zariadeniach podmienených…",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12227045,
+      "signed_on": "2026-04-14",
+      "amount_eur": 689147,
+      "counterparty": "EUROVIA SK, a.s.",
+      "counterparty_ico": "31651518",
+      "subject": "Zmluva o dielo č. 3/2026/OV",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 12776640,
+      "signed_on": "2026-09-08",
+      "amount_eur": 594325,
+      "counterparty": "COLAS Slovakia, a.s.",
+      "counterparty_ico": "31651402",
+      "subject": "Zmluva o dielo č. 8/2026/OV",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 11863777,
+      "signed_on": "2026-01-16",
+      "amount_eur": 350000,
+      "counterparty": "Mestský podnik Snina, s. r. o., r. s. p.",
+      "counterparty_ico": "52532810",
+      "subject": "Zmluva o poskytnutní dotácie",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12570511,
+      "signed_on": "2026-07-09",
+      "amount_eur": 300000,
+      "counterparty": "Mestský podnik Snina, s. r. o., r. s. p.",
+      "counterparty_ico": "52532810",
+      "subject": "Zmluva o poskytnutí dotácie",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11803871,
+      "signed_on": "2025-12-22",
+      "amount_eur": 268980,
+      "counterparty": "Košická arcidiecéza",
+      "counterparty_ico": "00179094",
+      "subject": "Zmluva č. 01/2026 o poskytnutí fin. prostriedkov na mzdy a prevádzku škôl a škols. zariadení",
+      "category": "služby alebo dodávka"
+    },
+    {
+      "id": 12081090,
+      "signed_on": "2026-03-09",
+      "amount_eur": 259712,
+      "counterparty": "KG-STAV GROUP s.r.o.",
+      "counterparty_ico": "50180746",
+      "subject": "ZMLUVA O DIELO č. 2/2026/OV",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 11803873,
+      "signed_on": "2025-12-22",
+      "amount_eur": 190000,
+      "counterparty": "Súkromná základná umelecká škola, Česká 2628/9, Snina",
+      "counterparty_ico": "37941542",
+      "subject": "Zmluva č. 05/2026 o poskytnutí fin. prostriedkov na mzdy a prevádzku škôl a školských zariadení",
+      "category": "služby alebo dodávka"
+    }
+  ],
+  "suppliers": {
+    "top": [
+      {
+        "name": "Štátny fond rozvoja bývania",
+        "ico": "31749542",
+        "contracts": 4,
+        "value_eur": 1527270
+      },
+      {
+        "name": "Ministerstvo dopravy SR",
+        "ico": "30416094",
+        "contracts": 2,
+        "value_eur": 973680
+      },
+      {
+        "name": "Ministerstvo práce, sociálnych vecí a rodiny SR",
+        "ico": "00681156",
+        "contracts": 1,
+        "value_eur": 792876
+      },
+      {
+        "name": "EUROVIA SK, a.s.",
+        "ico": "31651518",
+        "contracts": 1,
+        "value_eur": 689147
+      },
+      {
+        "name": "Mestský podnik Snina, s. r. o., r. s. p.",
+        "ico": "52532810",
+        "contracts": 3,
+        "value_eur": 650000
+      }
+    ],
+    "main_contracts": 412,
+    "named_contracts": 245,
+    "aggregated_contracts": 167
+  }
+}

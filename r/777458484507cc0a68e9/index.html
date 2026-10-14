@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesto Snina v číslach · Civora</title>
+<meta name="description" content="Prehľad zmlúv mesta v Centrálnom registri zmlúv, október 2025 až september 2026.">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#fbf6ee">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/alegreya-sans-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/alegreya-sans-latin-ext-700.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/alegreya-sans-latin-700.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/source-sans-3-sk-ext-400.woff2') format('woff2');unicode-range:U+010C-010F,U+011A-011B,U+0139-013A,U+013D-013E,U+0147-0148,U+0154-0155,U+0158-0159,U+0160-0161,U+0164-0165,U+016E-016F,U+017D-017E}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/source-sans-3-latin-400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/source-sans-3-sk-ext-600.woff2') format('woff2');unicode-range:U+010C-010F,U+011A-011B,U+0139-013A,U+013D-013E,U+0147-0148,U+0154-0155,U+0158-0159,U+0160-0161,U+0164-0165,U+016E-016F,U+017D-017E}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/source-sans-3-latin-600.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/source-sans-3-sk-ext-700.woff2') format('woff2');unicode-range:U+010C-010F,U+011A-011B,U+0139-013A,U+013D-013E,U+0147-0148,U+0154-0155,U+0158-0159,U+0160-0161,U+0164-0165,U+016E-016F,U+017D-017E}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/source-sans-3-latin-700.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* Dvere identity. Token names and values match /brand/tokens.css. */
+:root{
+  --civora-indigo:#34408a;--civora-indigo-deep:#232c63;--civora-terracotta:#b5523a;--civora-terracotta-deep:#9a4430;
+  --civora-clay-tint:#f4d9cc;--civora-paper:#fbf6ee;--civora-cream:#f3e9db;--civora-rule:#e3d8c8;
+  --civora-ink:#2b2a40;--civora-muted:#5b576c;
+  --civora-font-display:"Alegreya Sans",system-ui,sans-serif;
+  --civora-font-text:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --civora-radius:10px;--civora-measure:66ch;--gutter:clamp(20px,5vw,48px);
+  scrollbar-color:#b9ab97 var(--civora-paper);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--civora-paper);color:var(--civora-ink);font-family:var(--civora-font-text);
+  font-size:1.0625rem;line-height:1.55;font-variant-numeric:lining-nums tabular-nums;-webkit-font-smoothing:antialiased;overflow-x:clip}
+::selection{background:var(--civora-clay-tint);color:var(--civora-ink)}
+a{color:var(--civora-indigo);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--civora-indigo-deep);text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--civora-indigo);outline-offset:3px;border-radius:4px}
+.wrap{max-width:900px;margin:0 auto;padding-inline:var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--civora-ink);color:#fff;padding:10px 16px;border-radius:var(--civora-radius);z-index:10}
+.skip:focus{left:var(--gutter)}
+.skip,.skip:hover{color:#fff}
+h1,h2{margin:0;font-family:var(--civora-font-display);font-weight:700;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(2.25rem,1.4rem + 3.6vw,3.5rem);letter-spacing:-.012em}
+h2{font-size:clamp(1.65rem,1.2rem + 1.5vw,2.25rem);letter-spacing:-.008em}
+p{margin:0;max-width:var(--civora-measure);text-wrap:pretty}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px 20px;flex-wrap:wrap;padding-block:18px}
+.brand{display:block;line-height:0;border-radius:4px}
+.brand img{height:36px;width:auto}
+.meta{font-size:.9375rem;color:var(--civora-muted)}
+
+.band{padding-block:clamp(36px,6vw,64px)}
+.band--cream{background:var(--civora-cream)}
+.band--intro{padding-block:clamp(20px,4vw,48px) clamp(36px,6vw,64px)}
+.lead{font-size:1.25rem;line-height:1.5;color:var(--civora-muted);margin-top:20px;max-width:52ch}
+.sub{color:var(--civora-muted);margin-top:8px;font-size:1rem}
+h2+*{margin-top:22px}h2+.sub{margin-top:8px}h2+.sub+*{margin-top:22px}
+
+.facts{margin:22px 0 0;display:grid;grid-template-columns:1fr;gap:0 48px}
+.fact{padding-block:18px;border-top:1px solid var(--civora-rule)}
+.fact:first-child{border-top:0}
+.fact dt{font-weight:600;font-size:1rem}
+.fact dd{margin:0}
+.fact .big{font-family:var(--civora-font-display);font-size:3rem;font-weight:700;line-height:1.05;letter-spacing:-.012em;color:var(--civora-indigo);margin-top:4px}
+.fact .note{color:var(--civora-muted);font-size:.9375rem;margin-top:6px;max-width:46ch}
+@media(min-width:720px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(2){border-top:0}}
+
+table{width:100%;border-collapse:collapse}
+.trend th,.trend td{padding:7px 0;border-top:1px solid var(--civora-rule);vertical-align:middle;text-align:left}
+.trend tbody tr:first-child>*{border-top:0}
+.trend th{font-weight:400;white-space:nowrap;padding-right:14px;width:1%;font-size:1rem}
+.bar{display:block;height:.75rem;background:var(--civora-indigo);border-radius:2px}
+.barlabel{display:block;font-size:.9375rem;margin-top:2px}
+.barlabel .val{color:var(--civora-muted)}
+.data th,.data td{text-align:left;vertical-align:top}
+.data tbody tr{border-top:1px solid var(--civora-rule)}
+.data tbody tr:first-child{border-top:0}
+.data td{padding:12px 0}
+.rank{width:2.2rem;color:var(--civora-muted);font-weight:600}
+.what{padding-right:16px}
+.subject{display:block;font-weight:600;line-height:1.35}
+.who{display:block;color:var(--civora-muted);font-size:.9375rem;margin-top:2px}
+.amt,.n{text-align:right!important;white-space:nowrap;padding-left:14px!important}
+.data td.amt,.data td.n{font-weight:600;line-height:1.35}
+.data thead:not(.sr) th{font-size:.9375rem;color:var(--civora-muted);font-weight:600;padding:0 0 8px}
+.data td.crz{width:5.5rem;text-align:right;padding-left:14px}
+@media(max-width:639px){
+  .data:has(.rank) tbody tr{display:grid;grid-template-columns:2rem 1fr auto;grid-template-areas:"r w w" ". a c";gap:2px 0;padding-block:12px}
+  .data:has(.rank) td{padding:0}.rank{grid-area:r}.what{grid-area:w;padding-right:0}
+  .data:has(.rank) .amt{grid-area:a;text-align:left!important;padding:4px 0 0!important}
+  .data:has(.rank) td.crz{grid-area:c;width:auto;padding:4px 0 0}
+}
+
+/* the one strict band, and the one terracotta action */
+.next{background:var(--civora-indigo-deep);color:var(--civora-paper)}
+.next p{color:#e3dcee}.next p+p{margin-top:12px}.next p:last-child{margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border-radius:999px;background:var(--civora-terracotta);
+  color:#fff;font-weight:600;font-size:1.0625rem;text-decoration:none;border:1px solid var(--civora-terracotta)}
+.btn:hover{background:var(--civora-terracotta-deep);border-color:var(--civora-terracotta-deep);color:#fff}
+.next :focus-visible{outline-color:var(--civora-paper)}
+
+.method ul{margin:22px 0 0;padding-left:1.1rem;max-width:68ch;color:var(--civora-muted);font-size:1rem}
+.method li+li{margin-top:8px}.method strong{color:var(--civora-ink)}
+footer{border-top:1px solid var(--civora-rule);padding-block:28px 48px;font-size:.9375rem;color:var(--civora-muted)}
+footer p{max-width:70ch}footer .contact{margin-top:8px}
+@media(prefers-reduced-motion:no-preference){.btn{transition:background-color .15s ease,border-color .15s ease}}
+
+@page{size:A4;margin:14mm 14mm}
+@media print{
+  body{font-size:10.5pt;line-height:1.4;color:#000;background:#fff}
+  .skip,.no-print{display:none!important}
+  .wrap{max-width:none;padding-inline:0}
+  .top{padding-block:0 8pt}.brand img{height:28px}
+  h1{font-size:24pt}h2{font-size:14pt;break-after:avoid}
+  .band:not(.next){background:#fff;padding-block:16px;break-inside:avoid}
+  .fact .big{font-size:22pt}
+  .facts{break-inside:avoid}.fact,tr{break-inside:avoid}
+  .bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a{color:#000;text-decoration:none}
+  .lead,.sub,.fact .note,.method ul,.who,.meta,footer{color:#333}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#obsah">Preskočiť na obsah</a>
+<header class="top wrap">
+  <a class="brand" href="https://civora.sk/" rel="noreferrer" aria-label="Civora"><img src="/brand/wordmark.svg" width="118" height="36" alt="Civora"></a>
+  <p class="meta">Pripravené pre mesto · údaje k 14. 10. 2026</p>
+</header>
+<main id="obsah">
+  <section class="band band--intro"><div class="wrap">
+    <h1>Mesto Snina v&nbsp;číslach</h1>
+    <p class="lead">Za 12 mesiacov (október 2025 až september 2026) bolo v&nbsp;Centrálnom registri zmlúv zverejnených 563 zmlúv a dodatkov, pri ktorých je Mesto Snina zmluvnou stranou.
+    Pripravili sme prehľad z&nbsp;verejných údajov, aby bolo vidieť, čo sa z&nbsp;nich dá jednoducho prečítať.</p>
+  </div></section>
+
+  <section class="band band--cream" aria-labelledby="h-cisla"><div class="wrap">
+    <h2 id="h-cisla">Štyri čísla</h2>
+    <dl class="facts"><div class="fact"><dt>zmlúv a dodatkov s mestom</dt><dd class="big">563</dd><dd class="note">Z toho 412 zmlúv a 151 dodatkov. Dodatky počítame zvlášť, lebo zvyčajne menia podmienky a nie cenu.</dd></div><div class="fact"><dt>podpísaná hodnota zmlúv so sumou</dt><dd class="big">7,4 mil. €</dd><dd class="note">292 zmlúv s uvedenou sumou, medián 109 €. Je to hodnota z textu zmlúv, nie ročné výdavky mesta. Zahŕňa aj príjmy, úvery či viacročné zmluvy.</dd></div><div class="fact"><dt>zmlúv bez uvedenej sumy</dt><dd class="big">29 %</dd><dd class="note">120 z 412 zmlúv (bez dodatkov). CRZ zapisuje sumu 0 € aj tam, kde ide o rámcovú, bezodplatnú alebo nájomnú zmluvu, takže to nie je chyba, ale je to miesto, kde sa dá zlepšiť čitateľnosť.</dd></div><div class="fact"><dt>medián od podpisu po zverejnenie</dt><dd class="big">5 dní</dd><dd class="note">61 % zmlúv je zverejnených do 7 dní, 2 % po viac ako 30 dňoch.</dd></div></dl>
+  </div></section>
+
+  <section class="band" aria-labelledby="h-mesiace"><div class="wrap">
+    <h2 id="h-mesiace">Zmluvy po mesiacoch</h2>
+    <p class="sub">Podľa dátumu podpisu. Dĺžka pruhu zodpovedá počtu zmlúv a dodatkov, vedľa je podpísaná hodnota zmlúv so sumou.</p>
+    <table class="trend"><caption class="sr">Počet zmlúv a dodatkov podľa mesiaca podpisu</caption>
+    <thead class="sr"><tr><th scope="col">Mesiac</th><th scope="col">Počet zmlúv a hodnota</th></tr></thead><tbody><tr><th scope="row">október 2025</th><td><span class="bar" style="width:39%"></span><span class="barlabel">30<span class="val"> · 184 687 €</span></span></td></tr><tr><th scope="row">november 2025</th><td><span class="bar" style="width:100%"></span><span class="barlabel">77<span class="val"> · 10 635 €</span></span></td></tr><tr><th scope="row">december 2025</th><td><span class="bar" style="width:35%"></span><span class="barlabel">27<span class="val"> · 791 515 €</span></span></td></tr><tr><th scope="row">január 2026</th><td><span class="bar" style="width:26%"></span><span class="barlabel">20<span class="val"> · 370 658 €</span></span></td></tr><tr><th scope="row">február 2026</th><td><span class="bar" style="width:61%"></span><span class="barlabel">47<span class="val"> · 1,0 mil. €</span></span></td></tr><tr><th scope="row">marec 2026</th><td><span class="bar" style="width:94%"></span><span class="barlabel">72<span class="val"> · 469 568 €</span></span></td></tr><tr><th scope="row">apríl 2026</th><td><span class="bar" style="width:91%"></span><span class="barlabel">70<span class="val"> · 734 818 €</span></span></td></tr><tr><th scope="row">máj 2026</th><td><span class="bar" style="width:96%"></span><span class="barlabel">74<span class="val"> · 2,6 mil. €</span></span></td></tr><tr><th scope="row">jún 2026</th><td><span class="bar" style="width:60%"></span><span class="barlabel">46<span class="val"> · 173 026 €</span></span></td></tr><tr><th scope="row">júl 2026</th><td><span class="bar" style="width:43%"></span><span class="barlabel">33<span class="val"> · 403 336 €</span></span></td></tr><tr><th scope="row">august 2026</th><td><span class="bar" style="width:34%"></span><span class="barlabel">26<span class="val"> · 110 626 €</span></span></td></tr><tr><th scope="row">september 2026</th><td><span class="bar" style="width:53%"></span><span class="barlabel">41<span class="val"> · 596 220 €</span></span></td></tr></tbody></table>
+  </div></section>
+
+  <section class="band band--cream" aria-labelledby="h-top"><div class="wrap">
+    <h2 id="h-top">Desať najväčších zmlúv podľa sumy</h2>
+    <p class="sub">Bez dodatkov. Zmluvnú stranu uvádzame len pri právnických osobách. Každá zmluva odkazuje na originál v CRZ.</p>
+    <table class="data"><caption class="sr">Desať zmlúv s najvyššou sumou</caption>
+    <thead class="sr"><tr><th scope="col">Poradie</th><th scope="col">Predmet a zmluvná strana</th><th scope="col">Suma</th><th scope="col">Odkaz</th></tr></thead><tbody><tr><td class="rank">1</td><td class="what"><span class="subject">Zmluva o úvere č. 700/167/2026</span><span class="who">Štátny fond rozvoja bývania · 12. 5. 2026</span></td><td class="amt">1 381 080 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12333642/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12333642</span></a></td></tr><tr><td class="rank">2</td><td class="what"><span class="subject">Zmluva č. 0005-PRB/2026 o poskytnutí dotácie na obstaranie nájomných bytov</span><span class="who">Ministerstvo dopravy SR · 13. 5. 2026</span></td><td class="amt">920 720 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12345030/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12345030</span></a></td></tr><tr><td class="rank">3</td><td class="what"><span class="subject">Zmluva o poskytnutí finančného príspevku na poskytovanie sociálnej služby v zariadeniach podmienených…</span><span class="who">Ministerstvo práce, sociálnych vecí a rodiny SR · 12. 2. 2026</span></td><td class="amt">792 876 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/11997935/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 11997935</span></a></td></tr><tr><td class="rank">4</td><td class="what"><span class="subject">Zmluva o dielo č. 3/2026/OV</span><span class="who">EUROVIA SK, a.s. · 14. 4. 2026</span></td><td class="amt">689 147 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12227045/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12227045</span></a></td></tr><tr><td class="rank">5</td><td class="what"><span class="subject">Zmluva o dielo č. 8/2026/OV</span><span class="who">COLAS Slovakia, a.s. · 8. 9. 2026</span></td><td class="amt">594 325 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12776640/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12776640</span></a></td></tr><tr><td class="rank">6</td><td class="what"><span class="subject">Zmluva o poskytnutní dotácie</span><span class="who">Mestský podnik Snina, s. r. o., r. s. p. · 16. 1. 2026</span></td><td class="amt">350 000 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/11863777/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 11863777</span></a></td></tr><tr><td class="rank">7</td><td class="what"><span class="subject">Zmluva o poskytnutí dotácie</span><span class="who">Mestský podnik Snina, s. r. o., r. s. p. · 9. 7. 2026</span></td><td class="amt">300 000 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12570511/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12570511</span></a></td></tr><tr><td class="rank">8</td><td class="what"><span class="subject">Zmluva č. 01/2026 o poskytnutí fin. prostriedkov na mzdy a prevádzku škôl a škols. zariadení</span><span class="who">Košická arcidiecéza · 22. 12. 2025</span></td><td class="amt">268 980 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/11803871/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 11803871</span></a></td></tr><tr><td class="rank">9</td><td class="what"><span class="subject">ZMLUVA O DIELO č. 2/2026/OV</span><span class="who">KG-STAV GROUP s.r.o. · 9. 3. 2026</span></td><td class="amt">259 712 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12081090/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12081090</span></a></td></tr><tr><td class="rank">10</td><td class="what"><span class="subject">Zmluva č. 05/2026 o poskytnutí fin. prostriedkov na mzdy a prevádzku škôl a školských zariadení</span><span class="who">Súkromná základná umelecká škola, Česká 2628/9, Snina · 22. 12. 2025</span></td><td class="amt">190 000 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/11803873/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 11803873</span></a></td></tr></tbody></table>
+  </div></section>
+
+  <section class="band" aria-labelledby="h-dod"><div class="wrap">
+    <h2 id="h-dod">Najväčšie zmluvné strany</h2>
+    <p class="sub">Dodávatelia, ale aj poskytovatelia dotácií a úverov. Zoradené podľa podpísanej hodnoty zmlúv, bez dodatkov. Uvádzame iba právnické osoby s IČO.
+    167 z&nbsp;412 zmlúv (fyzické osoby, živnostníci a strany bez IČO) zobrazujeme len súhrnne.</p>
+    <table class="data"><caption class="sr">Najväčší dodávatelia podľa hodnoty zmlúv</caption><thead><tr><th scope="col">Zmluvná strana</th><th scope="col" class="n">Zmlúv</th><th scope="col" class="amt">Hodnota</th></tr></thead><tbody><tr><td class="what"><span class="subject">Štátny fond rozvoja bývania</span><span class="who">IČO 31749542</span></td><td class="n">4</td><td class="amt">1 527 270 €</td></tr><tr><td class="what"><span class="subject">Ministerstvo dopravy SR</span><span class="who">IČO 30416094</span></td><td class="n">2</td><td class="amt">973 680 €</td></tr><tr><td class="what"><span class="subject">Ministerstvo práce, sociálnych vecí a rodiny SR</span><span class="who">IČO 00681156</span></td><td class="n">1</td><td class="amt">792 876 €</td></tr><tr><td class="what"><span class="subject">EUROVIA SK, a.s.</span><span class="who">IČO 31651518</span></td><td class="n">1</td><td class="amt">689 147 €</td></tr><tr><td class="what"><span class="subject">Mestský podnik Snina, s. r. o., r. s. p.</span><span class="who">IČO 52532810</span></td><td class="n">3</td><td class="amt">650 000 €</td></tr></tbody></table>
+  </div></section>
+
+  <section class="band next no-print" aria-labelledby="h-dalej"><div class="wrap">
+    <h2 id="h-dalej">Čo s tým ďalej</h2>
+    <p>Tieto čísla nehodnotia prácu úradu. Suma 0&nbsp;€ je pri rámcových, nájomných či bezodplatných zmluvách bežná a zverejnenie do niekoľkých dní je v&nbsp;poriadku. Zaujímavé sú otázky, na ktoré sa dá odpovedať rýchlo: ktoré zmluvy nemajú sumu a prečo, ako dlho trvá cesta od podpisu po zverejnenie, čo sa zverejnilo minulý mesiac.</p>
+    <p>Civora Zmluvy drží celý postup (návrh, kontrolu, zverejnenie a prepojenie na CRZ) na jednom mieste, takže tieto odpovede sú po ruke.</p>
+    <p><a class="btn" href="mailto:denys@civora.sk?subject=Ukážka%20Civora%20Zmluvy%20pre%20Mesto%20Snina">Takto by to vyzeralo u&nbsp;vás</a></p>
+  </div></section>
+
+  <section class="band method" aria-labelledby="h-metoda"><div class="wrap">
+    <h2 id="h-metoda">Ako sme to počítali</h2>
+    <ul>
+      <li><strong>Zdroj.</strong> Centrálny register zmlúv (crz.gov.sk) v&nbsp;podobe otvorených údajov na ekosystem.slovensko.digital. Údaje sú k&nbsp;14. 10. 2026.</li>
+      <li><strong>Obdobie.</strong> Zmluvy podpísané od 1. 10. 2025 do 30. 9. 2026 (posledných 12 úplných mesiacov). Zmluva sa počíta, ak je Mesto Snina (IČO 00323560) ktoroukoľvek stranou. Mestské firmy a rozpočtové organizácie majú vlastné IČO a nie sú zahrnuté.</li>
+      <li><strong>Dvojité záznamy.</strong> CRZ vedie záznam od každej zverejňujúcej strany. Ak tú istú zmluvu zverejnili obe strany (rovnaká zmluvná strana, dátum podpisu a suma), počítame ju raz (odstránených 26).</li>
+      <li><strong>Dodatky</strong> poznáme podľa slova „dodatok“ v&nbsp;predmete zmluvy, lebo označenie druhu v&nbsp;zdroji nie je spoľahlivé. Môže ich byť o niečo viac či menej.</li>
+      <li><strong>Suma.</strong> Berieme sumu zo zmluvy zapísanú v&nbsp;CRZ. CRZ nerozlišuje „nie je známa“, „bezodplatné“ a „0 €“, preto „bez sumy“ znamená, že suma je 0 € alebo chýba. Sumy sa nerozpočítavajú na roky a nie sú audit hospodárenia.</li>
+      <li><strong>Zverejnenie.</strong> Rozdiel medzi dátumom podpisu a dátumom zverejnenia v&nbsp;CRZ, medián zo všetkých 563 zmlúv so známym dátumom. Čerstvo podpísané zmluvy nemusia byť ešte zverejnené.</li>
+      <li><strong>Mená.</strong> Zmluvné strany pomenúvame len vtedy, keď ide o právnickú osobu s IČO. Živnostníci sú fyzické osoby, preto sa spolu s ostatnými fyzickými osobami ukazujú len v&nbsp;súčtoch.</li>
+    </ul>
+  </div></section>
+</main>
+<footer class="wrap">
+  <p class="attr">Zdroj údajov: Centrálny register zmlúv Slovenskej republiky, sprístupnený cez <a href="https://ekosystem.slovensko.digital/" rel="noreferrer noopener">ekosystem.slovensko.digital</a> pod licenciou <a href="https://creativecommons.org/licenses/by/4.0/deed.sk" rel="noreferrer noopener">CC BY 4.0</a>. Výpočty a spracovanie: Civora.</p>
+  <p class="contact">Denys Kozlov · <a href="mailto:denys@civora.sk">denys@civora.sk</a> · <a href="tel:+421944926570">+421 944 926 570</a></p>
+</footer>
+</body>
+</html>
