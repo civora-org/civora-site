@@ -65,6 +65,7 @@
   ]
 }
 </script>
+<script>document.documentElement.classList.add("js")</script>
 <style>
 @font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/alegreya-sans-latin-ext-700.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
 @font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/alegreya-sans-latin-700.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
@@ -72,6 +73,7 @@
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:optional;src:url('fonts/source-sans-3-latin-400.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('fonts/source-sans-3-sk-ext-600.woff2') format('woff2');unicode-range:U+010C-010F, U+011A-011B, U+0139-013A, U+013D-013E, U+0147-0148, U+0154-0155, U+0158-0159, U+0160-0161, U+0164-0165, U+016E-016F, U+017D-017E}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('fonts/source-sans-3-latin-600.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
 
 /* Dvere identity. Token names and values match brand/tokens.css. */
 :root{
@@ -90,7 +92,10 @@
   --civora-font-text:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
   --civora-radius:10px;
   --civora-measure:66ch;
+  --ease:cubic-bezier(.16,1,.3,1);
   --gutter:clamp(20px,5vw,48px);
+  /* modrotlač: paper print on indigo cloth */
+  --mr:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cg fill='%23fbf6ee'%3E%3Ccircle cx='11' cy='11' r='2.4'/%3E%3Ccircle cx='11' cy='5' r='1.7'/%3E%3Ccircle cx='11' cy='17' r='1.7'/%3E%3Ccircle cx='5' cy='11' r='1.7'/%3E%3Ccircle cx='17' cy='11' r='1.7'/%3E%3Ccircle cx='0' cy='0' r='1.3'/%3E%3Ccircle cx='22' cy='0' r='1.3'/%3E%3Ccircle cx='0' cy='22' r='1.3'/%3E%3Ccircle cx='22' cy='22' r='1.3'/%3E%3C/g%3E%3C/svg%3E");
   scrollbar-color:#b9ab97 var(--civora-paper);
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -109,6 +114,8 @@ a:hover{color:var(--civora-indigo-deep);text-decoration-thickness:2px}
 .skip{position:absolute;left:-9999px;top:8px;background:var(--civora-ink);color:#fff;padding:10px 16px;border-radius:var(--civora-radius);z-index:10}
 .skip:focus{left:var(--gutter)}
 .wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gutter)}
+.narrow{max-width:900px}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
 
 h1,h2,h3{margin:0;font-family:var(--civora-font-display);font-weight:700;line-height:1.1;text-wrap:balance}
 h1{font-size:clamp(2.5rem,1.4rem + 4.4vw,4.25rem);letter-spacing:-.012em}
@@ -133,65 +140,61 @@ p{margin:0;max-width:var(--civora-measure);text-wrap:pretty}
 }
 .btn:hover{background:var(--civora-terracotta-deep);border-color:var(--civora-terracotta-deep);color:#fff}
 .btn--sm{min-height:44px;padding:0 22px;font-size:1rem}
-.btn--on-dark:focus-visible,.cta a:focus-visible{outline-color:var(--civora-paper)}
+.cta a:focus-visible{outline-color:var(--civora-paper)}
 
-/* hero */
-.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(32px,6vw,80px) clamp(48px,7vw,88px)}
-.hero p.lead{font-size:1.3125rem;line-height:1.5;color:var(--civora-muted);margin-top:24px;max-width:32ch}
-.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:36px}
+/* hero: a town, a hall, a door that is lit */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:end;padding-top:clamp(16px,4vw,56px)}
+.hero__text{align-self:center;padding-bottom:clamp(24px,4vw,56px)}
+.hero p.lead{font-size:1.3125rem;line-height:1.5;color:var(--civora-ink);margin-top:24px;max-width:30ch}
+.hero p.first{font-size:1rem;color:var(--civora-muted);margin-top:14px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:32px}
 .hero .actions a.link{font-weight:600;font-size:1.0625rem}
-.arch{background:var(--civora-cream);border-radius:999px 999px 20px 20px;padding:clamp(56px,9vw,112px) clamp(14px,2.6vw,32px) clamp(14px,2.6vw,32px)}
-.shot{border:1px solid var(--civora-rule);border-radius:var(--civora-radius);overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(43,42,64,.08),0 24px 40px -24px rgba(43,42,64,.3)}
+.scene{display:block;width:100%;height:auto;--lit:.85;margin-bottom:-1px}
+.ground{height:clamp(20px,3vw,32px);background:var(--civora-cream)}
+.strip{height:36px;background:var(--civora-indigo) var(--mr);background-size:22px 22px;background-position:center}
 
-.facts{border-block:1px solid var(--civora-rule)}
-.facts ul{list-style:none;margin:0 auto;padding:0 var(--gutter);max-width:1180px;display:grid;grid-template-columns:repeat(3,1fr)}
-.facts li{padding:22px 28px;font-size:1rem;color:var(--civora-muted);border-left:1px solid var(--civora-rule)}
-.facts li:first-child{border-left:0;padding-left:0}
-.facts strong{display:block;color:var(--civora-ink);font-weight:600}
-
+/* story: three people, one Tuesday */
 section{padding-block:clamp(56px,8vw,104px)}
-.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,5vw,80px)}
-.split .body p+p{margin-top:16px}
-.body p{color:var(--civora-muted)}
-.body p.strong{color:var(--civora-ink);font-size:1.25rem;line-height:1.5}
-.sub{margin-top:14px;color:var(--civora-muted);max-width:58ch}
+.story-intro p{margin-top:20px;font-size:1.25rem;line-height:1.5}
+.story-intro p+p{font-size:1rem;color:var(--civora-muted);margin-top:12px}
+.story{list-style:none;margin:clamp(40px,6vw,72px) 0 0;padding:0;display:grid;gap:clamp(48px,7vw,88px)}
+.vig{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.vig:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,230px)}
+.vig:nth-child(even) .vig__art{order:2}
+.vig__art{width:100%;max-width:230px;height:auto}
+.vig h3{font-size:clamp(1.5rem,1.2rem + 1vw,1.875rem)}
+.vig p{margin-top:12px;color:var(--civora-muted);max-width:44ch}
+.story-end{margin-top:clamp(40px,6vw,64px);padding-top:24px;border-top:1px solid var(--civora-rule);color:var(--civora-ink)}
 
+/* ledger: what can be checked */
 .tint{background:var(--civora-cream)}
+.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,5vw,80px)}
+.split .lede p{margin-top:16px;color:var(--civora-muted)}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{padding:22px 0 22px 44px;border-top:1px solid var(--civora-rule);position:relative}
+.checks li:last-child{border-bottom:1px solid var(--civora-rule)}
+.checks li::before{content:"";position:absolute;left:0;top:26px;width:22px;height:28px;border-radius:11px 11px 2px 2px;background:var(--civora-indigo)}
+.checks li.lit::before{background:var(--civora-terracotta)}
+.checks h3{font-size:1.375rem;color:var(--civora-indigo)}
+.checks p{margin-top:6px;color:var(--civora-muted);font-size:1.0625rem;max-width:48ch}
 
-/* workflow: each step is a door */
-.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);counter-reset:s}
-.steps li{counter-increment:s}
-.steps li::before{
-  content:counter(s);display:flex;align-items:flex-end;justify-content:center;
-  width:56px;height:68px;margin-bottom:20px;padding-bottom:10px;
-  border-radius:28px 28px 0 0;background:var(--civora-indigo);color:var(--civora-paper);
-  font:700 1.625rem/1 var(--civora-font-display);font-variant-numeric:tabular-nums;
-}
-.steps li:nth-child(3)::before{background:var(--civora-terracotta)}
-.steps p{font-size:1.0625rem;color:var(--civora-muted);margin-top:8px}
-
-/* features */
-.feat{margin:48px 0 0;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,6vw,96px)}
-.feat div{padding:24px 0;border-top:1px solid var(--civora-rule)}
-.feat dt{font:700 1.375rem/1.2 var(--civora-font-display);color:var(--civora-indigo)}
-.feat dd{margin:8px 0 0;color:var(--civora-muted);font-size:1.0625rem;max-width:44ch}
-
-/* gallery */
-.gal{padding-block:clamp(48px,5vw,64px)}
+/* gallery: small, calm, secondary */
+.gal{padding-block:clamp(48px,6vw,72px)}
 .gal__intro{margin-top:12px;color:var(--civora-muted)}
-.gal__list{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:40px}
+.gal__list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:36px}
 .gal__item{min-width:0}
-.gal__title{font-size:1.5rem}
+.gal__title{font-size:1.375rem}
 .gal__line{margin:4px 0 14px;font-size:1.0625rem;color:var(--civora-muted);max-width:60ch}
 .gal__note{margin-top:20px;font-size:.9375rem;color:var(--civora-muted)}
+.shot{border:1px solid var(--civora-rule);border-radius:var(--civora-radius);overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(43,42,64,.08),0 24px 40px -24px rgba(43,42,64,.3)}
+.frame{background:var(--civora-cream);padding:clamp(10px,2vw,18px);border-radius:16px}
 @media (min-width:960px){
-  .gal__list{margin-top:28px}
-  .gal.is-on .gal__body{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);gap:clamp(24px,3.5vw,48px);align-items:start}
+  .gal.is-on .gal__body{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:clamp(24px,3.5vw,48px);align-items:start;max-width:960px;margin-top:28px}
   .gal.is-on .gal__list{margin-top:0;gap:4px}
-  .gal.is-on .gal__item{padding:12px 16px;border:1px solid transparent;border-radius:var(--civora-radius);cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
-  .gal.is-on .gal__item .shot{display:none}
+  .gal.is-on .gal__item{padding:10px 16px;border:1px solid transparent;border-radius:var(--civora-radius);cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
+  .gal.is-on .gal__item .frame{display:none}
   .gal.is-on .gal__line{margin:2px 0 0;font-size:1rem}
-  .gal.is-on .gal__title{color:var(--civora-muted);font-size:1.375rem}
+  .gal.is-on .gal__title{color:var(--civora-muted);font-size:1.25rem}
   .gal.is-on .gal__item:hover{background:rgba(251,246,238,.7)}
   .gal.is-on .gal__item[aria-selected="true"]{background:var(--civora-paper);border-color:var(--civora-rule)}
   .gal.is-on .gal__item[aria-selected="true"] .gal__title{color:var(--civora-indigo)}
@@ -199,19 +202,33 @@ section{padding-block:clamp(56px,8vw,104px)}
   .gal__stage img{transition:opacity .18s ease-out}
   .gal__stage img.is-fading{opacity:0}
 }
-@media (prefers-reduced-motion:reduce){.gal__stage img,.gal.is-on .gal__item{transition:none}}
 
-/* offer */
-.offer h2{max-width:20ch}
+/* the letter */
+.letter-sec .grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(28px,5vw,72px);align-items:start}
+.foto{margin:0}
+.foto__arch{aspect-ratio:3/4;max-width:260px;border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--civora-indigo-deep,#232c63);box-shadow:0 0 0 6px var(--civora-paper),0 0 0 8px var(--civora-terracotta,#b5523a)}
+.foto__arch img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.foto figcaption{margin-top:10px;font-size:.9375rem;color:var(--civora-muted);max-width:260px}
+.letter{background:var(--civora-paper);border:1px solid var(--civora-rule);border-radius:6px;overflow:hidden;box-shadow:0 1px 2px rgba(43,42,64,.06),0 20px 36px -26px rgba(43,42,64,.35)}
+.letter::before{content:"";display:block;height:14px;background:var(--civora-indigo) var(--mr);background-size:22px 22px}
+.letter__body{padding:clamp(24px,4vw,48px)}
+.letter h2{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.25rem)}
+.letter p{margin-top:16px;font-size:1.1875rem;line-height:1.6;max-width:56ch}
+.letter .hello{margin-top:24px}
+.letter .sign{font:700 1.75rem/1.1 var(--civora-font-display);color:var(--civora-indigo);margin-top:28px}
+.letter .role{margin-top:2px;font-size:.9375rem;color:var(--civora-muted)}
 
 /* cta: the one strict indigo band */
-.cta{background:var(--civora-indigo-deep);color:var(--civora-paper);overflow:hidden}
+.cta{background:var(--civora-indigo-deep);color:var(--civora-paper);overflow:hidden;padding-bottom:0}
 .cta .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 64px;align-items:center}
 .cta p{color:#e3dcee;margin-top:14px}
 .cta .who{font-size:1rem;color:#e3dcee;margin-top:18px}
 .cta .who a,.cta .who a:hover{color:#fff}
+.cta .price{font-size:1rem;margin-top:22px;padding-top:18px;border-top:1px solid rgba(251,246,238,.22)}
 .cta .act{margin-top:28px}
+.cta__text{padding-bottom:clamp(56px,8vw,104px)}
 .cta__doors{display:block;width:100%;max-width:340px;height:auto;justify-self:end;align-self:end}
+.cta .strip{background-color:var(--civora-indigo-deep);height:30px;opacity:.9}
 
 footer{padding-block:48px 56px;font-size:.9375rem;color:var(--civora-muted)}
 footer .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:20px 64px}
@@ -220,36 +237,65 @@ footer p+p{margin-top:10px}
 footer .brand{margin-bottom:14px}
 footer .brand img{height:32px}
 
+/* motion: quiet, from a visible default, off for reduced motion */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+.js .rise{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.js .in .rise,.js .rise.in{opacity:1;transform:none}
+.scene .lit-door,.scene .lit-glow,.scene .lit-halo,.scene .lit-fig{transition:opacity .5s ease-out}
+.scene .lit-door{opacity:var(--lit)}
+.scene .lit-glow{opacity:var(--lit)}
+.scene .lit-halo{opacity:calc(var(--lit)*.35)}
+.scene .lit-fig{opacity:calc(.15 + var(--lit)*.85)}
+.vig__art .glow{transition:opacity 1.4s ease-out .4s;opacity:.35}
+.vig.in .vig__art .glow,.vig__art.in .glow{opacity:1}
+@media (hover:hover){.btn{transition:background-color .15s ease,border-color .15s ease,transform .25s var(--ease)}.btn:hover{transform:translateY(-1px)}}
+
 @media (max-width:900px){
   .hero{grid-template-columns:1fr}
-  .hero p.lead{max-width:44ch}
+  .hero__text{padding-bottom:8px}
+  .hero p.lead{max-width:36ch}
   .split{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr;row-gap:36px}
-  .feat{grid-template-columns:1fr}
+  .letter-sec .grid{grid-template-columns:1fr}
+  .foto__arch{max-width:180px}
   .cta .wrap,footer .wrap{grid-template-columns:1fr}
   .cta__doors{justify-self:start;max-width:260px}
 }
 @media (max-width:640px){
   .nav a:not(.btn){display:none}
   .brand img{height:32px}
-  .facts ul{grid-template-columns:1fr}
-  .facts li{border-left:0;padding:14px 0;border-top:1px solid var(--civora-rule)}
-  .facts li:first-child{border-top:0}
-  .steps{grid-template-columns:1fr}
   .hero .actions .btn{width:100%}
-  .arch{padding-top:44px}
+  .vig,.vig:nth-child(even){grid-template-columns:1fr;gap:20px}
+  .vig:nth-child(even) .vig__art{order:0}
+  .vig__art{max-width:170px}
+  .checks li{padding-left:38px}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.btn:hover{transition:none;transform:none}
+  .gal__stage img,.gal.is-on .gal__item{transition:none}
+  .js .reveal,.js .rise{opacity:1;transform:none;transition:none}
+  .scene .lit-door,.scene .lit-glow,.scene .lit-halo,.scene .lit-fig,.vig__art .glow{transition:none}
+  .vig__art .glow{opacity:1}
+}
 </style>
 </head>
 <body>
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="mr" width="22" height="22" patternUnits="userSpaceOnUse">
+      <g fill="#fbf6ee"><circle cx="11" cy="11" r="2.4"/><circle cx="11" cy="5" r="1.7"/><circle cx="11" cy="17" r="1.7"/><circle cx="5" cy="11" r="1.7"/><circle cx="17" cy="11" r="1.7"/><circle cx="0" cy="0" r="1.3"/><circle cx="22" cy="0" r="1.3"/><circle cx="0" cy="22" r="1.3"/><circle cx="22" cy="22" r="1.3"/></g>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f4d9cc" stop-opacity=".95"/><stop offset="1" stop-color="#f4d9cc" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
 <a class="skip" href="#obsah">Preskočiť na obsah</a>
 
 <header class="wrap top">
   <a class="brand" href="./" aria-label="Civora, domov"><img src="brand/wordmark.svg" width="210" height="64" alt="Civora"></a>
   <nav class="nav" aria-label="Hlavná navigácia">
-    <a href="#postup">Postup</a>
-    <a href="#funkcie">Funkcie</a>
+    <a href="#pribeh">Príbeh</a>
+    <a href="#list">List</a>
     <a href="#galeria">Ukážky</a>
     <a class="btn btn--sm" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
   </nav>
@@ -257,130 +303,266 @@ footer .brand img{height:32px}
 
 <main id="obsah">
 <div class="wrap hero">
-  <div>
+  <div class="hero__text">
     <h1>Dôvera medzi ľuďmi a ich obcou</h1>
-    <p class="lead">Civora pomáha obciam pracovať s ľuďmi otvorene a presne. Prvý produkt: Civora Zmluvy.</p>
+    <p class="lead">Začíname zmluvami slovenských obcí. Aby bolo vidno, kto ich pripravil, kto skontroloval a kedy vyšli.</p>
+    <p class="first">Prvý produkt sa volá Civora Zmluvy.</p>
     <div class="actions">
       <a class="btn" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
-      <a class="link" href="#postup">Ako to funguje</a>
+      <a class="link" href="#pribeh">Prečítať, ako to ide</a>
     </div>
   </div>
-  <div class="arch">
-    <div class="shot">
-      <img src="img/catalogue-sk-1440.webp?v=20261014" srcset="img/catalogue-sk-480.webp?v=20261014 480w, img/catalogue-sk-800.webp?v=20261014 800w, img/catalogue-sk-1200.webp?v=20261014 1200w, img/catalogue-sk-1440.webp?v=20261014 1440w" sizes="(max-width:900px) calc(100vw - 68px), 600px" width="1440" height="900" alt="Verejný katalóg zmlúv Obce Ukážkovej s vyhľadávaním a sumami zmlúv (ukážkové dáta)" fetchpriority="high" decoding="async">
-    </div>
-  </div>
+
+  <svg class="scene obs" viewBox="0 0 640 400" role="img" aria-label="Ilustrácia: radnica s rozsvietenými dverami, okolo nej domy a pred dverami traja ľudia">
+    <g class="rise" style="--d:.05s"><path d="M20 400V300a60 60 0 0 1 120 0V400z" fill="#f3e9db"/></g>
+    <g class="rise" style="--d:.15s"><path d="M510 400V280a60 60 0 0 1 120 0V400z" fill="#f3e9db"/></g>
+    <!-- left house -->
+    <g class="rise" style="--d:.2s">
+      <path d="M40 400V290a70 70 0 0 1 140 0V400z" fill="#f4d9cc"/>
+      <path d="M90 400V352a20 20 0 0 1 40 0V400z" fill="#232c63"/>
+      <path d="M62 316V304a10 10 0 0 1 20 0V316z" fill="#fbf6ee"/>
+      <path d="M138 316V304a10 10 0 0 1 20 0V316z" fill="#fbf6ee"/>
+    </g>
+    <!-- right house -->
+    <g class="rise" style="--d:.3s">
+      <path d="M460 400V270a75 75 0 0 1 150 0V400z" fill="#232c63"/>
+      <path d="M512 400V350a23 23 0 0 1 46 0V400z" fill="#f3e9db"/>
+      <path d="M480 300V286a11 11 0 0 1 22 0V300z" fill="#fbf6ee"/>
+      <path d="M568 300V286a11 11 0 0 1 22 0V300z" fill="#fbf6ee"/>
+      <path d="M520 262V250a15 15 0 0 1 30 0V262z" fill="#f4d9cc"/>
+    </g>
+    <!-- the hall is the mark -->
+    <g class="rise" style="--d:.1s">
+      <line x1="320" y1="70" x2="320" y2="38" stroke="#232c63" stroke-width="3"/>
+      <path d="M320 38l30 9-30 9z" fill="#f4d9cc" stroke="#232c63" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M190 400V200a130 130 0 0 1 260 0V400z" fill="#34408a"/>
+      <circle cx="320" cy="128" r="30" fill="#fbf6ee" stroke="#232c63" stroke-width="3"/>
+      <g stroke="#232c63" stroke-width="2.5" stroke-linecap="round"><line x1="320" y1="102" x2="320" y2="107"/><line x1="346" y1="128" x2="341" y2="128"/><line x1="320" y1="154" x2="320" y2="149"/><line x1="294" y1="128" x2="299" y2="128"/></g>
+      <g stroke="#2b2a40" stroke-linecap="round"><line id="h-hour" x1="320" y1="128" x2="320" y2="113" stroke-width="4" transform="rotate(300 320 128)"/><line id="h-min" x1="320" y1="128" x2="320" y2="106" stroke-width="2.5" transform="rotate(60 320 128)"/></g>
+      <circle cx="320" cy="128" r="3" fill="#2b2a40"/>
+      <path d="M216 242V226a12 12 0 0 1 24 0V242z" fill="#f4d9cc"/>
+      <path d="M262 242V226a12 12 0 0 1 24 0V242z" fill="#f4d9cc"/>
+      <path d="M354 242V226a12 12 0 0 1 24 0V242z" fill="#f4d9cc"/>
+      <path d="M400 242V226a12 12 0 0 1 24 0V242z" fill="#f4d9cc"/>
+      <rect x="190" y="262" width="260" height="22" fill="#232c63"/>
+      <rect x="190" y="262" width="260" height="22" fill="url(#mr)"/>
+      <rect x="250" y="390" width="140" height="10" rx="2" fill="#e3d8c8"/>
+      <path class="lit-halo" d="M254 390V335a66 66 0 0 1 132 0V390z" fill="#f4d9cc"/>
+      <path d="M275 390V335a45 45 0 0 1 90 0V390z" fill="#b5523a"/>
+      <path class="lit-door" d="M275 390V335a45 45 0 0 1 90 0V390z" fill="#e9a07a"/>
+      <g class="lit-fig" transform="translate(320 390) scale(.95)" fill="#9a4430"><path d="M-13 0V-32a13 13 0 0 1 26 0V0z"/><circle cy="-56" r="9"/></g>
+      <ellipse class="lit-glow" cx="320" cy="392" rx="130" ry="22" fill="url(#glow)"/>
+    </g>
+    <!-- people at the door -->
+    <g class="rise" style="--d:.45s">
+      <g transform="translate(236 400) scale(1.15)"><path d="M-13 0V-32a13 13 0 0 1 26 0V0z" fill="#fbf6ee"/><circle cy="-56" r="9" fill="#fbf6ee"/><rect x="7" y="-30" width="15" height="19" rx="1.5" fill="#f4d9cc" stroke="#232c63" stroke-width="1.2" transform="rotate(8 14 -20)"/></g>
+      <g transform="translate(404 400) scale(1.25)"><path d="M-13 0V-32a13 13 0 0 1 26 0V0z" fill="#f4d9cc"/><circle cy="-56" r="9" fill="#f4d9cc"/></g>
+      <g transform="translate(436 400) scale(.8)"><path d="M-13 0V-32a13 13 0 0 1 26 0V0z" fill="#f3e9db"/><circle cy="-56" r="9" fill="#f3e9db"/></g>
+    </g>
+  </svg>
 </div>
+<div class="ground" aria-hidden="true"></div>
+<div class="strip" aria-hidden="true"></div>
 
-<div class="facts">
-  <ul class="wrap">
-    <li><strong>Open source</strong>Postavené na platforme Decidim (AGPL)</li>
-    <li><strong>Vaše dáta</strong>Zostávajú vaše, bez viazanosti na dodávateľa</li>
-    <li><strong>Úradný záznam v CRZ</strong>Civora ho pripravuje a nenahrádza</li>
-  </ul>
-</div>
-
-<section>
-  <div class="wrap split">
-    <h2>Verejné ešte neznamená čitateľné</h2>
-    <div class="body">
-      <p class="strong">Zmluvy dnes žijú v e-mailoch, tabuľkách a priečinkoch. Zverejňovanie do CRZ je ručná práca a občan nevie, kde zmluvu hľadať.</p>
-      <p>Civora Zmluvy vedie každú zmluvu rovnakým postupom: kto ju pripravil, kto ju skontroloval a kedy bola zverejnená, to všetko je zapísané. Zmluvy, ktoré už sú v CRZ, sa v katalógu zobrazia automaticky.</p>
+<section id="pribeh">
+  <div class="wrap narrow">
+    <div class="story-intro reveal">
+      <h2>Jeden utorok v malej obci</h2>
+      <p>Zmluvy obce sú verejné. Verejné ešte neznamená čitateľné: ležia v e-mailoch, tabuľkách a priečinkoch a občan nevie, kde ich hľadať.</p>
+      <p>Takto by mohol vyzerať jeden obyčajný utorok. Obec aj ľudia sú vymyslení.</p>
     </div>
-  </div>
-</section>
 
-<section id="postup" class="tint">
-  <div class="wrap">
-    <h2>Civora Zmluvy: od návrhu po verejný katalóg</h2>
-    <p class="sub">Prvý produkt Civora. Každá zmluva prejde rovnakými dverami.</p>
-    <ol class="steps">
-      <li><h3>Návrh</h3><p>Editor vyplní údaje o zmluve a pripojí dokumenty.</p></li>
-      <li><h3>Kontrola</h3><p>Recenzent zmluvu posúdi a potvrdí kontrolu osobných údajov.</p></li>
-      <li><h3>Zverejnenie</h3><p>Zmluva sa objaví vo verejnom katalógu aj s dokumentmi.</p></li>
-      <li><h3>Dodatky</h3><p>Zmeny sa vedú ako nové verzie, verejný záznam zostáva úplný.</p></li>
+    <ol class="story">
+      <li class="vig">
+        <svg class="vig__art reveal" viewBox="0 0 200 240" aria-hidden="true" focusable="false">
+          <path d="M0 240V100a100 100 0 0 1 200 0V240z" fill="#f4d9cc"/>
+          <path d="M30 126V104a22 22 0 0 1 44 0V126z" fill="#fbf6ee"/>
+          <path d="M52 82v44M30 112h44" stroke="#f4d9cc" stroke-width="2" fill="none"/>
+          <path d="M84 176V146a22 22 0 0 1 44 0V176z" fill="#2b2a40"/>
+          <circle cx="106" cy="120" r="14" fill="#2b2a40"/>
+          <path class="glow" d="M146 168a16 16 0 0 1 32 0z" fill="#b5523a"/>
+          <path d="M162 168v16" stroke="#2b2a40" stroke-width="3"/>
+          <rect x="16" y="176" width="168" height="14" rx="2" fill="#232c63"/>
+          <rect x="20" y="190" width="160" height="50" fill="#34408a"/>
+          <rect x="42" y="168" width="40" height="8" rx="1" fill="#fbf6ee"/>
+          <rect x="48" y="161" width="38" height="8" rx="1" fill="#f3e9db"/>
+        </svg>
+        <div class="reveal" style="--d:.1s">
+          <h3>Ráno ju pripraví pani Jana z podateľne</h3>
+          <p>Prišla podpísaná zmluva o oprave strechy škôlky. Pani Jana ju vloží do Civory, doplní zmluvné strany a sumu, pripojí dokument. Nemusí nič hľadať v starej tabuľke ani nikomu volať, kde je posledná verzia.</p>
+        </div>
+      </li>
+      <li class="vig">
+        <svg class="vig__art reveal" viewBox="0 0 200 240" aria-hidden="true" focusable="false">
+          <path d="M0 240V100a100 100 0 0 1 200 0V240z" fill="#34408a"/>
+          <circle cx="100" cy="38" r="14" fill="#f4d9cc"/>
+          <path d="M64 100V88a36 36 0 0 1 72 0V100z" fill="#f4d9cc"/>
+          <rect x="48" y="92" width="104" height="148" rx="6" fill="#fbf6ee"/>
+          <g fill="#34408a" opacity=".35"><rect x="62" y="108" width="76" height="5" rx="2"/><rect x="62" y="122" width="60" height="5" rx="2"/><rect x="62" y="136" width="70" height="5" rx="2"/><rect x="62" y="150" width="48" height="5" rx="2"/></g>
+          <rect x="60" y="104" width="80" height="13" rx="2" fill="#f4d9cc" opacity=".8"/>
+          <g class="glow"><circle cx="128" cy="182" r="24" fill="#f4d9cc" fill-opacity=".5" stroke="#b5523a" stroke-width="6"/><path d="M146 200l18 18" stroke="#b5523a" stroke-width="7" stroke-linecap="round"/></g>
+          <path d="M66 186l7 7 14-15" stroke="#34408a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="reveal" style="--d:.1s">
+          <h3>Pred obedom ju skontroluje pán Marek</h3>
+          <p>Pán Marek zmluvu prejde: sumy, dátumy, a najmä osobné údaje. Kým nepotvrdí, že ich skontroloval, zmluvu nemožno zverejniť. Pri zmluve zostane jeho meno a čas. Nie preto, že by mu niekto neveril, ale aby bolo jasné, kto za čo ručí.</p>
+        </div>
+      </li>
+      <li class="vig">
+        <svg class="vig__art reveal" viewBox="0 0 200 240" aria-hidden="true" focusable="false">
+          <path d="M0 240V100a100 100 0 0 1 200 0V240z" fill="#f3e9db"/>
+          <path d="M118 150V108a32 32 0 0 1 64 0V150z" fill="#232c63"/>
+          <path class="glow" d="M124 150V108a26 26 0 0 1 52 0V150z" fill="#b5523a"/>
+          <path d="M150 74v76M124 118h52" stroke="#232c63" stroke-width="3" fill="none"/>
+          <path d="M36 240V176a28 28 0 0 1 56 0V240z" fill="#34408a"/>
+          <circle cx="64" cy="140" r="16" fill="#34408a"/>
+          <path d="M82 206l10-16" stroke="#34408a" stroke-width="10" stroke-linecap="round"/>
+          <rect x="84" y="168" width="26" height="42" rx="5" fill="#2b2a40"/>
+          <rect x="88" y="174" width="18" height="30" rx="2" fill="#fbf6ee"/>
+          <g fill="#34408a" opacity=".5"><rect x="91" y="179" width="12" height="3" rx="1"/><rect x="91" y="186" width="9" height="3" rx="1"/><rect x="91" y="193" width="12" height="3" rx="1"/></g>
+        </svg>
+        <div class="reveal" style="--d:.1s">
+          <h3>Večer si ju prečíta pani Zuzana</h3>
+          <p>Pani Zuzana býva o dve ulice ďalej a pri večeri sa spýtala, čo sa vlastne na škôlke opravuje. Otvorila telefón, našla zmluvu v katalógu a prečítala si sumu, dodávateľa aj priložený dokument. Nikoho nemusela prosiť o papier.</p>
+        </div>
+      </li>
     </ol>
+    <p class="story-end reveal">Ak príde dodatok, nájde ho vedľa pôvodnej zmluvy. A zmluvy, ktoré už sú v Centrálnom registri zmlúv, sa v katalógu zobrazia samy.</p>
   </div>
 </section>
 
-<section id="funkcie">
-  <div class="wrap">
-    <h2>Čo Civora Zmluvy zvládne</h2>
-    <dl class="feat">
-      <div><dt>Schvaľovanie v krokoch</dt><dd>Editor pripraví, recenzent posúdi, potom nasleduje zverejnenie. Každý krok má dátum a zodpovednú osobu.</dd></div>
-      <div><dt>Kontrola osobných údajov</dt><dd>Pred zverejnením je povinné potvrdenie, že zmluva bola skontrolovaná z hľadiska GDPR.</dd></div>
-      <div><dt>Auditná stopa</dt><dd>Záznam každej operácie: kto, čo a kedy zmenil. Pre kontrolu aj pre vnútornú disciplínu.</dd></div>
-      <div><dt>Verejný katalóg</dt><dd>Prehľadná stránka s vyhľadávaním pre občanov a novinárov, bez nutnosti vlastného webu.</dd></div>
-      <div><dt>Prepojenie na CRZ</dt><dd>Zmluvy už zverejnené v CRZ sa preberajú automaticky. Pre nové vznikne PDF podklad na vloženie do CRZ.</dd></div>
-      <div><dt>Verzie a dodatky</dt><dd>História zmien zmluvy. Zverejnené verzie sa uchovávajú a dodatky zostávajú súčasťou verejného záznamu.</dd></div>
-    </dl>
+<section class="tint" id="overit">
+  <div class="wrap split">
+    <div class="lede reveal">
+      <h2>Čo si môžete overiť</h2>
+      <p>Obec nemusí veriť nám na slovo. Toto sú veci, ktoré sa dajú skontrolovať.</p>
+    </div>
+    <ul class="checks reveal" style="--d:.1s">
+      <li><h3>Každý krok má meno a čas</h3><p>Auditná stopa zapisuje, kto čo a kedy zmenil. Pre kontrolu aj pre vlastnú disciplínu.</p></li>
+      <li><h3>Osobné údaje nikto nepreskočí</h3><p>Pred zverejnením treba potvrdiť, že zmluvu skontrolovali z hľadiska GDPR.</p></li>
+      <li><h3>Dodatok nič neprepíše</h3><p>Zmeny sa vedú ako nové verzie. Zverejnený záznam zostáva úplný.</p></li>
+      <li class="lit"><h3>Úradný záznam zostáva v CRZ</h3><p>Civora ho pripravuje a nenahrádza. Pre novú zmluvu vznikne PDF podklad na vloženie do CRZ.</p></li>
+      <li><h3>Katalóg bez vlastného webu</h3><p>Občania a novinári dostanú prehľadnú stránku s vyhľadávaním. Obec nemusí stavať nič navyše.</p></li>
+      <li><h3>Dáta ostávajú vaše</h3><p>Otvorený kód na platforme Decidim (AGPL), bez viazanosti na dodávateľa.</p></li>
+    </ul>
   </div>
 </section>
 
-<section class="tint gal" id="galeria">
+<section class="gal" id="galeria">
   <div class="wrap">
-    <h2>Ako to vyzerá v praxi</h2>
-    <p class="gal__intro">Verejný katalóg aj administrácia v Civora Zmluvy, zobrazené na vymyslených dátach Obce Ukážkovej.</p>
+    <h2>A takto vyzerá program zblízka</h2>
+    <p class="gal__intro">Verejný katalóg aj administrácia v Civora Zmluvy. Všetko sú vymyslené dáta Obce Ukážkovej.</p>
     <div class="gal__body">
       <ol class="gal__list">
         <li class="gal__item" data-id="catalogue-sk">
           <h3 class="gal__title">Verejný katalóg</h3>
           <p class="gal__line">Zoznam zverejnených zmlúv s vyhľadávaním, filtrami a sumami pre občanov a novinárov.</p>
-          <div class="shot"><img src="img/catalogue-sk-1440.webp?v=20261014" srcset="img/catalogue-sk-480.webp?v=20261014 480w, img/catalogue-sk-800.webp?v=20261014 800w, img/catalogue-sk-1200.webp?v=20261014 1200w, img/catalogue-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Verejný katalóg zmlúv s vyhľadávaním, filtrami a zoznamom zmlúv so sumami (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="frame"><div class="shot"><img src="img/catalogue-sk-1440.webp?v=20261014" srcset="img/catalogue-sk-480.webp?v=20261014 480w, img/catalogue-sk-800.webp?v=20261014 800w, img/catalogue-sk-1200.webp?v=20261014 1200w, img/catalogue-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Verejný katalóg zmlúv s vyhľadávaním, filtrami a zoznamom zmlúv so sumami (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
         </li>
         <li class="gal__item" data-id="detail-crz-sk">
           <h3 class="gal__title">Detail s pôvodom z CRZ</h3>
           <p class="gal__line">Odkaz na pôvodný záznam v CRZ a upozornenie, že ide o externe potvrdené údaje.</p>
-          <div class="shot"><img src="img/detail-crz-sk-1440.webp?v=20261014" srcset="img/detail-crz-sk-480.webp?v=20261014 480w, img/detail-crz-sk-800.webp?v=20261014 800w, img/detail-crz-sk-1200.webp?v=20261014 1200w, img/detail-crz-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Detail zmluvy zrkadlenej z CRZ s údajmi o zmluve, zmluvnými stranami a odkazom na pôvodný záznam (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="frame"><div class="shot"><img src="img/detail-crz-sk-1440.webp?v=20261014" srcset="img/detail-crz-sk-480.webp?v=20261014 480w, img/detail-crz-sk-800.webp?v=20261014 800w, img/detail-crz-sk-1200.webp?v=20261014 1200w, img/detail-crz-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Detail zmluvy zrkadlenej z CRZ s údajmi o zmluve, zmluvnými stranami a odkazom na pôvodný záznam (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
         </li>
         <li class="gal__item" data-id="notes-sk">
           <h3 class="gal__title">Interné poznámky</h3>
           <p class="gal__line">Tím sa dohodne priamo pri zmluve. Vidia ich iba nositelia rolí, verejnosť nikdy.</p>
-          <div class="shot"><img src="img/notes-sk-1440.webp?v=20261014" srcset="img/notes-sk-480.webp?v=20261014 480w, img/notes-sk-800.webp?v=20261014 800w, img/notes-sk-1200.webp?v=20261014 1200w, img/notes-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Interné poznámky k zmluve v administrácii: dve poznámky a pole na pridanie ďalšej (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="frame"><div class="shot"><img src="img/notes-sk-1440.webp?v=20261014" srcset="img/notes-sk-480.webp?v=20261014 480w, img/notes-sk-800.webp?v=20261014 800w, img/notes-sk-1200.webp?v=20261014 1200w, img/notes-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Interné poznámky k zmluve v administrácii: dve poznámky a pole na pridanie ďalšej (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
         </li>
         <li class="gal__item" data-id="import-preview-sk">
           <h3 class="gal__title">Import z tabuľky</h3>
           <p class="gal__line">Náhľad ukáže chybné riadky ešte pred uložením. Nič sa neuloží, kým to nepotvrdíte.</p>
-          <div class="shot"><img src="img/import-preview-sk-1440.webp?v=20261014" srcset="img/import-preview-sk-480.webp?v=20261014 480w, img/import-preview-sk-800.webp?v=20261014 800w, img/import-preview-sk-1200.webp?v=20261014 1200w, img/import-preview-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Náhľad importu zmlúv z tabuľky CSV: tri platné riadky a dva riadky s chybou v sume a v dátume (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="frame"><div class="shot"><img src="img/import-preview-sk-1440.webp?v=20261014" srcset="img/import-preview-sk-480.webp?v=20261014 480w, img/import-preview-sk-800.webp?v=20261014 800w, img/import-preview-sk-1200.webp?v=20261014 1200w, img/import-preview-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Náhľad importu zmlúv z tabuľky CSV: tri platné riadky a dva riadky s chybou v sume a v dátume (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
         </li>
         <li class="gal__item" data-id="roles-sk">
           <h3 class="gal__title">Správa rolí</h3>
           <p class="gal__line">Prehľad nositeľov rolí a udelenie alebo odobratie roly.</p>
-          <div class="shot"><img src="img/roles-sk-1440.webp?v=20261014" srcset="img/roles-sk-480.webp?v=20261014 480w, img/roles-sk-800.webp?v=20261014 800w, img/roles-sk-1200.webp?v=20261014 1200w, img/roles-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Správa rolí v administrácii s používateľom v roli recenzenta (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="frame"><div class="shot"><img src="img/roles-sk-1440.webp?v=20261014" srcset="img/roles-sk-480.webp?v=20261014 480w, img/roles-sk-800.webp?v=20261014 800w, img/roles-sk-1200.webp?v=20261014 1200w, img/roles-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Správa rolí v administrácii s používateľom v roli recenzenta (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
         </li>
         <li class="gal__item" data-id="audit-trail">
           <h3 class="gal__title">Auditná stopa</h3>
           <p class="gal__line">Pri zmluve vidno, kto, čo a kedy zmenil.</p>
-          <div class="shot"><img src="img/audit-trail-1440.webp?v=20261014" srcset="img/audit-trail-480.webp?v=20261014 480w, img/audit-trail-800.webp?v=20261014 800w, img/audit-trail-1200.webp?v=20261014 1200w, img/audit-trail-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Auditná stopa jednej zmluvy so zoznamom operácií, používateľov a dátumov (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="frame"><div class="shot"><img src="img/audit-trail-1440.webp?v=20261014" srcset="img/audit-trail-480.webp?v=20261014 480w, img/audit-trail-800.webp?v=20261014 800w, img/audit-trail-1200.webp?v=20261014 1200w, img/audit-trail-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Auditná stopa jednej zmluvy so zoznamom operácií, používateľov a dátumov (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
         </li>
       </ol>
     </div>
-    <p class="gal__note">Všetky obrazovky zobrazujú vymyslené dáta Obce Ukážkovej. Ukážky zatiaľ zachovávajú vzhľad samotného produktu.</p>
+    <p class="gal__note">Obrazovky ešte nesú starší vzhľad programu. Dolaďujeme ho, aby sa podobal na túto stránku.</p>
   </div>
 </section>
 
-<section id="ponuka" class="offer">
-  <div class="wrap split">
-    <h2>Cena podľa veľkosti obce — pošlem ponuku</h2>
-    <div class="body">
-      <p class="strong">Obce, ktoré si Civora Zmluvy chcú pozrieť v praxi, rád prevediem ukážkou.</p>
-      <p>Súčasťou je nastavenie, import existujúcich zmlúv a zaškolenie úradníkov. Napíšte nám a ozveme sa vám.</p>
+<section class="tint letter-sec" id="list">
+  <div class="wrap">
+    <div class="grid">
+      <figure class="foto reveal">
+        <div class="foto__arch"><img src="img/denys.jpg" width="519" height="693" alt="Denys Kozlov" loading="lazy" decoding="async"></div>
+        <figcaption>Denys Kozlov, zakladateľ Civory</figcaption>
+      </figure>
+      <article class="letter reveal" style="--d:.1s">
+        <div class="letter__body">
+          <h2>List od zakladateľa</h2>
+          <p class="hello">Dobrý deň,</p>
+          <p>volám sa Denys Kozlov. Som programátor z Bratislavy a Civoru staviam popri práci.</p>
+          <p>Tento mesiac som ju ukazoval prednostovi jedného mestského úradu. Opísal mi, ako u nich putuje zmluva: vecný odborník ju napíše, kolega ju skontroluje, tretí človek ju vloží do registra a celý ten čas sa lehota stráži v tabuľke a v hlave. Funguje to. Kým niekto neochorie.</p>
+          <p>To isté mesto má v Centrálnom registri zmlúv vyše tisíc zmlúv za jeden rok a k nim ani jeden prehľad, v ktorom by sa občan vyznal. Všetko je verejné. Kto chce vedieť, kto opravuje cestu pred jeho domom a za koľko, otvára PDF po jednom.</p>
+          <p>Preto Civora začína zmluvami. Sú nudné, ja viem. Lenže práve na nudných veciach sa ukáže, či sa obci dá veriť, pretože tam nikto nečaká, že sa niekto pozrie.</p>
+          <p>Kód Civory je verejný na GitHube. Úradník aj zvedavý sused si môžu prečítať, čo program robí s ich údajmi.</p>
+          <p>Raz by som chcel, aby takto otvorene spolu fungovali ľudia a ich samosprávy aj inde v Európe a možno vo svete. Dnes mi stačí jedna obec, ktorej utorok bude pokojnejší.</p>
+          <p>Ak sa vás to týka, napíšte mi. Odpíšem sám.</p>
+          <p class="sign">Denys Kozlov</p>
+          <p class="role">zakladateľ</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="cta" id="kontakt">
   <div class="wrap">
-    <div>
+    <div class="cta__text reveal">
       <h2>Poďte dnu, pozrite sa sami</h2>
-      <p>Ukážeme vám to naživo: 30 minút na ukážkových dátach, bez záväzku. Napíšte nám a dohodneme termín, osobne alebo online.</p>
+      <p>Ukážeme vám to naživo: 30 minút na ukážkových dátach, bez záväzku. Osobne alebo online, ako vám to vyhovuje.</p>
       <p class="who">Denys Kozlov · <a href="tel:+421944926570">+421 944 926 570</a> · <a href="mailto:denys@civora.sk">denys@civora.sk</a></p>
       <a class="btn act" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
+      <p class="price" id="ponuka">Cena podľa veľkosti obce — pošlem ponuku. Súčasťou je nastavenie, import existujúcich zmlúv a zaškolenie úradníkov.</p>
     </div>
-    <svg class="cta__doors" viewBox="0 -12 268 162" aria-hidden="true" focusable="false"><path d="M0 150V72a42 42 0 0 1 84 0V150z" fill="#fbf6ee"/><path d="M25.2 150v-45.6a16.8 16.8 0 0 1 33.6 0V150z" fill="#b5523a"/><path d="M92 150V32a42 42 0 0 1 84 0V150z" fill="#f4d9cc"/><path d="M184 150V92a42 42 0 0 1 84 0V150z" fill="#b5523a"/></svg>
+    <svg class="cta__doors obs" viewBox="0 -12 268 162" aria-hidden="true" focusable="false">
+      <g class="rise" style="--d:0s"><path d="M0 150V72a42 42 0 0 1 84 0V150z" fill="#fbf6ee"/><path d="M25.2 150v-45.6a16.8 16.8 0 0 1 33.6 0V150z" fill="#b5523a"/></g>
+      <g class="rise" style="--d:.15s"><path d="M92 150V32a42 42 0 0 1 84 0V150z" fill="#f4d9cc"/></g>
+      <g class="rise" style="--d:.3s"><path d="M184 150V92a42 42 0 0 1 84 0V150z" fill="#b5523a"/></g>
+    </svg>
   </div>
 </section>
 <script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  /* the town hall clock shows the visitor's own time */
+  var d=new Date(),hm=d.getMinutes(),hh=(d.getHours()%12)+hm/60;
+  var hr=document.getElementById('h-hour'),mi=document.getElementById('h-min');
+  if(hr)hr.setAttribute('transform','rotate('+(hh*30).toFixed(1)+' 320 128)');
+  if(mi)mi.setAttribute('transform','rotate('+(hm*6)+' 320 128)');
+  /* the door light warms as you read down */
+  var scene=document.querySelector('.scene');
+  if(scene&&!reduce){
+    var tick=false;
+    var warm=function(){
+      var p=Math.min(1,window.scrollY/(window.innerHeight*.9));
+      scene.style.setProperty('--lit',(0.2+0.8*p).toFixed(3));
+      tick=false;
+    };
+    warm();
+    window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(warm)}},{passive:true});
+  }
+  /* things rise in once, as they come into view */
+  var els=[].slice.call(document.querySelectorAll('.reveal,.obs'));
+  if(!('IntersectionObserver' in window)||reduce){
+    els.forEach(function(e){e.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}});
+    },{rootMargin:'0px 0px -12% 0px',threshold:.05});
+    els.forEach(function(e){io.observe(e)});
+  }
+})();
 (function(){
   var gal=document.getElementById('galeria');
   var mq=window.matchMedia('(min-width:960px)');
@@ -411,12 +593,15 @@ footer .brand img{height:32px}
   function on(){
     if(stage)return;
     stage=document.createElement('div');
-    stage.className='gal__stage shot';
+    stage.className='gal__stage frame';
     stage.id='galeria-panel';
     stage.setAttribute('role','tabpanel');
+    var shot=document.createElement('div');
+    shot.className='shot';
     img=document.createElement('img');
     img.width=1440;img.height=900;img.decoding='async';
-    stage.appendChild(img);
+    shot.appendChild(img);
+    stage.appendChild(shot);
     body.appendChild(stage);
     list.setAttribute('role','tablist');
     list.setAttribute('aria-label','Ukážky obrazoviek');
