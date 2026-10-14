@@ -77,7 +77,7 @@ The ground is warm paper, never white. Indigo carries strictness (links, heading
 
 **Key Characteristics:**
 - Warm paper ground, one strict deep-indigo band (the closing call to action).
-- Story first: a clerk, a colleague, a citizen, in short concrete moments; a founder's letter instead of a pitch.
+- Story first: a clerk, a colleague, a citizen, in short concrete moments; a small founder line instead of a pitch.
 - Humanist type pairing: Alegreya Sans for voice, Source Sans 3 for reading.
 - Terracotta only on fills (button, door); never on body text.
 - Flat surfaces with hairlines; depth only on product screenshots.
@@ -126,11 +126,11 @@ A paper-and-ink palette with one cool anchor and one warm companion.
 
 ## Layout
 
-A story, not a template. `.wrap` is a 1180px container with a fluid gutter (20 to 48px). Order: hero (text left, illustrated town right, standing on a cream ground and a modrotlač strip), the story (a narrow 900px column, three vignettes zig-zagging at 230px art), "Čo si môžete overiť" (a 4fr/7fr split with a hairline checklist, on cream), the screenshots (small and secondary), the founder's letter (photo placeholder plus a letter sheet, on cream), and the one indigo band. No card grid, no numbered steps, no feature grid. Splits collapse at 900px; below 640px the header keeps only the wordmark and the button, vignettes stack, and the hero button goes full width. No horizontal scroll at 375px.
+A story, not a template. `.wrap` is a 1180px container with a fluid gutter (20 to 48px). Order: hero (text left, illustrated town right, standing on a cream ground and a modrotlač strip), the story (a narrow 900px column, three vignettes zig-zagging at 230px art), "Čo si môžete overiť" (a 4fr/7fr split with a hairline checklist, on cream), the screenshots (small and secondary), and the one indigo band, which carries the founder block. No card grid, no numbered steps, no feature grid. Splits collapse at 900px; below 640px the header keeps only the wordmark and the button, vignettes stack, and the hero button goes full width. No horizontal scroll at 375px.
 
 ## Elevation & Depth
 
-Flat by default; hairlines (`--civora-rule`) separate. Lifted: screenshots (they are windows onto another surface, always inside a cream mat with a demo-data caption) and the letter sheet (very soft). No glass, no glow on UI, no hard offset shadows.
+Flat by default; hairlines (`--civora-rule`) separate. Lifted: screenshots (they are windows onto another surface, always inside a cream mat with a demo-data caption). No glass, no glow on UI, no hard offset shadows.
 
 ## Shapes
 
@@ -141,7 +141,7 @@ The arch is the one signature shape (`999px 999px 20px 20px`, or an SVG `a` arc)
 Own SVG, inline, built from three things only: arches, the palette, and the modrotlač pattern.
 - **Town:** the town hall is the mark scaled up (indigo arch, terracotta doorway, a clock showing the visitor's local time). Houses are smaller arches in clay, deep indigo and cream with arched windows. Flat fills, no outlines except thin deep-indigo details on the clock and flag.
 - **People:** abstract paper dolls, an arch body plus a round head, no faces, no skin tones, in paper, clay and cream. Never generated, never stock. Names in copy are invented and the page says so.
-- **Modrotlač:** a 22px tile of paper-coloured dots (a five-dot flower plus corner dots) printed on indigo, like resist-dyed cloth. Used only as the strip under the hero, as the top edge of the letter, and on the hall's frieze. It lives in `--mr` (CSS data URI) and `#mr` (SVG pattern); keep both in sync.
+- **Modrotlač:** a 22px tile of paper-coloured dots (a five-dot flower plus corner dots) printed on indigo, like resist-dyed cloth. Used only as the strip under the hero and on the hall's frieze. It lives in `--mr` (CSS data URI) and `#mr` (SVG pattern); keep both in sync.
 - **Vignettes:** one 200 x 240 arch per person (clay, indigo, cream grounds); the one warm element in each (lamp, magnifier, window) is terracotta.
 - **Rules:** one terracotta thing per scene; terracotta-deep only for the silhouette in the lit door. Illustrations are `aria-hidden` except the hero, which is `role="img"` with a Slovak label.
 
@@ -160,13 +160,13 @@ Quiet and respectful. Defaults are always visible; motion enhances them.
 - **Text link:** indigo, underlined with 0.18em offset; hover thickens to 2px and deepens.
 
 ### Navigation
-Wordmark SVG left, three plain labels (Príbeh, List, Ukážky) and the primary button right. Below 640px only the wordmark and the button remain.
+Wordmark SVG left, two plain labels (Príbeh, Ukážky) and the primary button right. Below 640px only the wordmark and the button remain.
 
 ### Checklist ("Čo si môžete overiť")
 A `ul` of six hairline-separated items. Each opens with a small indigo arch (terracotta for the CRZ item), a 1.375rem Alegreya title in indigo, a muted sentence.
 
-### Founder's letter
-A paper sheet with a modrotlač top edge, first-person copy signed "Denys Kozlov", next to a dashed arch holding the literal text `[FOTO]` until a real photograph exists. Never a stock or generated face.
+### Founder block
+Lives in the indigo contact band, between the intro sentence and the phone and e-mail line. A 68px round photo (`img/denys.jpg`, `object-position: 50% 28%`, paper ring) beside one Alegreya line, "Civoru stavia Denys Kozlov", and one short sentence in the band's tinted text colour. No letter, no sheet, no separate section. Stays on one row down to 375px. Never a stock or generated face.
 
 ### Product frame and gallery
 Screenshots sit in a cream mat, then a 1px rule frame with 10px radius, at most 560px wide, below the story. They show the fictional "Obec Ukážková" only and still carry the product's current look; the note says so. Every screenshot has five files (PNG plus WebP at four widths) and a `?v=YYYYMMDD` cache-bust. Tablist with a sticky stage at 960px and wider, stacked frames elsewhere and without JavaScript.
@@ -190,7 +190,7 @@ Published at stable URLs under `/brand/` (wordmarks, marks at 16 to 512 px, icon
 
 ### Don't:
 - **Don't** go back to a card grid, a numbered "Postup 1-2-3-4", a feature list or a trust strip.
-- **Don't** use stock photos or AI-generated people; the only photo allowed is a real one of the founder, replacing `[FOTO]`.
+- **Don't** use stock photos or AI-generated people; the only photo allowed is a real one of the founder.
 - **Don't** publish prices, pilot terms or the names of prospect towns anywhere on the site.
 - **Don't** recolour, rotate, stretch, shadow or crop the mark; below 24px use `mark-tight`.
 - **Don't** put terracotta on text, or paper text on terracotta below 4.5:1 (white on #b5523a is 4.96:1).
