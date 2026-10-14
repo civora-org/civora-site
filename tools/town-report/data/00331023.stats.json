@@ -1,0 +1,244 @@
+{
+  "ico": "00331023",
+  "town": "Mesto Svidník",
+  "window": {
+    "from": "2025-10-01",
+    "to": "2026-09-30",
+    "months": 12
+  },
+  "data_date": "2026-10-14",
+  "contracts": {
+    "total": 396,
+    "amendments": 47,
+    "main": 349,
+    "duplicates_removed": 31
+  },
+  "amount": {
+    "with_amount": 172,
+    "value_eur": 9555465,
+    "no_amount": 177,
+    "no_amount_pct": 51,
+    "median_eur": 764
+  },
+  "delay": {
+    "n": 396,
+    "median_days": 8.0,
+    "within_7_pct": 49,
+    "over_30_pct": 21
+  },
+  "trend": [
+    {
+      "month": "2025-10",
+      "label": "október",
+      "year": 2025,
+      "contracts": 44,
+      "value_eur": 9794
+    },
+    {
+      "month": "2025-11",
+      "label": "november",
+      "year": 2025,
+      "contracts": 25,
+      "value_eur": 486945
+    },
+    {
+      "month": "2025-12",
+      "label": "december",
+      "year": 2025,
+      "contracts": 20,
+      "value_eur": 180461
+    },
+    {
+      "month": "2026-01",
+      "label": "január",
+      "year": 2026,
+      "contracts": 14,
+      "value_eur": 757458
+    },
+    {
+      "month": "2026-02",
+      "label": "február",
+      "year": 2026,
+      "contracts": 97,
+      "value_eur": 2650747
+    },
+    {
+      "month": "2026-03",
+      "label": "marec",
+      "year": 2026,
+      "contracts": 32,
+      "value_eur": 184176
+    },
+    {
+      "month": "2026-04",
+      "label": "apríl",
+      "year": 2026,
+      "contracts": 31,
+      "value_eur": 3444480
+    },
+    {
+      "month": "2026-05",
+      "label": "máj",
+      "year": 2026,
+      "contracts": 23,
+      "value_eur": 344281
+    },
+    {
+      "month": "2026-06",
+      "label": "jún",
+      "year": 2026,
+      "contracts": 28,
+      "value_eur": 47626
+    },
+    {
+      "month": "2026-07",
+      "label": "júl",
+      "year": 2026,
+      "contracts": 8,
+      "value_eur": 464676
+    },
+    {
+      "month": "2026-08",
+      "label": "august",
+      "year": 2026,
+      "contracts": 41,
+      "value_eur": 975198
+    },
+    {
+      "month": "2026-09",
+      "label": "september",
+      "year": 2026,
+      "contracts": 33,
+      "value_eur": 9623
+    }
+  ],
+  "top_contracts": [
+    {
+      "id": 12249094,
+      "signed_on": "2026-04-21",
+      "amount_eur": 2811705,
+      "counterparty": "Štátny fond rozvoja bývania",
+      "counterparty_ico": "31749542",
+      "subject": "Záložná zmluva č. 700/1186/2025",
+      "category": "zmluva (iný predmet)"
+    },
+    {
+      "id": 11970497,
+      "signed_on": "2026-02-10",
+      "amount_eur": 2162850,
+      "counterparty": "Štátny fond rozvoja bývania",
+      "counterparty_ico": "31749542",
+      "subject": "Zmluva o úvere č. 700/1186/2025",
+      "category": "úver alebo financovanie"
+    },
+    {
+      "id": 11881945,
+      "signed_on": "2026-01-19",
+      "amount_eur": 752466,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU č. projektu: 401402F507",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12679227,
+      "signed_on": "2026-08-10",
+      "amount_eur": 595596,
+      "counterparty": "EUROVIA SK, a.s.",
+      "counterparty_ico": "31651518",
+      "subject": "Zmluva o dielo",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 12557962,
+      "signed_on": "2026-07-07",
+      "amount_eur": 445433,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu: 401501D416",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11625681,
+      "signed_on": "2025-11-19",
+      "amount_eur": 268651,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU č. projektu 401301F182",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12249178,
+      "signed_on": "2026-04-21",
+      "amount_eur": 268489,
+      "counterparty": "Štátny fond rozvoja bývania",
+      "counterparty_ico": "31749542",
+      "subject": "Záložná zmluva č. 700/1187/2025",
+      "category": "zmluva (iný predmet)"
+    },
+    {
+      "id": 12400430,
+      "signed_on": "2026-05-27",
+      "amount_eur": 251000,
+      "counterparty": "ProfiWay s.r.o.",
+      "counterparty_ico": "45706328",
+      "subject": "Kúpna zmluva",
+      "category": "kúpa alebo predaj"
+    },
+    {
+      "id": 11970587,
+      "signed_on": "2026-02-10",
+      "amount_eur": 206530,
+      "counterparty": "Štátny fond rozvoja bývania",
+      "counterparty_ico": "31749542",
+      "subject": "Zmluva o úvere č. 700/1187/2025",
+      "category": "úver alebo financovanie"
+    },
+    {
+      "id": 12238461,
+      "signed_on": "2026-04-08",
+      "amount_eur": 203508,
+      "counterparty": "Ministerstvo životného prostredia SR",
+      "counterparty_ico": "42181810",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU č. MZP-PSK-401202C433",
+      "category": "dotácia alebo príspevok"
+    }
+  ],
+  "suppliers": {
+    "top": [
+      {
+        "name": "Štátny fond rozvoja bývania",
+        "ico": "31749542",
+        "contracts": 6,
+        "value_eur": 5449574
+      },
+      {
+        "name": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+        "ico": "50349287",
+        "contracts": 4,
+        "value_eur": 1556594
+      },
+      {
+        "name": "EUROVIA SK, a.s.",
+        "ico": "31651518",
+        "contracts": 1,
+        "value_eur": 595596
+      },
+      {
+        "name": "ProfiWay s.r.o.",
+        "ico": "45706328",
+        "contracts": 1,
+        "value_eur": 251000
+      },
+      {
+        "name": "Ministerstvo životného prostredia SR",
+        "ico": "42181810",
+        "contracts": 1,
+        "value_eur": 203508
+      }
+    ],
+    "main_contracts": 349,
+    "named_contracts": 173,
+    "aggregated_contracts": 176
+  }
+}

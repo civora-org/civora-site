@@ -1,0 +1,244 @@
+{
+  "ico": "00332933",
+  "town": "Mesto Vranov nad Topľou",
+  "window": {
+    "from": "2025-10-01",
+    "to": "2026-09-30",
+    "months": 12
+  },
+  "data_date": "2026-10-14",
+  "contracts": {
+    "total": 1145,
+    "amendments": 85,
+    "main": 1060,
+    "duplicates_removed": 51
+  },
+  "amount": {
+    "with_amount": 978,
+    "value_eur": 9369758,
+    "no_amount": 82,
+    "no_amount_pct": 8,
+    "median_eur": 148
+  },
+  "delay": {
+    "n": 1145,
+    "median_days": 15,
+    "within_7_pct": 32,
+    "over_30_pct": 3
+  },
+  "trend": [
+    {
+      "month": "2025-10",
+      "label": "október",
+      "year": 2025,
+      "contracts": 112,
+      "value_eur": 93706
+    },
+    {
+      "month": "2025-11",
+      "label": "november",
+      "year": 2025,
+      "contracts": 77,
+      "value_eur": 363828
+    },
+    {
+      "month": "2025-12",
+      "label": "december",
+      "year": 2025,
+      "contracts": 403,
+      "value_eur": 2124900
+    },
+    {
+      "month": "2026-01",
+      "label": "január",
+      "year": 2026,
+      "contracts": 48,
+      "value_eur": 483494
+    },
+    {
+      "month": "2026-02",
+      "label": "február",
+      "year": 2026,
+      "contracts": 58,
+      "value_eur": 2208615
+    },
+    {
+      "month": "2026-03",
+      "label": "marec",
+      "year": 2026,
+      "contracts": 49,
+      "value_eur": 2260991
+    },
+    {
+      "month": "2026-04",
+      "label": "apríl",
+      "year": 2026,
+      "contracts": 74,
+      "value_eur": 141052
+    },
+    {
+      "month": "2026-05",
+      "label": "máj",
+      "year": 2026,
+      "contracts": 57,
+      "value_eur": 296701
+    },
+    {
+      "month": "2026-06",
+      "label": "jún",
+      "year": 2026,
+      "contracts": 111,
+      "value_eur": 301508
+    },
+    {
+      "month": "2026-07",
+      "label": "júl",
+      "year": 2026,
+      "contracts": 78,
+      "value_eur": 572696
+    },
+    {
+      "month": "2026-08",
+      "label": "august",
+      "year": 2026,
+      "contracts": 37,
+      "value_eur": 17846
+    },
+    {
+      "month": "2026-09",
+      "label": "september",
+      "year": 2026,
+      "contracts": 41,
+      "value_eur": 504420
+    }
+  ],
+  "top_contracts": [
+    {
+      "id": 12160805,
+      "signed_on": "2026-03-26",
+      "amount_eur": 2200000,
+      "counterparty": "Všeobecná úverová banka, a.s.",
+      "counterparty_ico": "31320155",
+      "subject": "Zmluva o termínovanom úvere č. 75/2026/UZ",
+      "category": "úver alebo financovanie"
+    },
+    {
+      "id": 11986148,
+      "signed_on": "2026-02-05",
+      "amount_eur": 1086792,
+      "counterparty": "Ministerstvo práce, sociálnych vecí a rodiny SR",
+      "counterparty_ico": "00681156",
+      "subject": "Zmluva o poskytnutí finančného príspevku na poskytovanie sociálnej služby v zariadeniach podmienených…",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11982240,
+      "signed_on": "2026-02-11",
+      "amount_eur": 897983,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu 401301H103",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11684551,
+      "signed_on": "2025-12-02",
+      "amount_eur": 896357,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "Zmluva o poskytnutí nenávratného finančného príspevku Z401101G372",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11743265,
+      "signed_on": "2025-12-12",
+      "amount_eur": 700000,
+      "counterparty": "COLAS Slovakia, a.s.",
+      "counterparty_ico": "31651402",
+      "subject": "ZMLUVA O DIELO č. zhotoviteľa: ZoD 263/2025/03454 - VRANOV NAD TOPĽOU – REKONŠTRUKCIA ul. DLHÁ",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 12867363,
+      "signed_on": "2026-09-28",
+      "amount_eur": 494680,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu: 401501I275 - Výstavba infraštruktúry pri…",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11637870,
+      "signed_on": "2025-11-24",
+      "amount_eur": 331000,
+      "counterparty": "ČIKOVÁ spol. s r. o.",
+      "counterparty_ico": "51182025",
+      "subject": "ZMLUVA č. 912/2025/OMM O PREVODE VLASTNÍCTVA NEBYTOVÉHO PRIESTORU",
+      "category": "zmluva (iný predmet)"
+    },
+    {
+      "id": 12535334,
+      "signed_on": "2026-07-01",
+      "amount_eur": 290149,
+      "counterparty": "Swietelsky-Slovakia spol. s r.o.",
+      "counterparty_ico": "00896225",
+      "subject": "Zmluva o dielo - „VRANOV N/T-OPRAVA MIESTNYCH CIEST A CHODNÍKOV“",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 11841238,
+      "signed_on": "2025-12-30",
+      "amount_eur": 261000,
+      "counterparty": "Mestský futbalový klub, a.s.",
+      "counterparty_ico": "36475700",
+      "subject": "Zmluva o poskytnutí dotácie",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11886674,
+      "signed_on": "2026-01-21",
+      "amount_eur": 258700,
+      "counterparty": null,
+      "counterparty_ico": null,
+      "subject": null,
+      "category": "úver alebo financovanie"
+    }
+  ],
+  "suppliers": {
+    "top": [
+      {
+        "name": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+        "ico": "50349287",
+        "contracts": 4,
+        "value_eur": 2370162
+      },
+      {
+        "name": "Všeobecná úverová banka, a.s.",
+        "ico": "31320155",
+        "contracts": 2,
+        "value_eur": 2200000
+      },
+      {
+        "name": "Ministerstvo práce, sociálnych vecí a rodiny SR",
+        "ico": "00681156",
+        "contracts": 2,
+        "value_eur": 1125960
+      },
+      {
+        "name": "COLAS Slovakia, a.s.",
+        "ico": "31651402",
+        "contracts": 1,
+        "value_eur": 700000
+      },
+      {
+        "name": "ČIKOVÁ spol. s r. o.",
+        "ico": "51182025",
+        "contracts": 1,
+        "value_eur": 331000
+      }
+    ],
+    "main_contracts": 1060,
+    "named_contracts": 184,
+    "aggregated_contracts": 876
+  }
+}

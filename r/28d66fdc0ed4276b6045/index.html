@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesto Zvolen v číslach · Civora</title>
+<meta name="description" content="Prehľad zmlúv mesta v Centrálnom registri zmlúv, október 2025 až september 2026.">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b5cad">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/source-sans-3-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/source-sans-3-sk-ext-400.woff2') format('woff2');unicode-range:U+010C-010F,U+011A-011B,U+0139-013A,U+013D-013E,U+0147-0148,U+0154-0155,U+0158-0159,U+0160-0161,U+0164-0165,U+016E-016F,U+017D-017E}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/source-sans-3-latin-400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/source-sans-3-sk-ext-600.woff2') format('woff2');unicode-range:U+010C-010F,U+011A-011B,U+0139-013A,U+013D-013E,U+0147-0148,U+0154-0155,U+0158-0159,U+0160-0161,U+0164-0165,U+016E-016F,U+017D-017E}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/source-sans-3-latin-600.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/source-sans-3-sk-ext-700.woff2') format('woff2');unicode-range:U+010C-010F,U+011A-011B,U+0139-013A,U+013D-013E,U+0147-0148,U+0154-0155,U+0158-0159,U+0160-0161,U+0164-0165,U+016E-016F,U+017D-017E}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/source-sans-3-latin-700.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --ink:#0e1b2e;--muted:#44546a;--blue:#0b5cad;--blue-dark:#084782;--navy:#0e2a4d;
+  --rule:#d5dce6;--tint:#f1f4f8;--bar:#7fa9d6;--white:#fff;
+  --measure:66ch;--gutter:clamp(18px,5vw,48px);
+  scrollbar-color:#9aa8bb var(--tint);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:1.0625rem;line-height:1.55;font-variant-numeric:lining-nums tabular-nums;-webkit-font-smoothing:antialiased}
+::selection{background:#bcd7f2;color:var(--ink)}
+a{color:var(--blue);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--blue-dark);text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
+.wrap{max-width:860px;margin:0 auto;padding-inline:var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:6px;z-index:10}
+.skip:focus{left:var(--gutter)}
+.skip,.skip:hover{color:#fff}
+h1,h2{margin:0;font-weight:700;line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
+h1{font-size:clamp(2.1rem,1.2rem + 4vw,3.25rem)}
+h2{font-size:clamp(1.4rem,1.1rem + 1.2vw,1.75rem)}
+p{margin:0;max-width:var(--measure);text-wrap:pretty}
+.top{display:flex;align-items:center;justify-content:space-between;gap:8px 20px;flex-wrap:wrap;padding-block:20px}
+.brand{font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand svg{width:26px;height:26px}
+.brand:hover{color:var(--ink)}
+.meta{font-size:.9375rem;color:var(--muted)}
+main section{padding-block:clamp(28px,5vw,48px);border-top:1px solid var(--rule)}
+main section.intro{border-top:0;padding-block:clamp(16px,4vw,40px) clamp(28px,5vw,48px)}
+.lead{font-size:1.1875rem;line-height:1.5;color:var(--muted);margin-top:20px;max-width:56ch}
+.sub{color:var(--muted);margin-top:8px;font-size:1rem}
+h2+*{margin-top:20px}h2+.sub{margin-top:8px}
+h2+.sub+*{margin-top:20px}
+
+.facts{margin:20px 0 0;display:grid;grid-template-columns:1fr;gap:0 40px}
+.fact{padding-block:18px;border-top:1px solid var(--rule)}
+.fact:first-child{border-top:0}
+.fact dt{font-weight:600;color:var(--ink);font-size:1rem}
+.fact dd{margin:0}
+.fact .big{font-size:2.5rem;font-weight:700;line-height:1.1;letter-spacing:-.02em;color:var(--blue);margin-top:4px}
+.fact .note{color:var(--muted);font-size:.9375rem;margin-top:6px;max-width:46ch}
+@media(min-width:720px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(2){border-top:0}}
+
+table{width:100%;border-collapse:collapse}
+.trend th,.trend td{padding:7px 0;border-top:1px solid var(--rule);vertical-align:middle;text-align:left}
+.trend tbody tr:first-child>*{border-top:0}
+.trend th{font-weight:400;white-space:nowrap;padding-right:14px;width:1%;font-size:1rem}
+.bar{display:block;height:.75rem;background:var(--bar);border-radius:2px;min-width:0}
+.barlabel{display:block;font-size:.9375rem;color:var(--ink);margin-top:2px}
+.barlabel .val{color:var(--muted)}
+.data th,.data td{text-align:left;vertical-align:top}
+.data tbody tr{border-top:1px solid var(--rule)}
+.data tbody tr:first-child{border-top:0}
+.data td{padding:12px 0}
+.rank{width:2.2rem;color:var(--muted);font-weight:600}
+.what{padding-right:16px}
+.subject{display:block;font-weight:600;line-height:1.35}
+.who{display:block;color:var(--muted);font-size:.9375rem;margin-top:2px}
+.amt,.n{text-align:right!important;white-space:nowrap;padding-left:14px!important}
+.data td.amt,.data td.n{font-weight:600;line-height:1.35}
+.data thead:not(.sr) th{font-size:.9375rem;color:var(--muted);font-weight:600;padding:0 0 8px}
+.data td.crz{width:5.5rem;text-align:right;padding-left:14px}
+@media(max-width:639px){
+  .data:has(.rank) tbody tr{display:grid;grid-template-columns:2rem 1fr auto;grid-template-areas:"r w w" ". a c";gap:2px 0;padding-block:12px}
+  .data:has(.rank) td{padding:0}.rank{grid-area:r}.what{grid-area:w;padding-right:0}.data:has(.rank) .amt{grid-area:a;text-align:left!important;padding:4px 0 0!important}.data:has(.rank) td.crz{grid-area:c;width:auto;padding:4px 0 0}
+}
+
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:6px;background:var(--blue);color:#fff;font-weight:600;text-decoration:none;border:1px solid var(--blue)}
+.btn:hover{background:var(--blue-dark);border-color:var(--blue-dark);color:#fff}
+.next p+p{margin-top:12px}.next p{color:var(--muted)}.next p:last-child{margin-top:20px}
+.method ul{margin:20px 0 0;padding-left:1.1rem;max-width:68ch;color:var(--muted);font-size:1rem}
+.method li+li{margin-top:8px}.method strong{color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-block:28px 48px;font-size:.9375rem;color:var(--muted)}
+footer p{max-width:70ch}footer .contact{margin-top:8px}
+@media(prefers-reduced-motion:no-preference){.btn{transition:background-color .15s ease}}
+
+@page{size:A4;margin:14mm 14mm}
+@media print{
+  body{font-size:10.5pt;line-height:1.4;color:#000}
+  .skip,.no-print{display:none!important}
+  .wrap{max-width:none;padding-inline:0}
+  .top{padding-block:0 8pt}
+  h1{font-size:24pt}h2{font-size:14pt;break-after:avoid}
+  main section{padding-block:12pt;break-inside:avoid}
+  .fact .big{font-size:20pt}
+  .facts{break-inside:avoid}.fact,tr{break-inside:avoid}
+  .bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a{color:#000;text-decoration:none}
+  .lead,.sub,.fact .note,.method ul,.who,.meta,footer{color:#333}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#obsah">Preskočiť na obsah</a>
+<header class="top wrap">
+  <a class="brand" href="https://civora.sk/" rel="noreferrer"><svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect width="28" height="28" rx="6" fill="#0b5cad"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Civora</a>
+  <p class="meta">Pripravené pre mesto · údaje k 14. 10. 2026</p>
+</header>
+<main id="obsah" class="wrap">
+  <section class="intro">
+    <h1>Mesto Zvolen v&nbsp;číslach</h1>
+    <p class="lead">Za 12 mesiacov (október 2025 až september 2026) bolo v&nbsp;Centrálnom registri zmlúv zverejnených 1 286 zmlúv a dodatkov, pri ktorých je Mesto Zvolen zmluvnou stranou.
+    Pripravili sme prehľad z&nbsp;verejných údajov, aby bolo vidieť, čo sa z&nbsp;nich dá jednoducho prečítať.</p>
+  </section>
+
+  <section aria-labelledby="h-cisla">
+    <h2 id="h-cisla">Štyri čísla</h2>
+    <dl class="facts"><div class="fact"><dt>zmlúv a dodatkov s mestom</dt><dd class="big">1 286</dd><dd class="note">Z toho 1 169 zmlúv a 117 dodatkov. Dodatky počítame zvlášť, lebo zvyčajne menia podmienky a nie cenu.</dd></div><div class="fact"><dt>podpísaná hodnota zmlúv so sumou</dt><dd class="big">11,9 mil. €</dd><dd class="note">203 zmlúv s uvedenou sumou, medián 3 000 €. Je to hodnota z textu zmlúv, nie ročné výdavky mesta. Zahŕňa aj príjmy, úvery či viacročné zmluvy.</dd></div><div class="fact"><dt>zmlúv bez uvedenej sumy</dt><dd class="big">83 %</dd><dd class="note">966 z 1 169 zmlúv (bez dodatkov). CRZ zapisuje sumu 0 € aj tam, kde ide o rámcovú, bezodplatnú alebo nájomnú zmluvu, takže to nie je chyba, ale je to miesto, kde sa dá zlepšiť čitateľnosť.</dd></div><div class="fact"><dt>medián od podpisu po zverejnenie</dt><dd class="big">3 dni</dd><dd class="note">82 % zmlúv je zverejnených do 7 dní, 8 % po viac ako 30 dňoch.</dd></div></dl>
+  </section>
+
+  <section aria-labelledby="h-mesiace">
+    <h2 id="h-mesiace">Zmluvy po mesiacoch</h2>
+    <p class="sub">Podľa dátumu podpisu. Dĺžka pruhu zodpovedá počtu zmlúv a dodatkov, vedľa je podpísaná hodnota zmlúv so sumou.</p>
+    <table class="trend"><caption class="sr">Počet zmlúv a dodatkov podľa mesiaca podpisu</caption>
+    <thead class="sr"><tr><th scope="col">Mesiac</th><th scope="col">Počet zmlúv a hodnota</th></tr></thead><tbody><tr><th scope="row">október 2025</th><td><span class="bar" style="width:51%"></span><span class="barlabel">117<span class="val"> · 2,5 mil. €</span></span></td></tr><tr><th scope="row">november 2025</th><td><span class="bar" style="width:41%"></span><span class="barlabel">94<span class="val"> · 1,0 mil. €</span></span></td></tr><tr><th scope="row">december 2025</th><td><span class="bar" style="width:44%"></span><span class="barlabel">100<span class="val"> · 43 749 €</span></span></td></tr><tr><th scope="row">január 2026</th><td><span class="bar" style="width:18%"></span><span class="barlabel">42<span class="val"> · 117 018 €</span></span></td></tr><tr><th scope="row">február 2026</th><td><span class="bar" style="width:22%"></span><span class="barlabel">51<span class="val"> · 582 188 €</span></span></td></tr><tr><th scope="row">marec 2026</th><td><span class="bar" style="width:100%"></span><span class="barlabel">228<span class="val"> · 340 669 €</span></span></td></tr><tr><th scope="row">apríl 2026</th><td><span class="bar" style="width:39%"></span><span class="barlabel">90<span class="val"> · 1,8 mil. €</span></span></td></tr><tr><th scope="row">máj 2026</th><td><span class="bar" style="width:34%"></span><span class="barlabel">78<span class="val"> · 349 423 €</span></span></td></tr><tr><th scope="row">jún 2026</th><td><span class="bar" style="width:72%"></span><span class="barlabel">164<span class="val"> · 774 901 €</span></span></td></tr><tr><th scope="row">júl 2026</th><td><span class="bar" style="width:57%"></span><span class="barlabel">130<span class="val"> · 1,8 mil. €</span></span></td></tr><tr><th scope="row">august 2026</th><td><span class="bar" style="width:42%"></span><span class="barlabel">95<span class="val"> · 1,4 mil. €</span></span></td></tr><tr><th scope="row">september 2026</th><td><span class="bar" style="width:43%"></span><span class="barlabel">97<span class="val"> · 1,1 mil. €</span></span></td></tr></tbody></table>
+  </section>
+
+  <section aria-labelledby="h-top">
+    <h2 id="h-top">Desať najväčších zmlúv podľa sumy</h2>
+    <p class="sub">Bez dodatkov. Zmluvnú stranu uvádzame len pri právnických osobách. Každá zmluva odkazuje na originál v CRZ.</p>
+    <table class="data"><caption class="sr">Desať zmlúv s najvyššou sumou</caption>
+    <thead class="sr"><tr><th scope="col">Poradie</th><th scope="col">Predmet a zmluvná strana</th><th scope="col">Suma</th><th scope="col">Odkaz</th></tr></thead><tbody><tr><td class="rank">1</td><td class="what"><span class="subject">ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU č. projektu 401501D411</span><span class="who">Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky · 20. 10. 2025</span></td><td class="amt">1 439 587 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/11465814/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 11465814</span></a></td></tr><tr><td class="rank">2</td><td class="what"><span class="subject">Zmluva o dielo &quot;Zachovanie NKP Pustý hrad Zvolen&quot;</span><span class="who">RAJNIAK BAU, s.r.o. · 23. 4. 2026</span></td><td class="amt">1 079 896 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12273725/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12273725</span></a></td></tr><tr><td class="rank">3</td><td class="what"><span class="subject">ZMLUVA O PARTNERSTVE</span><span class="who">Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky · 7. 8. 2026</span></td><td class="amt">800 312 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12683176/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12683176</span></a></td></tr><tr><td class="rank">4</td><td class="what"><span class="subject">Zmluva o dielo &quot;Mobilná ľadová plocha&quot;</span><span class="who">B.R.A. Company s.r.o. · 18. 9. 2026</span></td><td class="amt">661 691 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12833394/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12833394</span></a></td></tr><tr><td class="rank">5</td><td class="what"><span class="subject">ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu 401301C923</span><span class="who">Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky · 10. 10. 2025</span></td><td class="amt">554 100 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/11439211/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 11439211</span></a></td></tr><tr><td class="rank">6</td><td class="what"><span class="subject">Zmluva o dielo &quot;Rekonštrukcia zelene v areáli Borová hora&quot;</span><span class="who">POH, s.r.o. &quot;registrovaný sociálny podnik&quot; · 11. 6. 2026</span></td><td class="amt">548 105 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12487949/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12487949</span></a></td></tr><tr><td class="rank">7</td><td class="what"><span class="subject">ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu: 401202C856</span><span class="who">Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky · 10. 8. 2026</span></td><td class="amt">536 383 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12672797/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12672797</span></a></td></tr><tr><td class="rank">8</td><td class="what"><span class="subject">Zmluva o dielo &quot;Koncepcia vodozádržných opatrení v meste Zvolen, III. Lokalita Vnútroblok J. Kozačeka -…</span><span class="who">COLAS Slovakia, a.s. · 1. 7. 2026</span></td><td class="amt">500 842 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12556198/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12556198</span></a></td></tr><tr><td class="rank">9</td><td class="what"><span class="subject">ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu: 401402I094</span><span class="who">Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky · 9. 7. 2026</span></td><td class="amt">459 495 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12576579/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12576579</span></a></td></tr><tr><td class="rank">10</td><td class="what"><span class="subject">Zmluva o dielo &quot;Rekonštrukcia a stavebné úpravy na V. ZŠ, Hrnčiarska 2119/1 Zvolen - SO 02 - ETAPA I&quot;</span><span class="who">RS - Building, s.r.o. · 29. 4. 2026</span></td><td class="amt">457 031 €</td><td class="crz"><a href="https://www.crz.gov.sk/zmluva/12321219/" rel="noreferrer noopener">CRZ<span class="sr"> – zmluva č. 12321219</span></a></td></tr></tbody></table>
+  </section>
+
+  <section aria-labelledby="h-dod">
+    <h2 id="h-dod">Najväčšie zmluvné strany</h2>
+    <p class="sub">Dodávatelia, ale aj poskytovatelia dotácií a úverov. Zoradené podľa podpísanej hodnoty zmlúv, bez dodatkov. Uvádzame iba právnické osoby s IČO.
+    796 z&nbsp;1 169 zmlúv (fyzické osoby, živnostníci a strany bez IČO) zobrazujeme len súhrnne.</p>
+    <table class="data"><caption class="sr">Najväčší dodávatelia podľa hodnoty zmlúv</caption><thead><tr><th scope="col">Zmluvná strana</th><th scope="col" class="n">Zmlúv</th><th scope="col" class="amt">Hodnota</th></tr></thead><tbody><tr><td class="what"><span class="subject">Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky</span><span class="who">IČO 50349287</span></td><td class="n">6</td><td class="amt">3 789 878 €</td></tr><tr><td class="what"><span class="subject">RAJNIAK BAU, s.r.o.</span><span class="who">IČO 46999868</span></td><td class="n">1</td><td class="amt">1 079 896 €</td></tr><tr><td class="what"><span class="subject">COLAS Slovakia, a.s.</span><span class="who">IČO 31651402</span></td><td class="n">2</td><td class="amt">779 590 €</td></tr><tr><td class="what"><span class="subject">B.R.A. Company s.r.o.</span><span class="who">IČO 46006001</span></td><td class="n">4</td><td class="amt">747 218 €</td></tr><tr><td class="what"><span class="subject">POH, s.r.o. &quot;registrovaný sociálny podnik&quot;</span><span class="who">IČO 52713725</span></td><td class="n">1</td><td class="amt">548 105 €</td></tr></tbody></table>
+  </section>
+
+  <section class="next no-print" aria-labelledby="h-dalej">
+    <h2 id="h-dalej">Čo s tým ďalej</h2>
+    <p>Tieto čísla nehodnotia prácu úradu. Suma 0&nbsp;€ je pri rámcových, nájomných či bezodplatných zmluvách bežná a zverejnenie do niekoľkých dní je v&nbsp;poriadku. Zaujímavé sú otázky, na ktoré sa dá odpovedať rýchlo: ktoré zmluvy nemajú sumu a prečo, ako dlho trvá cesta od podpisu po zverejnenie, čo sa zverejnilo minulý mesiac.</p>
+    <p>Civora Zmluvy drží celý postup (návrh, kontrolu, zverejnenie a prepojenie na CRZ) na jednom mieste, takže tieto odpovede sú po ruke.</p>
+    <p><a class="btn" href="mailto:denys@civora.sk?subject=Ukážka%20Civora%20Zmluvy%20pre%20Mesto%20Zvolen">Takto by to vyzeralo u&nbsp;vás</a></p>
+  </section>
+
+  <section class="method" aria-labelledby="h-metoda">
+    <h2 id="h-metoda">Ako sme to počítali</h2>
+    <ul>
+      <li><strong>Zdroj.</strong> Centrálny register zmlúv (crz.gov.sk) v&nbsp;podobe otvorených údajov na ekosystem.slovensko.digital. Údaje sú k&nbsp;14. 10. 2026.</li>
+      <li><strong>Obdobie.</strong> Zmluvy podpísané od 1. 10. 2025 do 30. 9. 2026 (posledných 12 úplných mesiacov). Zmluva sa počíta, ak je Mesto Zvolen (IČO 00320439) ktoroukoľvek stranou. Mestské firmy a rozpočtové organizácie majú vlastné IČO a nie sú zahrnuté.</li>
+      <li><strong>Dvojité záznamy.</strong> CRZ vedie záznam od každej zverejňujúcej strany. Ak tú istú zmluvu zverejnili obe strany (rovnaká zmluvná strana, dátum podpisu a suma), počítame ju raz (odstránených 47).</li>
+      <li><strong>Dodatky</strong> poznáme podľa slova „dodatok“ v&nbsp;predmete zmluvy, lebo označenie druhu v&nbsp;zdroji nie je spoľahlivé. Môže ich byť o niečo viac či menej.</li>
+      <li><strong>Suma.</strong> Berieme sumu zo zmluvy zapísanú v&nbsp;CRZ. CRZ nerozlišuje „nie je známa“, „bezodplatné“ a „0 €“, preto „bez sumy“ znamená, že suma je 0 € alebo chýba. Sumy sa nerozpočítavajú na roky a nie sú audit hospodárenia.</li>
+      <li><strong>Zverejnenie.</strong> Rozdiel medzi dátumom podpisu a dátumom zverejnenia v&nbsp;CRZ, medián zo všetkých 1 286 zmlúv so známym dátumom. Čerstvo podpísané zmluvy nemusia byť ešte zverejnené.</li>
+      <li><strong>Mená.</strong> Zmluvné strany pomenúvame len vtedy, keď ide o právnickú osobu s IČO. Živnostníci sú fyzické osoby, preto sa spolu s ostatnými fyzickými osobami ukazujú len v&nbsp;súčtoch.</li>
+    </ul>
+  </section>
+</main>
+<footer class="wrap">
+  <p class="attr">Zdroj údajov: Centrálny register zmlúv Slovenskej republiky, sprístupnený cez <a href="https://ekosystem.slovensko.digital/" rel="noreferrer noopener">ekosystem.slovensko.digital</a> pod licenciou <a href="https://creativecommons.org/licenses/by/4.0/deed.sk" rel="noreferrer noopener">CC BY 4.0</a>. Výpočty a spracovanie: Civora.</p>
+  <p class="contact">Denys Kozlov · <a href="mailto:denys@civora.sk">denys@civora.sk</a> · <a href="tel:+421944926570">+421 944 926 570</a></p>
+</footer>
+</body>
+</html>

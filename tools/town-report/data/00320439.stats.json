@@ -1,0 +1,244 @@
+{
+  "ico": "00320439",
+  "town": "Mesto Zvolen",
+  "window": {
+    "from": "2025-10-01",
+    "to": "2026-09-30",
+    "months": 12
+  },
+  "data_date": "2026-10-14",
+  "contracts": {
+    "total": 1286,
+    "amendments": 117,
+    "main": 1169,
+    "duplicates_removed": 47
+  },
+  "amount": {
+    "with_amount": 203,
+    "value_eur": 11852996,
+    "no_amount": 966,
+    "no_amount_pct": 83,
+    "median_eur": 3000
+  },
+  "delay": {
+    "n": 1286,
+    "median_days": 3.0,
+    "within_7_pct": 82,
+    "over_30_pct": 8
+  },
+  "trend": [
+    {
+      "month": "2025-10",
+      "label": "október",
+      "year": 2025,
+      "contracts": 117,
+      "value_eur": 2524857
+    },
+    {
+      "month": "2025-11",
+      "label": "november",
+      "year": 2025,
+      "contracts": 94,
+      "value_eur": 1027965
+    },
+    {
+      "month": "2025-12",
+      "label": "december",
+      "year": 2025,
+      "contracts": 100,
+      "value_eur": 43749
+    },
+    {
+      "month": "2026-01",
+      "label": "január",
+      "year": 2026,
+      "contracts": 42,
+      "value_eur": 117018
+    },
+    {
+      "month": "2026-02",
+      "label": "február",
+      "year": 2026,
+      "contracts": 51,
+      "value_eur": 582188
+    },
+    {
+      "month": "2026-03",
+      "label": "marec",
+      "year": 2026,
+      "contracts": 228,
+      "value_eur": 340669
+    },
+    {
+      "month": "2026-04",
+      "label": "apríl",
+      "year": 2026,
+      "contracts": 90,
+      "value_eur": 1822851
+    },
+    {
+      "month": "2026-05",
+      "label": "máj",
+      "year": 2026,
+      "contracts": 78,
+      "value_eur": 349423
+    },
+    {
+      "month": "2026-06",
+      "label": "jún",
+      "year": 2026,
+      "contracts": 164,
+      "value_eur": 774901
+    },
+    {
+      "month": "2026-07",
+      "label": "júl",
+      "year": 2026,
+      "contracts": 130,
+      "value_eur": 1817501
+    },
+    {
+      "month": "2026-08",
+      "label": "august",
+      "year": 2026,
+      "contracts": 95,
+      "value_eur": 1354549
+    },
+    {
+      "month": "2026-09",
+      "label": "september",
+      "year": 2026,
+      "contracts": 97,
+      "value_eur": 1097324
+    }
+  ],
+  "top_contracts": [
+    {
+      "id": 11465814,
+      "signed_on": "2025-10-20",
+      "amount_eur": 1439587,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU č. projektu 401501D411",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12273725,
+      "signed_on": "2026-04-23",
+      "amount_eur": 1079896,
+      "counterparty": "RAJNIAK BAU, s.r.o.",
+      "counterparty_ico": "46999868",
+      "subject": "Zmluva o dielo \"Zachovanie NKP Pustý hrad Zvolen\"",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 12683176,
+      "signed_on": "2026-08-07",
+      "amount_eur": 800312,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O PARTNERSTVE",
+      "category": "zmluva (iný predmet)"
+    },
+    {
+      "id": 12833394,
+      "signed_on": "2026-09-18",
+      "amount_eur": 661691,
+      "counterparty": "B.R.A. Company s.r.o.",
+      "counterparty_ico": "46006001",
+      "subject": "Zmluva o dielo \"Mobilná ľadová plocha\"",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 11439211,
+      "signed_on": "2025-10-10",
+      "amount_eur": 554100,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu 401301C923",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12487949,
+      "signed_on": "2026-06-11",
+      "amount_eur": 548105,
+      "counterparty": "POH, s.r.o. \"registrovaný sociálny podnik\"",
+      "counterparty_ico": "52713725",
+      "subject": "Zmluva o dielo \"Rekonštrukcia zelene v areáli Borová hora\"",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 12672797,
+      "signed_on": "2026-08-10",
+      "amount_eur": 536383,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu: 401202C856",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12556198,
+      "signed_on": "2026-07-01",
+      "amount_eur": 500842,
+      "counterparty": "COLAS Slovakia, a.s.",
+      "counterparty_ico": "31651402",
+      "subject": "Zmluva o dielo \"Koncepcia vodozádržných opatrení v meste Zvolen, III. Lokalita Vnútroblok J. Kozačeka -…",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 12576579,
+      "signed_on": "2026-07-09",
+      "amount_eur": 459495,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu: 401402I094",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12321219,
+      "signed_on": "2026-04-29",
+      "amount_eur": 457031,
+      "counterparty": "RS - Building, s.r.o.",
+      "counterparty_ico": "46448764",
+      "subject": "Zmluva o dielo \"Rekonštrukcia a stavebné úpravy na V. ZŠ, Hrnčiarska 2119/1 Zvolen - SO 02 - ETAPA I\"",
+      "category": "zmluva o dielo"
+    }
+  ],
+  "suppliers": {
+    "top": [
+      {
+        "name": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+        "ico": "50349287",
+        "contracts": 6,
+        "value_eur": 3789878
+      },
+      {
+        "name": "RAJNIAK BAU, s.r.o.",
+        "ico": "46999868",
+        "contracts": 1,
+        "value_eur": 1079896
+      },
+      {
+        "name": "COLAS Slovakia, a.s.",
+        "ico": "31651402",
+        "contracts": 2,
+        "value_eur": 779590
+      },
+      {
+        "name": "B.R.A. Company s.r.o.",
+        "ico": "46006001",
+        "contracts": 4,
+        "value_eur": 747218
+      },
+      {
+        "name": "POH, s.r.o. \"registrovaný sociálny podnik\"",
+        "ico": "52713725",
+        "contracts": 1,
+        "value_eur": 548105
+      }
+    ],
+    "main_contracts": 1169,
+    "named_contracts": 373,
+    "aggregated_contracts": 796
+  }
+}
