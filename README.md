@@ -11,14 +11,16 @@ This repository holds only the site. The product, the code and the planning live
 | `index.html` | The whole page: markup, CSS and JavaScript inline |
 | `404.html` | Page for unknown paths. Marked `noindex` |
 | `img/` | Screenshots of the product, as PNG and WebP at four widths, and the Open Graph image |
-| `fonts/` | Source Sans 3 as self-hosted WOFF2, split into Latin and Slovak-extended subsets |
-| `favicon.svg` | Site icon |
+| `fonts/` | Alegreya Sans (700) and Source Sans 3 (400, 600) as self-hosted WOFF2, split into Latin and Slovak-extended subsets |
+| `brand/` | Civora brand files in the "Dvere" identity: wordmarks, marks, icons, `tokens.css`. Stable URLs, for example `/brand/mark-96.png` for the e-mail signature |
+| `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `manifest.webmanifest` | Site and home-screen icons |
+| `DESIGN.md` | The visual system as shipped (colours, type, shapes, components, rules) |
 | `robots.txt` | Allows all crawlers and points to the sitemap |
 | `sitemap.xml` | The home page with its screenshot URLs. Edited by hand |
 | `CNAME` | Custom domain (`civora.sk`) for GitHub Pages |
 | `.nojekyll` | Stops GitHub Pages from running Jekyll on the files |
 
-The page sections, in order: hero, problem, process, features, a product gallery, the pilot-programme section and a contact call to action.
+The page sections, in order: hero, problem, process, features, a product gallery, the offer (price on request) and a contact call to action.
 
 ## Technology
 
@@ -58,7 +60,7 @@ The repository has no script that makes the screenshots or the WebP files. Creat
 
 ### Cache-busting
 
-Every reference to a screenshot or to the Open Graph image has a version query, `?v=YYYYMMDD`. The date is the day the images were last replaced. The current value is `20261006`, and it appears in `img` and `srcset` attributes, the Open Graph image and the JSON-LD image.
+Every reference to a screenshot or to the Open Graph image has a version query, `?v=YYYYMMDD`. The date is the day the images were last replaced. The current value is `20261014`, and it appears in `img` and `srcset` attributes, the Open Graph image and the JSON-LD image.
 
 When you replace an image:
 
@@ -78,7 +80,8 @@ The gallery is a list of frames with `data-id` attributes. On screens 960 px and
 
 ## Content notes
 
-- The public price list was replaced by a pilot-programme section in commit `0cf7b80`. Pricing documents are in the private platform repository.
+- The site states no prices and no pilot terms. The offer section reads "Cena podľa veľkosti obce — pošlem ponuku". Pricing documents are in the private platform repository.
+- Look and feel: see `DESIGN.md`. Prospect towns are never named on the site.
 - Contact links are in `index.html`: a `mailto:` link for the demo request and a contact block in the final section. Update them there.
 
 ## Contributing

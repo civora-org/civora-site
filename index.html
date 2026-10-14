@@ -3,29 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Civora Zmluvy: evidencia a zverejňovanie zmlúv pre obce a mestá</title>
-<meta name="description" content="Návrh, kontrola a zverejnenie zmlúv obce či mesta v jednom nástroji, s verejným katalógom pre občanov a prepojením na CRZ. Postavené na open-source platforme Decidim.">
+<title>Civora: dôvera medzi ľuďmi a ich obcou | Civora Zmluvy</title>
+<meta name="description" content="Civora pomáha obciam pracovať s ľuďmi otvorene a presne. Prvý produkt, Civora Zmluvy, vedie zmluvy obce od návrhu po verejný katalóg a prepojenie na CRZ. Postavené na open-source platforme Decidim.">
 <link rel="canonical" href="https://civora.sk/">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#0b5cad">
+<meta name="theme-color" content="#fbf6ee">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Civora">
 <meta property="og:url" content="https://civora.sk/">
-<meta property="og:title" content="Civora Zmluvy: verejné zmluvy bez chaosu">
-<meta property="og:description" content="Pracovný postup a verejný katalóg zmlúv pre obce, mestá a mestské časti.">
+<meta property="og:title" content="Civora: dôvera medzi ľuďmi a ich obcou">
+<meta property="og:description" content="Prvý produkt: Civora Zmluvy, pracovný postup a verejný katalóg zmlúv pre obce, mestá a mestské časti.">
 <meta property="og:locale" content="sk_SK">
-<meta property="og:image" content="https://civora.sk/img/og-image.png?v=20261006">
+<meta property="og:image" content="https://civora.sk/img/og-image.png?v=20261014">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Verejný katalóg zmlúv v Civora Zmluvy (ukážkové dáta)">
+<meta property="og:image:alt" content="Civora: dôvera medzi ľuďmi a ich obcou. Prvý produkt: Civora Zmluvy.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/alegreya-sans-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/alegreya-sans-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-sk-ext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-sk-ext-600.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/source-sans-3-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/source-sans-3-sk-ext-700.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,8 +37,9 @@
       "@type": "Organization",
       "@id": "https://civora.sk/#org",
       "name": "Civora",
+      "slogan": "Dôvera medzi ľuďmi a ich obcou",
       "url": "https://civora.sk/",
-      "logo": "https://civora.sk/favicon.svg",
+      "logo": "https://civora.sk/brand/mark-512.png",
       "email": "denys@civora.sk",
       "telephone": "+421944926570",
       "areaServed": "SK"
@@ -54,186 +58,186 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "inLanguage": "sk",
-      "description": "Pracovný postup a verejný katalóg zmlúv pre obce, mestá a mestské časti: návrh, kontrola, zverejnenie a prepojenie na CRZ.",
-      "image": "https://civora.sk/img/og-image.png?v=20261006",
+      "description": "Prvý produkt Civora: pracovný postup a verejný katalóg zmlúv pre obce, mestá a mestské časti, od návrhu po zverejnenie a prepojenie na CRZ.",
+      "image": "https://civora.sk/img/og-image.png?v=20261014",
       "publisher": {"@id": "https://civora.sk/#org"}
     }
   ]
 }
 </script>
 <style>
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/alegreya-sans-latin-ext-700.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/alegreya-sans-latin-700.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:optional;src:url('fonts/source-sans-3-sk-ext-400.woff2') format('woff2');unicode-range:U+010C-010F, U+011A-011B, U+0139-013A, U+013D-013E, U+0147-0148, U+0154-0155, U+0158-0159, U+0160-0161, U+0164-0165, U+016E-016F, U+017D-017E}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:optional;src:url('fonts/source-sans-3-latin-400.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('fonts/source-sans-3-sk-ext-600.woff2') format('woff2');unicode-range:U+010C-010F, U+011A-011B, U+0139-013A, U+013D-013E, U+0147-0148, U+0154-0155, U+0158-0159, U+0160-0161, U+0164-0165, U+016E-016F, U+017D-017E}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:optional;src:url('fonts/source-sans-3-latin-600.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:optional;src:url('fonts/source-sans-3-sk-ext-700.woff2') format('woff2');unicode-range:U+010C-010F, U+011A-011B, U+0139-013A, U+013D-013E, U+0147-0148, U+0154-0155, U+0158-0159, U+0160-0161, U+0164-0165, U+016E-016F, U+017D-017E}
-@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:optional;src:url('fonts/source-sans-3-latin-700.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 
+/* Dvere identity. Token names and values match brand/tokens.css. */
 :root{
-  --ink:#0e1b2e;
-  --muted:#44546a;
-  --blue:#0b5cad;
-  --blue-dark:#084782;
-  --navy:#0e2a4d;
-  --rule:#d5dce6;
-  --tint:#f1f4f8;
-  --white:#fff;
-  --measure:66ch;
+  --civora-indigo:#34408a;
+  --civora-indigo-deep:#232c63;
+  --civora-terracotta:#b5523a;
+  --civora-terracotta-deep:#9a4430;
+  --civora-clay-tint:#f4d9cc;
+  --civora-paper:#fbf6ee;
+  --civora-cream:#f3e9db;
+  --civora-rule:#e3d8c8;
+  --civora-ink:#2b2a40;
+  --civora-muted:#5b576c;
+  --civora-white:#fff;
+  --civora-font-display:"Alegreya Sans",system-ui,sans-serif;
+  --civora-font-text:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --civora-radius:10px;
+  --civora-measure:66ch;
   --gutter:clamp(20px,5vw,48px);
-  scrollbar-color:#9aa8bb var(--tint);
+  scrollbar-color:#b9ab97 var(--civora-paper);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:var(--white);color:var(--ink);
-  font-family:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
-  font-size:1.125rem;line-height:1.6;font-variant-numeric:lining-nums;
-  -webkit-font-smoothing:antialiased;
+  margin:0;background:var(--civora-paper);color:var(--civora-ink);
+  font-family:var(--civora-font-text);
+  font-size:1.125rem;line-height:1.55;font-variant-numeric:lining-nums;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
 }
-::selection{background:#bcd7f2;color:var(--ink)}
+::selection{background:var(--civora-clay-tint);color:var(--civora-ink)}
 img{max-width:100%;height:auto;display:block}
-a{color:var(--blue);text-underline-offset:.18em;text-decoration-thickness:1px}
-a:hover{color:var(--blue-dark);text-decoration-thickness:2px}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
-.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:6px;z-index:10}
+a{color:var(--civora-indigo);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--civora-indigo-deep);text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--civora-indigo);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--civora-ink);color:#fff;padding:10px 16px;border-radius:var(--civora-radius);z-index:10}
 .skip:focus{left:var(--gutter)}
 .wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gutter)}
 
-h1,h2,h3{margin:0;font-weight:700;line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
-h1{font-size:clamp(2.5rem,1.2rem + 4.6vw,4rem)}
-h2{font-size:clamp(1.8rem,1.2rem + 1.9vw,2.5rem)}
-h3{font-size:1.25rem;letter-spacing:-.01em;line-height:1.3;font-weight:600}
-p{margin:0;max-width:var(--measure);text-wrap:pretty}
+h1,h2,h3{margin:0;font-family:var(--civora-font-display);font-weight:700;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(2.5rem,1.4rem + 4.4vw,4.25rem);letter-spacing:-.012em}
+h2{font-size:clamp(1.9rem,1.3rem + 2vw,2.75rem);letter-spacing:-.008em}
+h3{font-size:1.5rem;line-height:1.15}
+p{margin:0;max-width:var(--civora-measure);text-wrap:pretty}
 
 /* header */
-.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:20px}
-.brand{font-weight:700;font-size:1.4rem;letter-spacing:-.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
-.brand svg{width:28px;height:28px;flex:none}
-.brand:hover{color:var(--ink)}
-.nav{display:flex;align-items:center;gap:clamp(14px,3vw,32px);font-size:1rem}
-.nav a:not(.btn){color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
-.nav a:not(.btn):hover{border-bottom-color:var(--blue)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:18px}
+.brand{display:block;line-height:0;border-radius:4px}
+.brand img{height:38px;width:auto}
+.nav{display:flex;align-items:center;gap:clamp(14px,3vw,32px);font-size:1rem;font-weight:600}
+.nav a:not(.btn){color:var(--civora-ink);text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+.nav a:not(.btn):hover{border-bottom-color:var(--civora-indigo)}
 
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
-  min-height:48px;padding:0 24px;border-radius:6px;
-  background:var(--blue);color:#fff;font-weight:600;font-size:1.0625rem;
-  text-decoration:none;border:1px solid var(--blue);
+  min-height:48px;padding:0 28px;border-radius:999px;
+  background:var(--civora-terracotta);color:#fff;font-weight:600;font-size:1.0625rem;
+  text-decoration:none;border:1px solid var(--civora-terracotta);white-space:nowrap;
   transition:background-color .15s ease,border-color .15s ease;
 }
-.btn:hover{background:var(--blue-dark);border-color:var(--blue-dark);color:#fff}
-.btn--sm{min-height:42px;padding:0 18px;font-size:1rem}
-.btn--light{background:#fff;color:var(--navy);border-color:#fff}
-.btn--light:hover{background:#e6eef8;border-color:#e6eef8;color:var(--navy)}
+.btn:hover{background:var(--civora-terracotta-deep);border-color:var(--civora-terracotta-deep);color:#fff}
+.btn--sm{min-height:44px;padding:0 22px;font-size:1rem}
+.btn--on-dark:focus-visible,.cta a:focus-visible{outline-color:var(--civora-paper)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,88px) clamp(40px,6vw,72px)}
-.hero p.lead{font-size:1.3125rem;line-height:1.5;color:var(--muted);margin-top:24px;max-width:34ch}
-.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:36px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(32px,6vw,80px) clamp(48px,7vw,88px)}
+.hero p.lead{font-size:1.3125rem;line-height:1.5;color:var(--civora-muted);margin-top:24px;max-width:32ch}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:36px}
 .hero .actions a.link{font-weight:600;font-size:1.0625rem}
-.shot{border:1px solid #c6d0dc;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(14,27,46,.08),0 28px 48px -28px rgba(14,27,46,.35)}
+.arch{background:var(--civora-cream);border-radius:999px 999px 20px 20px;padding:clamp(56px,9vw,112px) clamp(14px,2.6vw,32px) clamp(14px,2.6vw,32px)}
+.shot{border:1px solid var(--civora-rule);border-radius:var(--civora-radius);overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(43,42,64,.08),0 24px 40px -24px rgba(43,42,64,.3)}
 
-.facts{border-block:1px solid var(--rule);background:var(--white)}
+.facts{border-block:1px solid var(--civora-rule)}
 .facts ul{list-style:none;margin:0 auto;padding:0 var(--gutter);max-width:1180px;display:grid;grid-template-columns:repeat(3,1fr)}
-.facts li{padding:20px 24px;font-size:1rem;color:var(--muted);border-left:1px solid var(--rule)}
+.facts li{padding:22px 28px;font-size:1rem;color:var(--civora-muted);border-left:1px solid var(--civora-rule)}
 .facts li:first-child{border-left:0;padding-left:0}
-.facts strong{display:block;color:var(--ink);font-weight:600}
+.facts strong{display:block;color:var(--civora-ink);font-weight:600}
 
 section{padding-block:clamp(56px,8vw,104px)}
 .split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,5vw,80px)}
 .split .body p+p{margin-top:16px}
-.body p{color:var(--muted)}
-.body p.strong{color:var(--ink)}
+.body p{color:var(--civora-muted)}
+.body p.strong{color:var(--civora-ink);font-size:1.25rem;line-height:1.5}
+.sub{margin-top:14px;color:var(--civora-muted);max-width:58ch}
 
-.tint{background:var(--tint)}
+.tint{background:var(--civora-cream)}
 
-/* workflow */
-.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:2px solid var(--ink)}
-.steps li{padding:24px 28px 0 0;counter-increment:s}
-.steps li+li{padding-left:28px;border-left:1px solid var(--rule)}
-.steps li::before{content:counter(s);display:block;font-size:2.75rem;font-weight:700;line-height:1;color:var(--blue);margin-bottom:14px;font-variant-numeric:tabular-nums}
-.steps p{font-size:1rem;color:var(--muted);margin-top:8px}
+/* workflow: each step is a door */
+.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);counter-reset:s}
+.steps li{counter-increment:s}
+.steps li::before{
+  content:counter(s);display:flex;align-items:flex-end;justify-content:center;
+  width:56px;height:68px;margin-bottom:20px;padding-bottom:10px;
+  border-radius:28px 28px 0 0;background:var(--civora-indigo);color:var(--civora-paper);
+  font:700 1.625rem/1 var(--civora-font-display);font-variant-numeric:tabular-nums;
+}
+.steps li:nth-child(3)::before{background:var(--civora-terracotta)}
+.steps p{font-size:1.0625rem;color:var(--civora-muted);margin-top:8px}
 
 /* features */
 .feat{margin:48px 0 0;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,6vw,96px)}
-.feat div{padding:24px 0;border-top:1px solid var(--rule)}
-.feat dt{font-weight:600;font-size:1.1875rem;line-height:1.3}
-.feat dd{margin:6px 0 0;color:var(--muted);font-size:1.0625rem;max-width:44ch}
-
-/* screens */
-.screens{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);margin-top:48px}
-.screens figure{margin:0}
-.screens figcaption{margin-top:14px;font-size:1rem;color:var(--muted);max-width:46ch}
-.screens figcaption strong{color:var(--ink);font-weight:600}
+.feat div{padding:24px 0;border-top:1px solid var(--civora-rule)}
+.feat dt{font:700 1.375rem/1.2 var(--civora-font-display);color:var(--civora-indigo)}
+.feat dd{margin:8px 0 0;color:var(--civora-muted);font-size:1.0625rem;max-width:44ch}
 
 /* gallery */
 .gal{padding-block:clamp(48px,5vw,64px)}
-.gal__intro{margin-top:12px;color:var(--muted)}
+.gal__intro{margin-top:12px;color:var(--civora-muted)}
 .gal__list{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:40px}
 .gal__item{min-width:0}
-.gal__title{font-size:1.1875rem}
-.gal__line{margin:4px 0 14px;font-size:1rem;color:var(--muted);max-width:60ch}
-.gal__note{margin-top:20px;font-size:.9375rem;color:var(--muted)}
+.gal__title{font-size:1.5rem}
+.gal__line{margin:4px 0 14px;font-size:1.0625rem;color:var(--civora-muted);max-width:60ch}
+.gal__note{margin-top:20px;font-size:.9375rem;color:var(--civora-muted)}
 @media (min-width:960px){
   .gal__list{margin-top:28px}
   .gal.is-on .gal__body{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);gap:clamp(24px,3.5vw,48px);align-items:start}
   .gal.is-on .gal__list{margin-top:0;gap:4px}
-  .gal.is-on .gal__item{padding:12px 16px;border:1px solid transparent;border-radius:8px;cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
+  .gal.is-on .gal__item{padding:12px 16px;border:1px solid transparent;border-radius:var(--civora-radius);cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
   .gal.is-on .gal__item .shot{display:none}
-  .gal.is-on .gal__line{margin:2px 0 0;font-size:.9375rem}
-  .gal.is-on .gal__title{color:var(--muted)}
-  .gal.is-on .gal__item:hover{background:rgba(255,255,255,.6)}
-  .gal.is-on .gal__item[aria-selected="true"]{background:var(--white);border-color:var(--rule)}
-  .gal.is-on .gal__item[aria-selected="true"] .gal__title{color:var(--ink)}
+  .gal.is-on .gal__line{margin:2px 0 0;font-size:1rem}
+  .gal.is-on .gal__title{color:var(--civora-muted);font-size:1.375rem}
+  .gal.is-on .gal__item:hover{background:rgba(251,246,238,.7)}
+  .gal.is-on .gal__item[aria-selected="true"]{background:var(--civora-paper);border-color:var(--civora-rule)}
+  .gal.is-on .gal__item[aria-selected="true"] .gal__title{color:var(--civora-indigo)}
   .gal__stage{position:sticky;top:24px}
   .gal__stage img{transition:opacity .18s ease-out}
   .gal__stage img.is-fading{opacity:0}
 }
 @media (prefers-reduced-motion:reduce){.gal__stage img,.gal.is-on .gal__item{transition:none}}
 
-/* pricing */
-.plans{margin:48px 0 0;border-top:2px solid var(--ink)}
-.plan{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,3fr);gap:16px 32px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--rule)}
-.plan p{color:var(--muted);font-size:1.0625rem}
-.plan .price{font-weight:700;font-size:1.75rem;letter-spacing:-.02em;text-align:right;font-variant-numeric:tabular-nums lining-nums;line-height:1.2}
-.plan .price small{display:block;font-size:1rem;font-weight:400;color:var(--muted);letter-spacing:0}
-.note{margin-top:20px;font-size:1rem;color:var(--muted)}
+/* offer */
+.offer h2{max-width:20ch}
 
-/* cta */
-.cta{background:var(--navy);color:#fff}
+/* cta: the one strict indigo band */
+.cta{background:var(--civora-indigo-deep);color:var(--civora-paper);overflow:hidden}
 .cta .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 64px;align-items:center}
-.cta p{color:#c9d6e8;margin-top:14px}
-.cta .who{font-size:1rem;color:#c9d6e8;margin-top:18px}
+.cta p{color:#e3dcee;margin-top:14px}
+.cta .who{font-size:1rem;color:#e3dcee;margin-top:18px}
 .cta .who a,.cta .who a:hover{color:#fff}
-.cta .act{justify-self:start}
+.cta .act{margin-top:28px}
+.cta__doors{display:block;width:100%;max-width:340px;height:auto;justify-self:end;align-self:end}
 
-footer{padding-block:40px 56px;font-size:.9375rem;color:var(--muted)}
-footer .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:16px 64px}
+footer{padding-block:48px 56px;font-size:.9375rem;color:var(--civora-muted)}
+footer .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:20px 64px}
 footer p{max-width:60ch}
-footer .brand{font-size:1.2rem;margin-bottom:10px}
+footer p+p{margin-top:10px}
+footer .brand{margin-bottom:14px}
+footer .brand img{height:32px}
 
 @media (max-width:900px){
   .hero{grid-template-columns:1fr}
   .hero p.lead{max-width:44ch}
   .split{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .steps li:nth-child(odd){padding-left:0;border-left:0}
-  .steps li:nth-child(n+3){margin-top:28px;border-top:1px solid var(--rule)}
+  .steps{grid-template-columns:1fr 1fr;row-gap:36px}
   .feat{grid-template-columns:1fr}
-  .screens{grid-template-columns:1fr}
-  .plan{grid-template-columns:1fr;gap:6px}
-  .plan .price{text-align:left}
   .cta .wrap,footer .wrap{grid-template-columns:1fr}
+  .cta__doors{justify-self:start;max-width:260px}
 }
 @media (max-width:640px){
   .nav a:not(.btn){display:none}
+  .brand img{height:32px}
   .facts ul{grid-template-columns:1fr}
-  .facts li{border-left:0;padding:14px 0;border-top:1px solid var(--rule)}
+  .facts li{border-left:0;padding:14px 0;border-top:1px solid var(--civora-rule)}
   .facts li:first-child{border-top:0}
   .steps{grid-template-columns:1fr}
-  .steps li,.steps li+li{padding:20px 0 0;border-left:0}
-  .steps li+li{margin-top:20px;border-top:1px solid var(--rule)}
-  .steps li:nth-child(n+3){margin-top:20px}
+  .hero .actions .btn{width:100%}
+  .arch{padding-top:44px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
@@ -242,14 +246,11 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
 <a class="skip" href="#obsah">Preskočiť na obsah</a>
 
 <header class="wrap top">
-  <a class="brand" href="./" aria-label="Civora Zmluvy, domov">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0b5cad"/><path d="M21.5 11.2A7 7 0 1 0 21.5 20.8" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>
-    Civora
-  </a>
+  <a class="brand" href="./" aria-label="Civora, domov"><img src="brand/wordmark.svg" width="210" height="64" alt="Civora"></a>
   <nav class="nav" aria-label="Hlavná navigácia">
     <a href="#postup">Postup</a>
     <a href="#funkcie">Funkcie</a>
-    <a href="#pilot">Pilot</a>
+    <a href="#galeria">Ukážky</a>
     <a class="btn btn--sm" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
   </nav>
 </header>
@@ -257,15 +258,17 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
 <main id="obsah">
 <div class="wrap hero">
   <div>
-    <h1>Verejné zmluvy bez chaosu</h1>
-    <p class="lead">Návrh, kontrola a zverejnenie zmlúv v jednom nástroji, s verejným katalógom pre občanov. Pre obce, mestá a mestské časti.</p>
+    <h1>Dôvera medzi ľuďmi a ich obcou</h1>
+    <p class="lead">Civora pomáha obciam pracovať s ľuďmi otvorene a presne. Prvý produkt: Civora Zmluvy.</p>
     <div class="actions">
       <a class="btn" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
       <a class="link" href="#postup">Ako to funguje</a>
     </div>
   </div>
-  <div class="shot">
-    <img src="img/catalogue-sk-1440.webp?v=20261006" srcset="img/catalogue-sk-480.webp?v=20261006 480w, img/catalogue-sk-800.webp?v=20261006 800w, img/catalogue-sk-1200.webp?v=20261006 1200w, img/catalogue-sk-1440.webp?v=20261006 1440w" sizes="(max-width:900px) calc(100vw - 32px), 640px" width="1440" height="900" alt="Verejný katalóg zmlúv s vyhľadávaním a sumami zmlúv (ukážkové dáta)" fetchpriority="high" decoding="async">
+  <div class="arch">
+    <div class="shot">
+      <img src="img/catalogue-sk-1440.webp?v=20261014" srcset="img/catalogue-sk-480.webp?v=20261014 480w, img/catalogue-sk-800.webp?v=20261014 800w, img/catalogue-sk-1200.webp?v=20261014 1200w, img/catalogue-sk-1440.webp?v=20261014 1440w" sizes="(max-width:900px) calc(100vw - 68px), 600px" width="1440" height="900" alt="Verejný katalóg zmlúv Obce Ukážkovej s vyhľadávaním a sumami zmlúv (ukážkové dáta)" fetchpriority="high" decoding="async">
+    </div>
   </div>
 </div>
 
@@ -273,15 +276,15 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
   <ul class="wrap">
     <li><strong>Open source</strong>Postavené na platforme Decidim (AGPL)</li>
     <li><strong>Vaše dáta</strong>Zostávajú vaše, bez viazanosti na dodávateľa</li>
-    <li><strong>Pilot na 3 mesiace</strong>Kedykoľvek ukončiteľný</li>
+    <li><strong>Úradný záznam v CRZ</strong>Civora ho pripravuje a nenahrádza</li>
   </ul>
 </div>
 
 <section>
   <div class="wrap split">
-    <h2>Zmluvy dnes žijú v e-mailoch, tabuľkách a priečinkoch</h2>
+    <h2>Verejné ešte neznamená čitateľné</h2>
     <div class="body">
-      <p class="strong">Zverejňovanie do CRZ je ručná práca. Pred zverejnením chýba jednotná kontrola a občan nevie, kde zmluvu hľadať.</p>
+      <p class="strong">Zmluvy dnes žijú v e-mailoch, tabuľkách a priečinkoch. Zverejňovanie do CRZ je ručná práca a občan nevie, kde zmluvu hľadať.</p>
       <p>Civora Zmluvy vedie každú zmluvu rovnakým postupom: kto ju pripravil, kto ju skontroloval a kedy bola zverejnená, to všetko je zapísané. Zmluvy, ktoré už sú v CRZ, sa v katalógu zobrazia automaticky.</p>
     </div>
   </div>
@@ -289,7 +292,8 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
 
 <section id="postup" class="tint">
   <div class="wrap">
-    <h2>Od návrhu po verejný katalóg</h2>
+    <h2>Civora Zmluvy: od návrhu po verejný katalóg</h2>
+    <p class="sub">Prvý produkt Civora. Každá zmluva prejde rovnakými dverami.</p>
     <ol class="steps">
       <li><h3>Návrh</h3><p>Editor vyplní údaje o zmluve a pripojí dokumenty.</p></li>
       <li><h3>Kontrola</h3><p>Recenzent zmluvu posúdi a potvrdí kontrolu osobných údajov.</p></li>
@@ -316,51 +320,51 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
 <section class="tint gal" id="galeria">
   <div class="wrap">
     <h2>Ako to vyzerá v praxi</h2>
-    <p class="gal__intro">Verejný katalóg aj administrácia, zobrazené na vymyslených ukážkových dátach.</p>
+    <p class="gal__intro">Verejný katalóg aj administrácia v Civora Zmluvy, zobrazené na vymyslených dátach Obce Ukážkovej.</p>
     <div class="gal__body">
       <ol class="gal__list">
         <li class="gal__item" data-id="catalogue-sk">
           <h3 class="gal__title">Verejný katalóg</h3>
           <p class="gal__line">Zoznam zverejnených zmlúv s vyhľadávaním, filtrami a sumami pre občanov a novinárov.</p>
-          <div class="shot"><img src="img/catalogue-sk-1440.webp?v=20261006" srcset="img/catalogue-sk-480.webp?v=20261006 480w, img/catalogue-sk-800.webp?v=20261006 800w, img/catalogue-sk-1200.webp?v=20261006 1200w, img/catalogue-sk-1440.webp?v=20261006 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Verejný katalóg zmlúv s vyhľadávaním, filtrami a zoznamom zmlúv so sumami (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="shot"><img src="img/catalogue-sk-1440.webp?v=20261014" srcset="img/catalogue-sk-480.webp?v=20261014 480w, img/catalogue-sk-800.webp?v=20261014 800w, img/catalogue-sk-1200.webp?v=20261014 1200w, img/catalogue-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Verejný katalóg zmlúv s vyhľadávaním, filtrami a zoznamom zmlúv so sumami (ukážkové dáta)" loading="lazy" decoding="async"></div>
         </li>
         <li class="gal__item" data-id="detail-crz-sk">
           <h3 class="gal__title">Detail s pôvodom z CRZ</h3>
           <p class="gal__line">Odkaz na pôvodný záznam v CRZ a upozornenie, že ide o externe potvrdené údaje.</p>
-          <div class="shot"><img src="img/detail-crz-sk-1440.webp?v=20261006" srcset="img/detail-crz-sk-480.webp?v=20261006 480w, img/detail-crz-sk-800.webp?v=20261006 800w, img/detail-crz-sk-1200.webp?v=20261006 1200w, img/detail-crz-sk-1440.webp?v=20261006 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Detail zmluvy zrkadlenej z CRZ s údajmi o zmluve, zmluvnými stranami a odkazom na pôvodný záznam (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="shot"><img src="img/detail-crz-sk-1440.webp?v=20261014" srcset="img/detail-crz-sk-480.webp?v=20261014 480w, img/detail-crz-sk-800.webp?v=20261014 800w, img/detail-crz-sk-1200.webp?v=20261014 1200w, img/detail-crz-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Detail zmluvy zrkadlenej z CRZ s údajmi o zmluve, zmluvnými stranami a odkazom na pôvodný záznam (ukážkové dáta)" loading="lazy" decoding="async"></div>
         </li>
         <li class="gal__item" data-id="notes-sk">
           <h3 class="gal__title">Interné poznámky</h3>
           <p class="gal__line">Tím sa dohodne priamo pri zmluve. Vidia ich iba nositelia rolí, verejnosť nikdy.</p>
-          <div class="shot"><img src="img/notes-sk-1440.webp?v=20261006" srcset="img/notes-sk-480.webp?v=20261006 480w, img/notes-sk-800.webp?v=20261006 800w, img/notes-sk-1200.webp?v=20261006 1200w, img/notes-sk-1440.webp?v=20261006 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Interné poznámky k zmluve v administrácii: dve poznámky a pole na pridanie ďalšej (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="shot"><img src="img/notes-sk-1440.webp?v=20261014" srcset="img/notes-sk-480.webp?v=20261014 480w, img/notes-sk-800.webp?v=20261014 800w, img/notes-sk-1200.webp?v=20261014 1200w, img/notes-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Interné poznámky k zmluve v administrácii: dve poznámky a pole na pridanie ďalšej (ukážkové dáta)" loading="lazy" decoding="async"></div>
         </li>
         <li class="gal__item" data-id="import-preview-sk">
           <h3 class="gal__title">Import z tabuľky</h3>
           <p class="gal__line">Náhľad ukáže chybné riadky ešte pred uložením. Nič sa neuloží, kým to nepotvrdíte.</p>
-          <div class="shot"><img src="img/import-preview-sk-1440.webp?v=20261006" srcset="img/import-preview-sk-480.webp?v=20261006 480w, img/import-preview-sk-800.webp?v=20261006 800w, img/import-preview-sk-1200.webp?v=20261006 1200w, img/import-preview-sk-1440.webp?v=20261006 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Náhľad importu zmlúv z tabuľky CSV: tri platné riadky a dva riadky s chybou v sume a v dátume (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="shot"><img src="img/import-preview-sk-1440.webp?v=20261014" srcset="img/import-preview-sk-480.webp?v=20261014 480w, img/import-preview-sk-800.webp?v=20261014 800w, img/import-preview-sk-1200.webp?v=20261014 1200w, img/import-preview-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Náhľad importu zmlúv z tabuľky CSV: tri platné riadky a dva riadky s chybou v sume a v dátume (ukážkové dáta)" loading="lazy" decoding="async"></div>
         </li>
         <li class="gal__item" data-id="roles-sk">
           <h3 class="gal__title">Správa rolí</h3>
           <p class="gal__line">Prehľad nositeľov rolí a udelenie alebo odobratie roly.</p>
-          <div class="shot"><img src="img/roles-sk-1440.webp?v=20261006" srcset="img/roles-sk-480.webp?v=20261006 480w, img/roles-sk-800.webp?v=20261006 800w, img/roles-sk-1200.webp?v=20261006 1200w, img/roles-sk-1440.webp?v=20261006 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Správa rolí v administrácii s používateľom v roli recenzenta (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="shot"><img src="img/roles-sk-1440.webp?v=20261014" srcset="img/roles-sk-480.webp?v=20261014 480w, img/roles-sk-800.webp?v=20261014 800w, img/roles-sk-1200.webp?v=20261014 1200w, img/roles-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Správa rolí v administrácii s používateľom v roli recenzenta (ukážkové dáta)" loading="lazy" decoding="async"></div>
         </li>
         <li class="gal__item" data-id="audit-trail">
           <h3 class="gal__title">Auditná stopa</h3>
           <p class="gal__line">Pri zmluve vidno, kto, čo a kedy zmenil.</p>
-          <div class="shot"><img src="img/audit-trail-1440.webp?v=20261006" srcset="img/audit-trail-480.webp?v=20261006 480w, img/audit-trail-800.webp?v=20261006 800w, img/audit-trail-1200.webp?v=20261006 1200w, img/audit-trail-1440.webp?v=20261006 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Auditná stopa jednej zmluvy so zoznamom operácií, používateľov a dátumov (ukážkové dáta)" loading="lazy" decoding="async"></div>
+          <div class="shot"><img src="img/audit-trail-1440.webp?v=20261014" srcset="img/audit-trail-480.webp?v=20261014 480w, img/audit-trail-800.webp?v=20261014 800w, img/audit-trail-1200.webp?v=20261014 1200w, img/audit-trail-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 40px), 660px" width="1440" height="900" alt="Auditná stopa jednej zmluvy so zoznamom operácií, používateľov a dátumov (ukážkové dáta)" loading="lazy" decoding="async"></div>
         </li>
       </ol>
     </div>
-    <p class="gal__note">Všetky obrazovky zobrazujú ukážkové dáta.</p>
+    <p class="gal__note">Všetky obrazovky zobrazujú vymyslené dáta Obce Ukážkovej. Ukážky zatiaľ zachovávajú vzhľad samotného produktu.</p>
   </div>
 </section>
 
-<section id="pilot">
+<section id="ponuka" class="offer">
   <div class="wrap split">
-    <h2>Pilotný program pripravujeme</h2>
+    <h2>Cena podľa veľkosti obce — pošlem ponuku</h2>
     <div class="body">
-      <p class="strong">Hľadáme prvé obce a mestá, ktoré si Civora Zmluvy vyskúšajú v praxi.</p>
-      <p>Pilot zahŕňa nastavenie, import existujúcich zmlúv a zaškolenie úradníkov. Podmienky dohodneme individuálne. Napíšte nám a ozveme sa vám.</p>
+      <p class="strong">Obce, ktoré si Civora Zmluvy chcú pozrieť v praxi, rád prevediem ukážkou.</p>
+      <p>Súčasťou je nastavenie, import existujúcich zmlúv a zaškolenie úradníkov. Napíšte nám a ozveme sa vám.</p>
     </div>
   </div>
 </section>
@@ -368,11 +372,12 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
 <section class="cta" id="kontakt">
   <div class="wrap">
     <div>
-      <h2>Ukážeme vám to naživo</h2>
-      <p>30 minút na ukážkových dátach, bez záväzku. Napíšte nám a dohodneme termín, osobne alebo online.</p>
+      <h2>Poďte dnu, pozrite sa sami</h2>
+      <p>Ukážeme vám to naživo: 30 minút na ukážkových dátach, bez záväzku. Napíšte nám a dohodneme termín, osobne alebo online.</p>
       <p class="who">Denys Kozlov · <a href="tel:+421944926570">+421 944 926 570</a> · <a href="mailto:denys@civora.sk">denys@civora.sk</a></p>
+      <a class="btn act" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
     </div>
-    <a class="btn btn--light act" href="mailto:denys@civora.sk?subject=Demo%20Civora%20Zmluvy">Dohodnúť demo</a>
+    <svg class="cta__doors" viewBox="0 -12 268 162" aria-hidden="true" focusable="false"><path d="M0 150V72a42 42 0 0 1 84 0V150z" fill="#fbf6ee"/><path d="M25.2 150v-45.6a16.8 16.8 0 0 1 33.6 0V150z" fill="#b5523a"/><path d="M92 150V32a42 42 0 0 1 84 0V150z" fill="#f4d9cc"/><path d="M184 150V92a42 42 0 0 1 84 0V150z" fill="#b5523a"/></svg>
   </div>
 </section>
 <script>
@@ -454,10 +459,13 @@ footer .brand{font-size:1.2rem;margin-bottom:10px}
 <footer>
   <div class="wrap">
     <div>
-      <div class="brand">Civora</div>
+      <a class="brand" href="./" aria-label="Civora, domov"><img src="brand/wordmark.svg" width="210" height="64" alt="Civora"></a>
       <p>Civora Zmluvy je softvér, nie právne poradenstvo. Zverejňovanie do CRZ zostáva v kompetencii organizácie.</p>
     </div>
-    <p>Postavené na open-source platforme <a href="https://decidim.org" rel="noopener">Decidim</a>.<br>© 2026 Civora</p>
+    <div>
+      <p>Údaje zo Centrálneho registra zmlúv (CRZ) preberáme cez ekosystem.slovensko.digital. Úradným záznamom zostáva <a href="https://www.crz.gov.sk" rel="noopener">crz.gov.sk</a>, zdrojové údaje majú len informatívny charakter.</p>
+      <p>Postavené na open-source platforme <a href="https://decidim.org" rel="noopener">Decidim</a>. © 2026 Civora</p>
+    </div>
   </div>
 </footer>
 </body>

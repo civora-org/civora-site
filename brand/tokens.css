@@ -1,0 +1,29 @@
+:root{
+  /* Civora brand tokens, identity "Dvere" (round 2, variant 1) */
+
+  /* Colour: indigo is the strict anchor, terracotta the warmth */
+  --civora-indigo:#34408a;       /* Modrotlač: wordmark, links, arch, headings accents */
+  --civora-indigo-deep:#232c63;  /* Deep indigo: rare strict band, footers, hover */
+  --civora-terracotta:#b5523a;   /* Terakota: primary button, the lit doorway */
+  --civora-clay-tint:#f4d9cc;    /* Hlina: chips, soft fills */
+  --civora-paper:#fbf6ee;        /* Teplý papier: page ground */
+  --civora-cream:#f3e9db;        /* Krém: panels, avatar ground */
+  --civora-rule:#e3d8c8;         /* Hairlines */
+  --civora-ink:#2b2a40;          /* Tuš: body text, headings */
+  --civora-muted:#5b576c;        /* Secondary text */
+  --civora-white:#ffffff;
+
+  /* Type */
+  --civora-font-display:"Alegreya Sans",system-ui,sans-serif;  /* 500 wordmark, 700 headings */
+  --civora-font-text:"Source Sans 3",system-ui,sans-serif;     /* 400 / 600 text */
+  --civora-fs-0:.875rem; --civora-fs-1:1rem; --civora-fs-2:1.1875rem;
+  --civora-fs-3:1.5rem; --civora-fs-4:2rem; --civora-fs-5:clamp(2.25rem,1.4rem + 3vw,3.5rem);
+  --civora-lh-text:1.55; --civora-lh-head:1.1;
+  --civora-measure:66ch;
+
+  /* Shape and space */
+  --civora-radius:10px; --civora-radius-pill:999px;
+  --civora-space-1:.25rem; --civora-space-2:.5rem; --civora-space-3:.75rem; --civora-space-4:1rem;
+  --civora-space-5:1.5rem; --civora-space-6:2.5rem; --civora-space-7:4rem;
+  --civora-focus:0 0 0 3px var(--civora-paper),0 0 0 6px var(--civora-indigo);
+}
