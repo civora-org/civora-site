@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Civora: dôvera medzi ľuďmi a ich obcou | Civora Zmluvy</title>
-<meta name="description" content="Civora pomáha obciam pracovať s ľuďmi otvorene a presne. Prvý produkt, Civora Zmluvy, vedie zmluvy obce od návrhu po verejný katalóg a prepojenie na CRZ. Postavené na open-source platforme Decidim.">
+<meta name="description" content="Civora pomáha obciam pracovať s ľuďmi otvorene a presne. Prvý produkt, Civora Zmluvy, pripraví zmluvu z vašej šablóny vo Worde, vedie ju od návrhu po verejný katalóg a prepojenie na CRZ. Postavené na open-source platforme Decidim.">
 <link rel="canonical" href="https://civora.sk/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#fbf6ee">
@@ -14,7 +14,7 @@
 <meta property="og:title" content="Civora: dôvera medzi ľuďmi a ich obcou">
 <meta property="og:description" content="Prvý produkt: Civora Zmluvy, pracovný postup a verejný katalóg zmlúv pre obce, mestá a mestské časti.">
 <meta property="og:locale" content="sk_SK">
-<meta property="og:image" content="https://civora.sk/img/og-image.png?v=20261014">
+<meta property="og:image" content="https://civora.sk/img/og-image.png?v=20261104">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Civora: dôvera medzi ľuďmi a ich obcou. Prvý produkt: Civora Zmluvy.">
@@ -58,8 +58,8 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "inLanguage": "sk",
-      "description": "Prvý produkt Civora: pracovný postup a verejný katalóg zmlúv pre obce, mestá a mestské časti, od návrhu po zverejnenie a prepojenie na CRZ.",
-      "image": "https://civora.sk/img/og-image.png?v=20261014",
+      "description": "Prvý produkt Civora: zmluvy zo šablón obce vo Worde, pracovný postup s kontrolou druhou osobou a verejný katalóg zmlúv pre obce, mestá a mestské časti, od návrhu po zverejnenie a prepojenie na CRZ.",
+      "image": "https://civora.sk/img/og-image.png?v=20261104",
       "publisher": {"@id": "https://civora.sk/#org"}
     }
   ]
@@ -178,30 +178,27 @@ section{padding-block:clamp(56px,8vw,104px)}
 .checks h3{font-size:1.375rem;color:var(--civora-indigo)}
 .checks p{margin-top:6px;color:var(--civora-muted);font-size:1.0625rem;max-width:48ch}
 
-/* gallery: small, calm, secondary */
-.gal{padding-block:clamp(48px,6vw,72px)}
+/* gallery: five screens in workflow order, large and quiet */
+.gal{padding-block:clamp(56px,8vw,104px)}
 .gal__intro{margin-top:12px;color:var(--civora-muted)}
-.gal__list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:36px}
-.gal__item{min-width:0}
-.gal__title{font-size:1.375rem}
-.gal__line{margin:4px 0 14px;font-size:1.0625rem;color:var(--civora-muted);max-width:60ch}
-.gal__note{margin-top:20px;font-size:.9375rem;color:var(--civora-muted)}
+.gal__note{margin-top:clamp(40px,6vw,72px);font-size:.9375rem;color:var(--civora-muted)}
+.show{list-style:none;margin:clamp(36px,5vw,64px) 0 0;padding:0;display:grid;gap:clamp(56px,8vw,112px)}
+.show__item{display:grid;gap:clamp(18px,2.5vw,28px);min-width:0}
+.show__text h3{font-size:clamp(1.5rem,1.2rem + 1vw,1.875rem)}
+.show__text p{margin-top:10px;color:var(--civora-muted);max-width:52ch}
 .shot{border:1px solid var(--civora-rule);border-radius:var(--civora-radius);overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(43,42,64,.08),0 24px 40px -24px rgba(43,42,64,.3)}
-.frame{background:var(--civora-cream);padding:clamp(10px,2vw,18px);border-radius:16px}
-@media (min-width:960px){
-  .gal.is-on .gal__body{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:clamp(24px,3.5vw,48px);align-items:start;max-width:960px;margin-top:28px}
-  .gal.is-on .gal__list{margin-top:0;gap:4px}
-  .gal.is-on .gal__item{padding:10px 16px;border:1px solid transparent;border-radius:var(--civora-radius);cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
-  .gal.is-on .gal__item .frame{display:none}
-  .gal.is-on .gal__line{margin:2px 0 0;font-size:1rem}
-  .gal.is-on .gal__title{color:var(--civora-muted);font-size:1.25rem}
-  .gal.is-on .gal__item:hover{background:rgba(251,246,238,.7)}
-  .gal.is-on .gal__item[aria-selected="true"]{background:var(--civora-paper);border-color:var(--civora-rule)}
-  .gal.is-on .gal__item[aria-selected="true"] .gal__title{color:var(--civora-indigo)}
-  .gal__stage{position:sticky;top:24px}
-  .gal__stage img{transition:opacity .18s ease-out}
-  .gal__stage img.is-fading{opacity:0}
+.frame{margin:0;background:var(--civora-cream);padding:clamp(10px,1.6vw,18px);border-radius:16px;min-width:0}
+.frame figcaption{margin-top:12px;font-size:.9375rem;color:var(--civora-muted)}
+@media (min-width:640px){.show__cat{display:grid;grid-template-columns:minmax(0,1fr) clamp(120px,15vw,190px);gap:clamp(12px,2vw,24px);align-items:end}}
+.show__phone{width:100%;height:auto;border-radius:clamp(14px,1.6vw,20px);box-shadow:0 0 0 1px var(--civora-rule),0 14px 28px -12px rgba(43,42,64,.4)}
+.doc{position:relative;background:#fff}
+.doc__mark{position:absolute;left:27.2%;top:76.1%;width:23.8%;height:20%;border-radius:8px;background:rgba(181,82,58,.14);box-shadow:0 0 0 2px rgba(181,82,58,.55);pointer-events:none}
+@media (min-width:900px){
+  .show__item:not(.show__item--doc) .show__text{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0 clamp(24px,5vw,80px);align-items:baseline}
+  .show__item:not(.show__item--doc) .show__text p{margin-top:0}
+  .show__item--doc{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,80px);align-items:center}
 }
+@media (max-width:639px){.show__phone{display:none}}
 
 /* cta: the one strict indigo band */
 .cta{background:var(--civora-indigo-deep);color:var(--civora-paper);overflow:hidden;padding-bottom:0}
@@ -261,7 +258,6 @@ footer .brand img{height:32px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .btn,.btn:hover{transition:none;transform:none}
-  .gal__stage img,.gal.is-on .gal__item{transition:none}
   .js .reveal,.js .rise{opacity:1;transform:none;transition:none}
   .scene .lit-door,.scene .lit-glow,.scene .lit-halo,.scene .lit-fig,.vig__art .glow{transition:none}
   .vig__art .glow{opacity:1}
@@ -376,7 +372,7 @@ footer .brand img{height:32px}
         </svg>
         <div class="reveal" style="--d:.1s">
           <h3>Ráno ju pripraví pani Jana z podateľne</h3>
-          <p>Prišla podpísaná zmluva o oprave strechy škôlky. Pani Jana ju vloží do Civory, doplní zmluvné strany a sumu, pripojí dokument. Nemusí nič hľadať v starej tabuľke ani nikomu volať, kde je posledná verzia.</p>
+          <p>Civora jej na úvodnej stránke ukáže, čo je dnes na rade. Pre predaj pozemku vyberie šablónu, ktorú obec už má vo Worde, a vyplní formulár. Číslo zmluvy sa pridelí v tvare, aký obec používa, a sumu napíše Civora aj slovom. Zmluvné strany sa doplnia samy. Nemusí nič hľadať v starých súboroch ani nikomu volať, kde je posledná verzia.</p>
         </div>
       </li>
       <li class="vig">
@@ -392,7 +388,7 @@ footer .brand img{height:32px}
         </svg>
         <div class="reveal" style="--d:.1s">
           <h3>Pred obedom ju skontroluje pán Marek</h3>
-          <p>Pán Marek zmluvu prejde: sumy, dátumy, a najmä osobné údaje. Kým nepotvrdí, že ich skontroloval, zmluvu nemožno zverejniť. Pri zmluve zostane jeho meno a čas. Nie preto, že by mu niekto neveril, ale aby bolo jasné, kto za čo ručí.</p>
+          <p>Pani Jana zmluvu odoslala, preto ju sama neschváli. Pán Marek ju prejde: sumy, dátumy, a najmä osobné údaje. Civora z nej urobí aj verziu na zverejnenie, v ktorej sú osobné údaje kupujúceho skryté, a skontroluje, že v PDF nezostali. Kým pán Marek nepotvrdí, že ich skontroloval, zmluvu nemožno zverejniť. Pri zmluve zostane jeho meno a čas. Nie preto, že by mu niekto neveril, ale aby bolo jasné, kto za čo ručí.</p>
         </div>
       </li>
       <li class="vig">
@@ -414,7 +410,7 @@ footer .brand img{height:32px}
         </div>
       </li>
     </ol>
-    <p class="story-end reveal">Ak príde dodatok, nájde ho vedľa pôvodnej zmluvy. A zmluvy, ktoré už sú v Centrálnom registri zmlúv, sa v katalógu zobrazia samy.</p>
+    <p class="story-end reveal">Ak príde dodatok, nájde ho vedľa pôvodnej zmluvy. Zmluvy, ktoré už sú v Centrálnom registri zmlúv, sa v katalógu zobrazia samy. A kým sa nová zmluva do registra nedostane, Civora ju vedie ako „zatiaľ neúčinnú“ a zodpovednému človeku pošle ráno e-mail, keď sa jej lehota blíži alebo uplynula.</p>
   </div>
 </section>
 
@@ -425,12 +421,13 @@ footer .brand img{height:32px}
       <p>Obec nemusí veriť nám na slovo. Toto sú veci, ktoré sa dajú skontrolovať.</p>
     </div>
     <ul class="checks reveal" style="--d:.1s">
-      <li><h3>Každý krok má meno a čas</h3><p>Auditná stopa zapisuje, kto čo a kedy zmenil. Pre kontrolu aj pre vlastnú disciplínu.</p></li>
-      <li><h3>Osobné údaje nikto nepreskočí</h3><p>Pred zverejnením treba potvrdiť, že zmluvu skontrolovali z hľadiska GDPR.</p></li>
+      <li><h3>Každý krok má meno a čas</h3><p>Auditná stopa zapisuje, kto čo a kedy zmenil. Zmluvu, ktorú niekto odoslal, nemôže schváliť ten istý človek.</p></li>
+      <li><h3>Osobné údaje nikto nepreskočí</h3><p>Verziu na zverejnenie Civora overí a pred zverejnením musí skrytie osobných údajov potvrdiť človek.</p></li>
       <li><h3>Dodatok nič neprepíše</h3><p>Zmeny sa vedú ako nové verzie. Zverejnený záznam zostáva úplný.</p></li>
-      <li class="lit"><h3>Úradný záznam zostáva v CRZ</h3><p>Civora ho pripravuje a nenahrádza. Pre novú zmluvu vznikne PDF podklad na vloženie do CRZ.</p></li>
-      <li><h3>Katalóg bez vlastného webu</h3><p>Občania a novinári dostanú prehľadnú stránku s vyhľadávaním. Obec nemusí stavať nič navyše.</p></li>
-      <li><h3>Dáta ostávajú vaše</h3><p>Otvorený kód na platforme Decidim (AGPL), bez viazanosti na dodávateľa.</p></li>
+      <li class="lit"><h3>Úradný záznam zostáva v CRZ</h3><p>Civora ho pripravuje a nenahrádza. Zmluva je v Civore zatiaľ neúčinná, kým sa nevloží do CRZ, a ráno príde e-mail o lehotách.</p></li>
+      <li><h3>Zmluvy z vašich šablón</h3><p>Používa sa vaša šablóna vo Worde, vaša hlavička a vaše číslovanie. Fyzická osoba sa vo verejnom zázname zobrazí len ako „Fyzická osoba“.</p></li>
+      <li><h3>Katalóg bez vlastného webu</h3><p>Občania a novinári dostanú prehľadnú stránku s vyhľadávaním, štatistikami, stránkami dodávateľov a otvorenými dátami. Obec nemusí stavať nič navyše.</p></li>
+      <li><h3>Dáta ostávajú vaše</h3><p>Otvorený kód na platforme Decidim (AGPL), bez viazanosti na dodávateľa. Modul je uvedený medzi komunitnými modulmi na <a href="https://decidim.org/modules/" rel="noopener">decidim.org</a>.</p></li>
     </ul>
   </div>
 </section>
@@ -438,42 +435,30 @@ footer .brand img{height:32px}
 <section class="gal" id="galeria">
   <div class="wrap">
     <h2>A takto vyzerá program zblízka</h2>
-    <p class="gal__intro">Verejný katalóg aj administrácia v Civora Zmluvy. Všetko sú vymyslené dáta Obce Ukážkovej.</p>
-    <div class="gal__body">
-      <ol class="gal__list">
-        <li class="gal__item" data-id="catalogue-sk">
-          <h3 class="gal__title">Verejný katalóg</h3>
-          <p class="gal__line">Zoznam zverejnených zmlúv s vyhľadávaním, filtrami a sumami pre občanov a novinárov.</p>
-          <div class="frame"><div class="shot"><img src="img/catalogue-sk-1440.webp?v=20261014" srcset="img/catalogue-sk-480.webp?v=20261014 480w, img/catalogue-sk-800.webp?v=20261014 800w, img/catalogue-sk-1200.webp?v=20261014 1200w, img/catalogue-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Verejný katalóg zmlúv s vyhľadávaním, filtrami a zoznamom zmlúv so sumami (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
+    <p class="gal__intro">Jedna zmluva od rána po katalóg v Civora Zmluvy. Všetko sú vymyslené dáta Mesta Ukážkového.</p>
+    <ol class="show">
+        <li class="show__item reveal">
+          <div class="show__text"><h3>Čo treba dnes urobiť</h3><p>Po prihlásení úradník vidí len to, čo je na rade: zmluvy po lehote CRZ a kroky, ktoré čakajú práve na neho. Ku každému patrí jedno tlačidlo.</p></div>
+          <figure class="frame"><div class="shot"><img src="img/today-sk-1440.webp?v=20261104" srcset="img/today-sk-480.webp?v=20261104 480w, img/today-sk-800.webp?v=20261104 800w, img/today-sk-1200.webp?v=20261104 1200w, img/today-sk-1440.webp?v=20261104 1440w" sizes="(min-width:1240px) 1100px, calc(100vw - 2 * var(--gutter) - 20px)" width="1440" height="900" alt="Úvodná stránka administrácie s nadpisom „Čo treba dnes urobiť“: tri zmluvy po lehote CRZ a schválené zmluvy čakajúce na zverejnenie, ku každej tlačidlo (ukážkové dáta)" loading="lazy" decoding="async"></div></figure>
         </li>
-        <li class="gal__item" data-id="detail-crz-sk">
-          <h3 class="gal__title">Detail s pôvodom z CRZ</h3>
-          <p class="gal__line">Odkaz na pôvodný záznam v CRZ a upozornenie, že ide o externe potvrdené údaje.</p>
-          <div class="frame"><div class="shot"><img src="img/detail-crz-sk-1440.webp?v=20261014" srcset="img/detail-crz-sk-480.webp?v=20261014 480w, img/detail-crz-sk-800.webp?v=20261014 800w, img/detail-crz-sk-1200.webp?v=20261014 1200w, img/detail-crz-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Detail zmluvy zrkadlenej z CRZ s údajmi o zmluve, zmluvnými stranami a odkazom na pôvodný záznam (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
+        <li class="show__item reveal">
+          <div class="show__text"><h3>Zo šablóny obce vznikne zmluva aj jej verzia na zverejnenie</h3><p>Úradník vyplní formulár. Civora z neho pripraví zmluvu vo Worde a v PDF a kópiu bez osobných údajov. Zmluvné strany sa doplnia samy a fyzická osoba sa uvedie bez mena.</p></div>
+          <figure class="frame"><div class="shot"><img src="img/template-docs-sk-1440.webp?v=20261104" srcset="img/template-docs-sk-480.webp?v=20261104 480w, img/template-docs-sk-800.webp?v=20261104 800w, img/template-docs-sk-1200.webp?v=20261104 1200w, img/template-docs-sk-1440.webp?v=20261104 1440w" sizes="(min-width:1240px) 1100px, calc(100vw - 2 * var(--gutter) - 20px)" width="1440" height="900" alt="Dokumenty vygenerované zo šablóny: interná zmluva vo Worde a v PDF a verzia na zverejnenie so značkou „skryté údaje“, pod nimi údaje o zmluve a zmluvné strany, fyzická osoba bez mena (ukážkové dáta)" loading="lazy" decoding="async"></div></figure>
         </li>
-        <li class="gal__item" data-id="notes-sk">
-          <h3 class="gal__title">Interné poznámky</h3>
-          <p class="gal__line">Tím sa dohodne priamo pri zmluve. Vidia ich iba nositelia rolí, verejnosť nikdy.</p>
-          <div class="frame"><div class="shot"><img src="img/notes-sk-1440.webp?v=20261014" srcset="img/notes-sk-480.webp?v=20261014 480w, img/notes-sk-800.webp?v=20261014 800w, img/notes-sk-1200.webp?v=20261014 1200w, img/notes-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Interné poznámky k zmluve v administrácii: dve poznámky a pole na pridanie ďalšej (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
+        <li class="show__item reveal">
+          <div class="show__text"><h3>Stránka zmluvy</h3><p>Päť krokov od konceptu po vloženie do CRZ a vždy jeden ďalší krok. Vpravo je lehota CRZ a stav „zatiaľ neúčinná“, kým zmluva nie je v registri.</p></div>
+          <figure class="frame"><div class="shot"><img src="img/workspace-sk-1440.webp?v=20261104" srcset="img/workspace-sk-480.webp?v=20261104 480w, img/workspace-sk-800.webp?v=20261104 800w, img/workspace-sk-1200.webp?v=20261104 1200w, img/workspace-sk-1440.webp?v=20261104 1440w" sizes="(min-width:1240px) 1100px, calc(100vw - 2 * var(--gutter) - 20px)" width="1440" height="900" alt="Stránka zmluvy v administrácii: päťkrokový ukazovateľ od konceptu po vloženie do CRZ, ďalší krok s tlačidlom, lehota CRZ a stav „zatiaľ neúčinná“ (ukážkové dáta)" loading="lazy" decoding="async"></div></figure>
         </li>
-        <li class="gal__item" data-id="import-preview-sk">
-          <h3 class="gal__title">Import z tabuľky</h3>
-          <p class="gal__line">Náhľad ukáže chybné riadky ešte pred uložením. Nič sa neuloží, kým to nepotvrdíte.</p>
-          <div class="frame"><div class="shot"><img src="img/import-preview-sk-1440.webp?v=20261014" srcset="img/import-preview-sk-480.webp?v=20261014 480w, img/import-preview-sk-800.webp?v=20261014 800w, img/import-preview-sk-1200.webp?v=20261014 1200w, img/import-preview-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Náhľad importu zmlúv z tabuľky CSV: tri platné riadky a dva riadky s chybou v sume a v dátume (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
+        <li class="show__item show__item--doc reveal">
+          <div class="show__text"><h3>Verzia na zverejnenie</h3><p>Namiesto osobných údajov kupujúceho je v PDF text „osobné údaje – skryté“. Civora skontroluje, že v súbore nezostali. Zverejniť ho môže až človek, ktorý skrytie potvrdí.</p></div>
+          <figure class="frame"><div class="shot doc"><img src="img/publication-pdf-sk-1440.webp?v=20261104" srcset="img/publication-pdf-sk-480.webp?v=20261104 480w, img/publication-pdf-sk-800.webp?v=20261104 800w, img/publication-pdf-sk-1200.webp?v=20261104 1200w, img/publication-pdf-sk-1440.webp?v=20261104 1440w" sizes="(min-width:1240px) 1100px, calc(100vw - 2 * var(--gutter) - 20px)" width="1440" height="960" alt="Začiatok PDF verzie na zverejnenie ukážkovej kúpnej zmluvy: údaje predávajúceho sú vyplnené, údaje kupujúceho sú nahradené textom „[osobné údaje – skryté]“ (ukážkové dáta)" loading="lazy" decoding="async"><span class="doc__mark" aria-hidden="true"></span></div><figcaption>Zvýraznené sú miesta, kde Civora nahradila osobné údaje. Text v dokumente je pôvodný výstup.</figcaption></figure>
         </li>
-        <li class="gal__item" data-id="roles-sk">
-          <h3 class="gal__title">Správa rolí</h3>
-          <p class="gal__line">Prehľad nositeľov rolí a udelenie alebo odobratie roly.</p>
-          <div class="frame"><div class="shot"><img src="img/roles-sk-1440.webp?v=20261014" srcset="img/roles-sk-480.webp?v=20261014 480w, img/roles-sk-800.webp?v=20261014 800w, img/roles-sk-1200.webp?v=20261014 1200w, img/roles-sk-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Správa rolí v administrácii s používateľom v roli recenzenta (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
+        <li class="show__item reveal">
+          <div class="show__text"><h3>Verejný katalóg</h3><p>Občania a novinári nájdu zmluvu vyhľadávaním a filtrami, aj z telefónu. Stránky preberajú farby obce.</p></div>
+          <figure class="frame show__cat"><div class="shot"><img src="img/catalogue-sk-1440.webp?v=20261104" srcset="img/catalogue-sk-480.webp?v=20261104 480w, img/catalogue-sk-800.webp?v=20261104 800w, img/catalogue-sk-1200.webp?v=20261104 1200w, img/catalogue-sk-1440.webp?v=20261104 1440w" sizes="(min-width:1240px) 1100px, calc(100vw - 2 * var(--gutter) - 20px)" width="1440" height="900" alt="Verejný katalóg zmlúv vo farbách obce s vyhľadávaním, filtrami, súčtom a zoznamom zmlúv so sumami (ukážkové dáta)" loading="lazy" decoding="async"></div><img class="show__phone" src="img/catalogue-phone-sk-390.webp?v=20261104" srcset="img/catalogue-phone-sk-390.webp?v=20261104 390w, img/catalogue-phone-sk-780.webp?v=20261104 780w" sizes="190px" width="390" height="844" alt="Ten istý katalóg na telefóne" loading="lazy" decoding="async"></figure>
         </li>
-        <li class="gal__item" data-id="audit-trail">
-          <h3 class="gal__title">Auditná stopa</h3>
-          <p class="gal__line">Pri zmluve vidno, kto, čo a kedy zmenil.</p>
-          <div class="frame"><div class="shot"><img src="img/audit-trail-1440.webp?v=20261014" srcset="img/audit-trail-480.webp?v=20261014 480w, img/audit-trail-800.webp?v=20261014 800w, img/audit-trail-1200.webp?v=20261014 1200w, img/audit-trail-1440.webp?v=20261014 1440w" sizes="(max-width:959px) calc(100vw - 60px), 560px" width="1440" height="900" alt="Auditná stopa jednej zmluvy so zoznamom operácií, používateľov a dátumov (ukážkové dáta)" loading="lazy" decoding="async"></div></div>
-        </li>
-      </ol>
-    </div>
-    <p class="gal__note">Obrazovky ešte nesú starší vzhľad programu. Dolaďujeme ho, aby sa podobal na túto stránku.</p>
+    </ol>
+    <p class="gal__note">Mesto, zmluvy aj osoby na obrazovkách sú vymyslené. Verejné stránky preberajú farby obce, Civora sa podpisuje len malým písmom.</p>
   </div>
 </section>
 
@@ -527,81 +512,6 @@ footer .brand img{height:32px}
     },{rootMargin:'0px 0px -12% 0px',threshold:.05});
     els.forEach(function(e){io.observe(e)});
   }
-})();
-(function(){
-  var gal=document.getElementById('galeria');
-  var mq=window.matchMedia('(min-width:960px)');
-  if(!gal)return;
-  var body=gal.querySelector('.gal__body'),list=gal.querySelector('.gal__list');
-  var items=[].slice.call(list.children),stage,img,cur=0,timer;
-  function select(n,focus){
-    items.forEach(function(it,i){
-      it.setAttribute('aria-selected',i===n?'true':'false');
-      it.tabIndex=i===n?0:-1;
-    });
-    if(focus)items[n].focus();
-    if(n===cur&&img.src)return;
-    cur=n;
-    var src=items[n].querySelector('img'),panel=stage;
-    panel.setAttribute('aria-labelledby',items[n].id);
-    var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-    clearTimeout(timer);
-    function swap(){
-      img.removeAttribute('loading');
-      img.srcset=src.srcset;img.sizes=src.sizes;img.src=src.src;img.alt=src.alt;
-      img.classList.remove('is-fading');
-    }
-    if(reduce){swap();return}
-    img.classList.add('is-fading');
-    timer=setTimeout(swap,180);
-  }
-  function on(){
-    if(stage)return;
-    stage=document.createElement('div');
-    stage.className='gal__stage frame';
-    stage.id='galeria-panel';
-    stage.setAttribute('role','tabpanel');
-    var shot=document.createElement('div');
-    shot.className='shot';
-    img=document.createElement('img');
-    img.width=1440;img.height=900;img.decoding='async';
-    shot.appendChild(img);
-    stage.appendChild(shot);
-    body.appendChild(stage);
-    list.setAttribute('role','tablist');
-    list.setAttribute('aria-label','Ukážky obrazoviek');
-    items.forEach(function(it,i){
-      it.id='galeria-tab-'+i;
-      it.setAttribute('role','tab');
-      it.setAttribute('aria-controls','galeria-panel');
-    });
-    gal.classList.add('is-on');
-    cur=-1;select(0);
-  }
-  function off(){
-    if(!stage)return;
-    stage.remove();stage=null;img=null;
-    gal.classList.remove('is-on');
-    list.removeAttribute('role');list.removeAttribute('aria-label');
-    items.forEach(function(it){
-      ['role','aria-controls','aria-selected','tabindex','id'].forEach(function(a){it.removeAttribute(a)});
-    });
-  }
-  items.forEach(function(it,i){it.addEventListener('click',function(){if(stage)select(i)})});
-  list.addEventListener('keydown',function(e){
-    if(!stage)return;
-    var i=items.indexOf(document.activeElement),n=-1;
-    if(i<0)return;
-    if(e.key==='ArrowDown'||e.key==='ArrowRight')n=(i+1)%items.length;
-    else if(e.key==='ArrowUp'||e.key==='ArrowLeft')n=(i-1+items.length)%items.length;
-    else if(e.key==='Home')n=0;
-    else if(e.key==='End')n=items.length-1;
-    if(n<0)return;
-    e.preventDefault();select(n,true);
-  });
-  function sync(){mq.matches?on():off()}
-  sync();
-  if(mq.addEventListener)mq.addEventListener('change',sync);
 })();
 </script>
 </main>

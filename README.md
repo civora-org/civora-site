@@ -49,9 +49,9 @@ No install is needed. Any server that serves `.webp` as `image/webp` and `.woff2
 
 ## Product screenshots
 
-The gallery uses screenshots from the public demo host. They show fictional data only. Never publish a screenshot with real names, e-mail addresses or contract data.
+The gallery uses screenshots from the public demo host. They show fictional data only: the town is "Mesto Ukážkové", and the town name, logo text and any town identifiers are replaced in the page (DOM) before the screenshot, never in the database. Where a view would show real register rows, the list is built from invented records or the view is left out. Never publish a screenshot with real names, e-mail addresses, IČO, bank details or contract data. PDF screenshots are rendered from a generated PDF and repainted with fictional values where the town's own data appears.
 
-Each screenshot has five files:
+Each screenshot has five files (the phone inset has a PNG plus two WebP widths):
 
 - `<name>.png`, the source image;
 - `<name>-480.webp`, `<name>-800.webp`, `<name>-1200.webp` and `<name>-1440.webp`, the WebP widths used in `srcset`.
@@ -60,7 +60,7 @@ The repository has no script that makes the screenshots or the WebP files. Creat
 
 ### Cache-busting
 
-Every reference to a screenshot or to the Open Graph image has a version query, `?v=YYYYMMDD`. The date is the day the images were last replaced. The current value is `20261014`, and it appears in `img` and `srcset` attributes, the Open Graph image and the JSON-LD image.
+Every reference to a screenshot or to the Open Graph image has a version query, `?v=YYYYMMDD`. The date is the day the images were last replaced. The current value is `20261104`, and it appears in `img` and `srcset` attributes, the Open Graph image and the JSON-LD image.
 
 When you replace an image:
 
@@ -71,7 +71,7 @@ When you replace an image:
 
 ### Gallery behaviour
 
-The gallery is a list of frames with `data-id` attributes. On screens 960 px and wider, the selector swaps the featured frame. On narrow screens and without JavaScript, the frames stack. Selection uses `aria-selected`, and the swap respects `prefers-reduced-motion`.
+The gallery is an ordered list of five large screens in workflow order. It needs no JavaScript. Each item has a heading, one or two sentences and a framed screenshot with `width` and `height` attributes. The PDF item overlays a CSS marker (`.doc__mark`, percentages of the image) on the redacted lines; if you recrop `publication-pdf-sk`, move the marker. The catalogue item carries a phone inset (`catalogue-phone-sk`), hidden below 640 px.
 
 ## SEO and performance
 
