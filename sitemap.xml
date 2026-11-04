@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://civora.sk/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-04</lastmod>
+    <image:image><image:loc>https://civora.sk/img/today-sk-1440.webp</image:loc></image:image>
+    <image:image><image:loc>https://civora.sk/img/workspace-sk-1440.webp</image:loc></image:image>
+    <image:image><image:loc>https://civora.sk/img/template-form-sk-1440.webp</image:loc></image:image>
+    <image:image><image:loc>https://civora.sk/img/template-docs-sk-1440.webp</image:loc></image:image>
+    <image:image><image:loc>https://civora.sk/img/publication-pdf-sk-1440.webp</image:loc></image:image>
     <image:image><image:loc>https://civora.sk/img/catalogue-sk-1440.webp</image:loc></image:image>
     <image:image><image:loc>https://civora.sk/img/detail-crz-sk-1440.webp</image:loc></image:image>
+    <image:image><image:loc>https://civora.sk/img/mobile-sk-1440.webp</image:loc></image:image>
     <image:image><image:loc>https://civora.sk/img/audit-trail-1440.webp</image:loc></image:image>
   </url>
 </urlset>

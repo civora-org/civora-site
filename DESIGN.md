@@ -169,7 +169,7 @@ A `ul` of six hairline-separated items. Each opens with a small indigo arch (ter
 Lives in the indigo contact band, between the intro sentence and the phone and e-mail line. A 68px round photo (`img/denys.jpg`, `object-position: 50% 28%`, paper ring) beside one Alegreya line, "Civoru stavia Denys Kozlov", and one short sentence in the band's tinted text colour. No letter, no sheet, no separate section. Stays on one row down to 375px. Never a stock or generated face.
 
 ### Product frame and gallery
-Screenshots sit in a cream mat, then a 1px rule frame with 10px radius, at most 560px wide, below the story. They show the fictional "Obec Ukážková" only and still carry the product's current look; the note says so. Every screenshot has five files (PNG plus WebP at four widths) and a `?v=YYYYMMDD` cache-bust. Tablist with a sticky stage at 960px and wider, stacked frames elsewhere and without JavaScript.
+Screenshots sit in a cream mat, then a 1px rule frame with 10px radius, at most 560px wide, below the story. They show the fictional "Mesto Ukážkové" only and carry the product's current look (warm paper, the town's own colours); the note says that the town, contracts and people are invented. Every screenshot has five files (PNG plus WebP at four widths) and a `?v=YYYYMMDD` cache-bust. Tablist with a sticky stage at 960px and wider, stacked frames elsewhere and without JavaScript.
 
 ### Closing band
 The only deep-indigo surface: paper heading, #e3dcee text, white underlined contact links, the primary button, the offer line ("Cena podľa veľkosti obce — pošlem ponuku", no prices) and the three doors on the right, which rise in.
@@ -185,7 +185,7 @@ Published at stable URLs under `/brand/` (wordmarks, marks at 16 to 512 px, icon
 - **Do** keep motion optional: visible by default, off for reduced motion, no libraries.
 - **Do** lead with trust between people and their town; present Civora Zmluvy as the first product.
 - **Do** keep the CRZ attribution wherever CRZ data is shown (footer and the CRZ detail screenshot).
-- **Do** show only the fictional "Obec Ukážková" in screenshots, and use "Cena podľa veľkosti obce — pošlem ponuku" for pricing.
+- **Do** show only the fictional "Mesto Ukážkové" in screenshots, and use "Cena podľa veľkosti obce — pošlem ponuku" for pricing.
 - **Do** check 375px (no horizontal scroll) and Slovak diacritics in every face after a copy change.
 
 ### Don't:
