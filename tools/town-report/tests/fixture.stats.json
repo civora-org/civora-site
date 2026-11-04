@@ -1,0 +1,244 @@
+{
+  "ico": "00000000",
+  "town": "Mesto Ukážka",
+  "window": {
+    "from": "2025-10-01",
+    "to": "2026-09-30",
+    "months": 12
+  },
+  "data_date": "2026-10-14",
+  "contracts": {
+    "total": 1216,
+    "amendments": 212,
+    "main": 1004,
+    "duplicates_removed": 14
+  },
+  "amount": {
+    "with_amount": 640,
+    "value_eur": 18400000,
+    "no_amount": 364,
+    "no_amount_pct": 28,
+    "median_eur": 1250
+  },
+  "delay": {
+    "n": 1150,
+    "median_days": 2.0,
+    "within_7_pct": 81,
+    "over_30_pct": 4
+  },
+  "trend": [
+    {
+      "month": "2025-10",
+      "label": "október",
+      "year": 2025,
+      "contracts": 96,
+      "value_eur": 361782
+    },
+    {
+      "month": "2025-11",
+      "label": "november",
+      "year": 2025,
+      "contracts": 104,
+      "value_eur": 1273707
+    },
+    {
+      "month": "2025-12",
+      "label": "december",
+      "year": 2025,
+      "contracts": 131,
+      "value_eur": 1762471
+    },
+    {
+      "month": "2026-01",
+      "label": "január",
+      "year": 2026,
+      "contracts": 88,
+      "value_eur": 1681751
+    },
+    {
+      "month": "2026-02",
+      "label": "február",
+      "year": 2026,
+      "contracts": 93,
+      "value_eur": 212344
+    },
+    {
+      "month": "2026-03",
+      "label": "marec",
+      "year": 2026,
+      "contracts": 112,
+      "value_eur": 614918
+    },
+    {
+      "month": "2026-04",
+      "label": "apríl",
+      "year": 2026,
+      "contracts": 101,
+      "value_eur": 327293
+    },
+    {
+      "month": "2026-05",
+      "label": "máj",
+      "year": 2026,
+      "contracts": 119,
+      "value_eur": 1119002
+    },
+    {
+      "month": "2026-06",
+      "label": "jún",
+      "year": 2026,
+      "contracts": 98,
+      "value_eur": 1675853
+    },
+    {
+      "month": "2026-07",
+      "label": "júl",
+      "year": 2026,
+      "contracts": 105,
+      "value_eur": 1022651
+    },
+    {
+      "month": "2026-08",
+      "label": "august",
+      "year": 2026,
+      "contracts": 77,
+      "value_eur": 1070370
+    },
+    {
+      "month": "2026-09",
+      "label": "september",
+      "year": 2026,
+      "contracts": 92,
+      "value_eur": 1446489
+    }
+  ],
+  "top_contracts": [
+    {
+      "id": 1000000,
+      "signed_on": "2026-01-10",
+      "amount_eur": 2400000,
+      "counterparty": "Ukážková firma 1, s. r. o.",
+      "counterparty_ico": "36000000",
+      "subject": "Zmluva o dielo – rekonštrukcia základnej školy",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000001,
+      "signed_on": "2026-02-11",
+      "amount_eur": 974702,
+      "counterparty": "Ukážková firma 2, s. r. o.",
+      "counterparty_ico": "36000001",
+      "subject": "Zmluva o úvere na financovanie investícií",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000002,
+      "signed_on": "2026-03-12",
+      "amount_eur": 575378,
+      "counterparty": "Ukážková firma 3, s. r. o.",
+      "counterparty_ico": "36000002",
+      "subject": "Kúpna zmluva – pozemok pri ceste",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000003,
+      "signed_on": "2026-04-13",
+      "amount_eur": 395852,
+      "counterparty": "Ukážková firma 4, s. r. o.",
+      "counterparty_ico": "36000003",
+      "subject": "Zmluva o poskytovaní služieb – odvoz odpadu",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000004,
+      "signed_on": "2026-05-14",
+      "amount_eur": 296176,
+      "counterparty": "Ukážková firma 5, s. r. o.",
+      "counterparty_ico": "36000004",
+      "subject": "Zmluva o dielo – cyklochodník",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000005,
+      "signed_on": "2026-06-15",
+      "amount_eur": 233676,
+      "counterparty": "Ukážková firma 6, s. r. o.",
+      "counterparty_ico": "36000005",
+      "subject": "Rámcová dohoda – zimná údržba komunikácií",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000006,
+      "signed_on": "2026-07-16",
+      "amount_eur": 191242,
+      "counterparty": "Ukážková firma 7, s. r. o.",
+      "counterparty_ico": "36000006",
+      "subject": "Zmluva o dielo – verejné osvetlenie",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000007,
+      "signed_on": "2026-08-17",
+      "amount_eur": 160766,
+      "counterparty": "Ukážková firma 8, s. r. o.",
+      "counterparty_ico": "36000007",
+      "subject": "Zmluva o nájme nebytových priestorov",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000008,
+      "signed_on": "2026-09-18",
+      "amount_eur": 137941,
+      "counterparty": null,
+      "counterparty_ico": null,
+      "subject": null,
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 1000009,
+      "signed_on": "2026-01-19",
+      "amount_eur": 120284,
+      "counterparty": "Ukážková firma 10, s. r. o.",
+      "counterparty_ico": "36000009",
+      "subject": "Zmluva o dotácii",
+      "category": "zmluva o dielo"
+    }
+  ],
+  "suppliers": {
+    "top": [
+      {
+        "name": "Ukážková firma 1, a. s.",
+        "ico": "35000001",
+        "contracts": 26,
+        "value_eur": 2000000
+      },
+      {
+        "name": "Ukážková firma 2, a. s.",
+        "ico": "35000002",
+        "contracts": 22,
+        "value_eur": 1000000
+      },
+      {
+        "name": "Ukážková firma 3, a. s.",
+        "ico": "35000003",
+        "contracts": 18,
+        "value_eur": 666666
+      },
+      {
+        "name": "Ukážková firma 4, a. s.",
+        "ico": "35000004",
+        "contracts": 14,
+        "value_eur": 500000
+      },
+      {
+        "name": "Ukážková firma 5, a. s.",
+        "ico": "35000005",
+        "contracts": 10,
+        "value_eur": 400000
+      }
+    ],
+    "named_contracts": 410,
+    "aggregated_contracts": 490,
+    "main_contracts": 900
+  }
+}

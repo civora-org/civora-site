@@ -1,0 +1,244 @@
+{
+  "ico": "00317667",
+  "town": "Mesto Považská Bystrica",
+  "window": {
+    "from": "2025-10-01",
+    "to": "2026-09-30",
+    "months": 12
+  },
+  "data_date": "2026-10-14",
+  "contracts": {
+    "total": 611,
+    "amendments": 68,
+    "main": 543,
+    "duplicates_removed": 24
+  },
+  "amount": {
+    "with_amount": 277,
+    "value_eur": 44721305,
+    "no_amount": 266,
+    "no_amount_pct": 49,
+    "median_eur": 2500
+  },
+  "delay": {
+    "n": 611,
+    "median_days": 2,
+    "within_7_pct": 78,
+    "over_30_pct": 5
+  },
+  "trend": [
+    {
+      "month": "2025-10",
+      "label": "október",
+      "year": 2025,
+      "contracts": 73,
+      "value_eur": 1225056
+    },
+    {
+      "month": "2025-11",
+      "label": "november",
+      "year": 2025,
+      "contracts": 53,
+      "value_eur": 589040
+    },
+    {
+      "month": "2025-12",
+      "label": "december",
+      "year": 2025,
+      "contracts": 53,
+      "value_eur": 13108386
+    },
+    {
+      "month": "2026-01",
+      "label": "január",
+      "year": 2026,
+      "contracts": 20,
+      "value_eur": 49694
+    },
+    {
+      "month": "2026-02",
+      "label": "február",
+      "year": 2026,
+      "contracts": 52,
+      "value_eur": 1442387
+    },
+    {
+      "month": "2026-03",
+      "label": "marec",
+      "year": 2026,
+      "contracts": 54,
+      "value_eur": 2384183
+    },
+    {
+      "month": "2026-04",
+      "label": "apríl",
+      "year": 2026,
+      "contracts": 39,
+      "value_eur": 1384267
+    },
+    {
+      "month": "2026-05",
+      "label": "máj",
+      "year": 2026,
+      "contracts": 57,
+      "value_eur": 946851
+    },
+    {
+      "month": "2026-06",
+      "label": "jún",
+      "year": 2026,
+      "contracts": 87,
+      "value_eur": 1255053
+    },
+    {
+      "month": "2026-07",
+      "label": "júl",
+      "year": 2026,
+      "contracts": 56,
+      "value_eur": 19888488
+    },
+    {
+      "month": "2026-08",
+      "label": "august",
+      "year": 2026,
+      "contracts": 30,
+      "value_eur": 1351337
+    },
+    {
+      "month": "2026-09",
+      "label": "september",
+      "year": 2026,
+      "contracts": 37,
+      "value_eur": 1096563
+    }
+  ],
+  "top_contracts": [
+    {
+      "id": 12637594,
+      "signed_on": "2026-07-29",
+      "amount_eur": 19252398,
+      "counterparty": "MEGAWASTE SLOVAKIA s.r.o.",
+      "counterparty_ico": "36265144",
+      "subject": "Nakladanie s odpadom a vybrané technické služby v meste Považská Bystrica",
+      "category": "služby alebo dodávka"
+    },
+    {
+      "id": 11695552,
+      "signed_on": "2025-12-01",
+      "amount_eur": 11623500,
+      "counterparty": "IMAO electric, s. r. o.",
+      "counterparty_ico": "44007841",
+      "subject": "Koncesná zmluva na poskytnutie služieb verejného osvetlenia mesta Považská Bystrica",
+      "category": "služby alebo dodávka"
+    },
+    {
+      "id": 12075075,
+      "signed_on": "2026-03-05",
+      "amount_eur": 991775,
+      "counterparty": null,
+      "counterparty_ico": null,
+      "subject": null,
+      "category": "úver alebo financovanie"
+    },
+    {
+      "id": 12722933,
+      "signed_on": "2026-08-26",
+      "amount_eur": 892205,
+      "counterparty": "RADOSTAV RM, s. r. o.",
+      "counterparty_ico": "53618157",
+      "subject": "\"ZŠ Slovenských partizánov - stavebné úpravy pavilónu E\"",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 11764647,
+      "signed_on": "2025-12-08",
+      "amount_eur": 843103,
+      "counterparty": null,
+      "counterparty_ico": null,
+      "subject": null,
+      "category": "úver alebo financovanie"
+    },
+    {
+      "id": 12015587,
+      "signed_on": "2026-02-17",
+      "amount_eur": 731290,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie SR",
+      "counterparty_ico": "50349287",
+      "subject": "Modernizácia autobusových zastávok v SPR Považská Bystrica",
+      "category": "zmluva (iný predmet)"
+    },
+    {
+      "id": 12216202,
+      "signed_on": "2026-04-10",
+      "amount_eur": 529075,
+      "counterparty": "H B H, a.s.",
+      "counterparty_ico": "31617913",
+      "subject": "Stavebné úravy - Kultúrny dom Praznov",
+      "category": "zmluva o dielo"
+    },
+    {
+      "id": 12885457,
+      "signed_on": "2026-09-30",
+      "amount_eur": 406963,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU kód projektu: 401301I609",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 11673662,
+      "signed_on": "2025-11-27",
+      "amount_eur": 406331,
+      "counterparty": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+      "counterparty_ico": "50349287",
+      "subject": "ZMLUVA O POSKYTNUTÍ NENÁVRATNÉHO FINANČNÉHO PRÍSPEVKU",
+      "category": "dotácia alebo príspevok"
+    },
+    {
+      "id": 12507714,
+      "signed_on": "2026-06-24",
+      "amount_eur": 400236,
+      "counterparty": null,
+      "counterparty_ico": null,
+      "subject": null,
+      "category": "zmluva (iný predmet)"
+    }
+  ],
+  "suppliers": {
+    "top": [
+      {
+        "name": "MEGAWASTE SLOVAKIA s.r.o.",
+        "ico": "36265144",
+        "contracts": 1,
+        "value_eur": 19252398
+      },
+      {
+        "name": "IMAO electric, s. r. o.",
+        "ico": "44007841",
+        "contracts": 1,
+        "value_eur": 11623500
+      },
+      {
+        "name": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky",
+        "ico": "50349287",
+        "contracts": 9,
+        "value_eur": 3485446
+      },
+      {
+        "name": "STRABAG s.r.o.",
+        "ico": "17317282",
+        "contracts": 7,
+        "value_eur": 1098528
+      },
+      {
+        "name": "RADOSTAV RM, s. r. o.",
+        "ico": "53618157",
+        "contracts": 1,
+        "value_eur": 892205
+      }
+    ],
+    "main_contracts": 543,
+    "named_contracts": 209,
+    "aggregated_contracts": 334
+  }
+}
